@@ -13,5 +13,5 @@
 - [6_User_Stories](/06_user_stories.md)
 
 **SQLite**
-- [7_Connecting_to_a_database](/07_Connecting_to_a_database.md)
+- [7_Command-line SQLite_connecting_to_a_database](/07_Connecting_to_a_database.md)
 - [8_SQLite_and_Csharp](/08_SQLite_and_Csharp.md)
