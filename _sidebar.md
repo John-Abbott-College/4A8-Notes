@@ -10,3 +10,8 @@
 **SDLC, Agile, SCRUM**
 - [4_Software_Development_Life_Cycle](/04_software_development_life.md)
 - [5_SCRUM](/05_scrum.md)
+- [6_User_Stories](/06_user_stories.md)
+
+**SQLite**
+- [7_Connecting_to_a_database](/07_Connecting_to_a_database.md)
+- [8_SQLite_and_Csharp](/08_SQLite_and_Csharp.md)
