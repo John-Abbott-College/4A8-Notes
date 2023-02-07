@@ -2,7 +2,7 @@
 - [0.0_Introduction](/00.1_Introduction.md)
 - [0.1_Expectations](/00_Expectations.md)
 
-**Documentation and setup of projects (code, test)**
+**Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
 - [2_Documenting_Public_APIs](/02_Documenting_Public_APIs.md)
 - [3_Creating_Unit_Test_Project](/03_Creating_Tests_for_a_Project.md)
@@ -15,3 +15,12 @@
 **SQLite**
 - [7_Command-line_SQLite_connecting_to_a_database](/07_Connecting_to_a_database.md)
 - [8_SQLite_and_Csharp](/08_SQLite_and_Csharp.md)
+
+**Coding standards, JIRA, Git**
+- [09_coding_standards](/09_coding_standards.md)
+- [10_JIRA](/10_JIRA.md)
+- [11.1_using_git_solo](/11.1_using_git_solo.pdf)
+- [11.2_git_ignore](/11.2_git_ignore.pdf)
+- [11.3_Tale_of_the_git_pull_request](/11.3_Tale_of_the_git_pull_request.pdf)
+- [11.4_working_in_teams_with_git](/11.4_working_in_teams_with_git.pdf)
+- [11.5_git](/11.5_git.md)
