@@ -19,7 +19,7 @@
 **Coding standards, JIRA, Git**
 - [09_coding_standards](/09_coding_standards.md)
 - [10_JIRA](/10_JIRA.md)
-- [11.1_using_git_solo](/11.1_using_git_solo.pdf)
+- [11.1_using_git_solo](https://drive.google.com/file/d/1CKXzVzqlzD4T8eK5vpWtUZnUO65S5Zfs/view?usp=share_link)
 - [11.2_git_ignore](/11.2_git_ignore.pdf)
 - [11.3_Tale_of_the_git_pull_request](/11.3_Tale_of_the_git_pull_request.pdf)
 - [11.4_working_in_teams_with_git](/11.4_working_in_teams_with_git.pdf)
