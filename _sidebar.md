@@ -25,3 +25,6 @@
 - [11.4_working_in_teams_with_git](https://drive.google.com/file/d/1ZMj097yKSdP6b6s9bkbHlXNW2q78Bba1/view?usp=share_link)
 - [11.5_git](/11.5_git.md)
 
+**Milestones 3 & 4**
+- [12a_Milestones_3_and_4_help](/12_Milestones_3_and_4_help.md)
+- [12b_Milestone_3_4_UserStories](/12a_Milestone_3_4_UserStories.md)
