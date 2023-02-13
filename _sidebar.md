@@ -26,5 +26,5 @@
 - [11.5_git](/11.5_git.md)
 
 **Milestones 3 & 4**
-- [12a_Milestones_3_and_4_help](/12_Milestones_3_and_4_help.md)
-- [12b_Milestone_3_4_UserStories](/12a_Milestone_3_4_UserStories.md)
+- [12a_Milestones_3_and_4_help](/12a_Milestones_3_and_4_help.md)
+- [12b_Milestone_3_4_UserStories](/12b_Milestone_3_4_UserStories.md)
