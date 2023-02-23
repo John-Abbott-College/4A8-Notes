@@ -30,4 +30,9 @@
 - [12b_Milestone_3_4_UserStories](/12b_Milestone_3_4_UserStories.md)
 
 **Merge Conflicts**
-- [11.9_Git_Merge_Conflicts.md](/11.9_Git_Merge_Conflicts.md)
+- [11.9_Git_Merge_Conflicts](/11.9_Git_Merge_Conflicts.md)
+
+**DateTime, Exceptions, Unit tests**
+- [13_DateTimeNonsense](/13_DateTimeNonsense.md)
+- [14_To_throw_or_not_to_throw](/14_To_throw_or_not_to_throw.md)
+- [15_Writing_Unit_Tests](/15_Writing_Unit_Tests.md)
