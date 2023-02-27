@@ -186,7 +186,7 @@ The tests are not testing all the logic! For example, they do not ensure that:
 Additionally, code quality is not ensured:
 
 - the public method is not documented
-- Naming conventions could have not been followed (they are here, if you like Helen's style of naming)
+- naming conventions could have not been followed (they are here, if you like Helen's style of naming)
 
 
 
