@@ -198,6 +198,7 @@ It is your responsibility to make sure that your code is properly tested in unit
 
 
 
-To remove the code coverage highlighting in the code:
+
+Helpful hint: to remove the code coverage highlighting in the code:
 
 ![image-CodeCoverage_removeHighlight](./Images/CodeCoverage_removeHighlight.JPG)
