@@ -108,10 +108,10 @@ Consider the following method:
     {
         if ( litersOfFuel > 400 || temperatureInCelsius < -40 )
         {
-        	throw new Exception( "this makes no sense!" );
+            throw new Exception( "this makes no sense!" );
         }
     
-    	return ( litersOfFuel / kilometersTravelled ) * ( temperatureInCelsius / 32 );
+        return ( litersOfFuel / kilometersTravelled ) * ( temperatureInCelsius / 32 );
     }
 
 And the unit test that tests it:
@@ -154,13 +154,13 @@ Adding the following test, brings code coverage to 100%!
         float kilometersTravelled = 4;
         float temperatureInCelsius = 30;
     
-    	//Act
-    	try
-    	{
-    		float fuelPerKilometer = 	
-    	  	 fuelCalculator.getFuelPerKilometerCorrectedForTemperature(litersOfFuel,
-    																   kilometersTravelled,
-    																   temperatureInCelsius);
+        //Act
+        try
+        {
+           float fuelPerKilometer = 	
+               fuelCalculator.getFuelPerKilometerCorrectedForTemperature(litersOfFuel,
+                                                                         kilometersTravelled,
+                                                                         temperatureInCelsius);
         }
         catch
         {
@@ -186,7 +186,7 @@ The tests are not testing all the logic! For example, they do not ensure that:
 Additionally, code quality is not ensured:
 
 - the public method is not documented
-- naming conventions could have not been followed (they are here, if you like Helen's style of naming)
+- naming conventions could have not been followed (they are here)
 
 
 
