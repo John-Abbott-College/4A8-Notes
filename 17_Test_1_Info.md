@@ -6,24 +6,45 @@
 
 
 
+VisualStudio project setup
+
+- VS Project file (.csproj) contains all the info and instructions to build the project. 
+
+  - In XML format
+  - Can be edited (to fixup file list of files if it gets out of sync, for example)
+
+- VS Solution file (.sln) contains the info for one or more related projects with build info and solution wide settings.
+
+  - Text file in its own format
+  - Should not be edited 
+
+- To add existing .cs files, copy them into the project directory and Add -> Existing Items on the project in VisualStudio - this ensures that the files are properly added in the .csproj file
+
+- Setting a common namespace in C# files
+
+- Using a console app to test an API with no GUI
+
+  
+
 Documenting APIs
 
 - Why?
 
-  - Allow others to use your API without having to understand your implementation (how it does what it does). You might even not want to give them the code at all. They need to rely on your documentation.
+  - Allow others to use your API without having to understand your implementation (how it does what it does). You might even not want to give them the code at all. They need to rely on your documentation. IDEs show you the documentation which helps users of your code.
 
 - What you should document
 
   - Public classes, methods, fields in an API
+  - Keep it succinct and clear: do not repeat the name of the method/class/interface/struct, do not state "this method/class/interface/struct will/does"
 
-- Identify the components of a public method to document
+- Identify the components of a public method/class/interface/struct to document
 
   - What it does (not how), return type, parameters, exceptions
   - Describe what it does starting with a verb indicating the operation
   - Boolean parameters:
     - Requesting an action: If true… If false
     - Boolean specifying state: True if….; false otherwise
-  - Exceptions: Thrown when….
+  - Exceptions: Thrown when…., specify all thrown explicitly and implicitly
 
 - Providing example usage of the main class in XML documentation
 
@@ -37,17 +58,66 @@ Documenting APIs
 
     
 
-VisualStudio project setup
+Unit tests
 
-- VS Project file (.csproj) contains all the info and instructions to build the project. 
-  - In XML format
-  - Can be edited (to fixup file list of files if it gets out of sync, for example)
-- VS Solution file (.sln) contains the info for one or more related projects with build info and solution wide settings.
-  - Text file in its own format
-  - Should not be edited 
-- To add existing .cs files, copy them into the project directory and Add -> Existing Items on the project in VisualStudio - this ensures that the files are properly added in the .csproj file
+- A test of a unit of code (often a method) in isolation
 
+  - Not about interaction with other parts of the code, no dependencies on any outside systems
+  - is NOT:
+    - integration testing
+      - tests the interaction between components of the system
+      - done after you have tested each individual component
+    - regression testing
+      - verify if any new bugs in the system introduced by your changes. Sometimes bugs in other parts of the code that your changes affected.
 
+- In an XUnit Test project, 
+
+  - Need to add a reference to the source code project, so that the XUnit project can access the code to test
+
+  - need to decorate test methods with [Fact]
+
+- Test methods
+
+  - Should test that
+    - the code works as expected, typical use
+    - the code works as expected in atypical uses
+    - the expected functioning in edge case conditions
+  - Should be named very descriptively
+    - Name often includes inputs or tested scenario and expected output
+  - Should be independent
+  - Usually follow the pattern of
+    - Arrange - test setup
+    - Act - invoke the tested method
+    - Assert - check that the expected occurred
+  - Assert methods throw if the condition passed in is false, for example
+    - Assert.Equal( expected, actual ) will throw if expected and actual are not equal
+    - Assert.NotEqual( expected, actual ) will throw if expected and actual are equal
+    - Assert.True( condition ) will throw if the condition is false
+    - Assert.False( condition ) will throw if the condition is not false (true)
+  - Good idea to add test when you fix a bug found post development
+  - Be able to write, run, and debug unit tests
+
+- Code coverage
+
+  - Gives the percentage of code (per namespace, class, or method) that the unit tests exercise.
+
+  - Highlights code that is run during tests and code that is not run.
+
+  - Allows a developer to realise that there are missing tests.
+
+  - The ideal is 100% coverage, but this is hard to attain in practice.
+
+  - Just because code is run in a test does not mean that it is necessarily well tested or that it is good code. What is tested and how it is tested determines if a ‘covered’ line of code is well tested.
+
+  - You need to 
+
+    - ensure the quality of your code: good logic, meets the requirements, well documented
+    - write good unit tests that test
+      - all possible logic flows in the expected use of the method
+      - all possible cases where things could go wrong: edge cases
+      - intentional misuses of your method (security risks)
+
+    
 
 Coding standards
 
@@ -62,104 +132,6 @@ Coding standards
   - Holding the same information in two places is increasing the likelihood of bugs - versions diverge, one may forget to update both places, etc.
 
 
-
-Prepare and Test Database
-
-- SQLite database properties
-
-  - Relational
-  - Stored in a file
-  - Very lightweight
-  - No configuration required
-  - No server required
-
-- Be able to use the command line interface to see database basics like:
-
-  - Open the file of an existing database: run sqlite3 with the filename or call .open [filename]
-  - List the tables in the database (.tables), 
-  - Query a given table (select [columns] from [table]**;**)
-  - Quit the Command line interface (.quit)
-  - Why did we add the sqlite3 executable to the PATH environment variable?
-
-- ADO.NET provides an interface to databases. We are using the SQLite version,System.Data.SQLite, which allows us to interface with SQLite in C#. We are able to:
-
-  - Create an SQLite database
-  - Add tables to an SQLite database, with primary key and foreign key columns specified
-  - Insert rows into an SQLite database
-  - Query data in an SQLite database
-    - Be able to iterate over the data received
-  - Remember to not use SELECT * because it makes your code vulnerable to bugs if someone modifies the database by adding a column. Specify the column names in your select statements.
-
-- What do we use NuGet for in VisualStudio?
-
-  
-
-Understand what SQL injection is
-
-- A common hacking technique
-- Attempts to place malicious code into an SQL statement
-- As a developper, if you take user input and incorporate into the SQL statement directly, you leave your application vulnerable to SQL injection
-- Be able to understand why a particular injection string is dangerous
-  - Example injection strings (for SELECT * FROM Users WHERE UserID='{id}'):
-  - 105' OR '1'='1 
-  - 105'; DROP TABLE suppliers;--
-  - ' OR ''='
-
-
-
-Protecting against SQL injection
-
-- Parameter binding (aka dynamic parameters or prepared statements)
-
-  - Understand how they work
-
-    - Bound data is not interpreted as SQL
-    - Compiling SQL inserts the reference to the data
-    - The data is only used when the SQL code is executed
-
-  - Prepare, Bind, Execute, Fetch pattern
-
-    ![img](https://lh4.googleusercontent.com/-zmDw_HtGJHfvrc1W9VHHmJLb6gxNC81grd7wrp_-_I3EZV54l_PEXO7kr5NWSzQJCuYEx9DgIgbqWIOvYBvVXicsOgfHV8AAqX5kJ7M5qg6Q9lqODrvb35DzBEfBK2Fp_eq2VVSJlj3zZMhFQURRg)
-
-  - Be able to create SQL statements that use bound parameters in C# with SQLite.
-
-
-
-Unit tests
-
-- A test of a unit of code (often a method) in isolation
-
-  - Not about interaction with other parts of the code
-
-- In an XUnit Test project, need to decorate test methods with [Fact]
-
-- Test methods
-
-  - Should be named very descriptively
-    - Name often includes inputs or tested scenario and expected output
-  - Usually follow the pattern of
-    - Arrange - test setup
-    - Act - invoke the tested method
-    - Assert - check that the expected occurred
-  - Assert methods throw if the condition passed in is false, for example
-  - Assert.Equal( expected, actual ) will throw if expected and actual are not equal
-  - Assert.NotEqual( expected, actual ) will throw if expected and actual are equal
-  - Assert.True( condition ) will throw if the condition is false
-  - Assert.False( condition ) will throw if the condition is not false (true)
-
-- Code coverage
-
-  - Gives the percentage of code (per namespace, class, or method) that the unit tests exercise.
-
-  - Highlights code that is tested in green and code that is not tested in red.
-
-  - Allows a developer to realise that there are missing tests.
-
-  - The ideal is 100% coverage, but this is hard to attain in practice.
-
-  - Just because code is run in a test does not mean that it is necessarily well tested. What is tested and how it is tested determines if a ‘covered’ line of code is well tested.
-
-    
 
 Software Development Cycle
 
@@ -250,12 +222,73 @@ Scrum
 JIRA
 
 - A tool that is widely used in industry for software project management
-
 - Allows Scrum teams to create and manage user stories in a backlog and to manage sprints.
-
 - Allows for the creation of Epics - a logical grouping of user stories
 
+
+
+Prepare and Test Database
+
+- SQLite database properties
+
+  - Relational
+  - Stored in a file
+  - Very lightweight
+  - No configuration required
+  - No server required
+
+- Be able to use the command line interface to see database basics like:
+
+  - Open the file of an existing database: run sqlite3 with the filename or call .open [filename]
+  - List the tables in the database (.tables), 
+  - Query a given table (select [columns] from [table]**;**)
+  - Quit the Command line interface (.quit)
+  - Why did we add the sqlite3 executable to the PATH environment variable?
+
+- ADO.NET provides an interface to databases. We are using the SQLite version,System.Data.SQLite, which allows us to interface with SQLite in C#. We are able to:
+
+  - Create an SQLite database
+  - Add tables to an SQLite database, with primary key and foreign key columns specified
+  - Insert rows into an SQLite database
+  - Query data in an SQLite database
+    - Be able to iterate over the data received
+  - Create appropriate queries with GROUP BY and ORDER BY clauses
+  - Remember to not use SELECT * because it makes your code vulnerable to bugs if someone modifies the database by adding a column. Specify the column names in your select statements.
+
+- What do we use NuGet for in VisualStudio?
+
   
+
+Understand what SQL injection is
+
+- A common hacking technique
+- Attempts to place malicious code into an SQL statement
+- As a developper, if you take user input and incorporate into the SQL statement directly, you leave your application vulnerable to SQL injection
+- Be able to understand why a particular injection string is dangerous
+  - Example injection strings (for SELECT * FROM Users WHERE UserID='{id}'):
+  - 105' OR '1'='1 
+  - 105'; DROP TABLE suppliers;--
+  - ' OR ''='
+
+
+
+Protecting against SQL injection
+
+- Parameter binding (aka dynamic parameters or prepared statements)
+
+  - Understand how they work
+
+    - Bound data is not interpreted as SQL
+    - Compiling SQL inserts the reference to the data
+    - The data is only used when the SQL code is executed
+
+  - Prepare, Bind, Execute, Fetch pattern
+
+    ![img](https://lh4.googleusercontent.com/-zmDw_HtGJHfvrc1W9VHHmJLb6gxNC81grd7wrp_-_I3EZV54l_PEXO7kr5NWSzQJCuYEx9DgIgbqWIOvYBvVXicsOgfHV8AAqX5kJ7M5qg6Q9lqODrvb35DzBEfBK2Fp_eq2VVSJlj3zZMhFQURRg)
+
+  - Be able to create SQL statements that use bound parameters in C# with SQLite.
+
+
 
 Working in teams on a common code base
 
@@ -272,13 +305,14 @@ Working in teams on a common code base
   - Work that one person adds might be releasable immediately, all the while another person may commit partial work.
   - One person may commit partial work that does not compile leaving the others unable to run or test their changes
 - Use master/main repository and branches
-  - The master/main repository should only contain code that is deployableIndividuals work in their branches which are initially copies of the shared master/main repository
+  - The master/main repository should only contain code that is deployable
+  - Individuals work in their branches which are initially copies of the shared master/main repository
 - Each team member has:
-  - A local copy of their branch, or the feature branch
+  - A local copy of the feature branch they are working on
   - Usually also a local copy of the master/main repository
-- Know what a pull request is, when and how to create one.
-- Know how to update the master/main repository with your branch changes
-- Know how to update your branch with new changes that have been added to master/main
+- Know what a pull request is, when and how to create one: when bringing your completed branch changes to master
+- Know how to update the master/main repository with your branch changes: pull request
+- Know how to update your branch with new changes that have been added to master/main: merge master into your branch
 - Know when it is necessary to do the above two (branch=>master, master=>branch)
 - Remember to keep local copies of branches/repositories in sync with the versions on GitHub.
 - Commit your branch work very often, even if it is not finalized.
