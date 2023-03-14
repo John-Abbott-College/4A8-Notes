@@ -40,3 +40,8 @@
 
 **Test 1 Info**
 - [17_Test_1_Info](/17_Test_1_Info.md)
+
+**Access Modifiers, dlls, WPF**
+- [18_Access_Modifiers](/18_Access_Modifiers.md)
+- [19_Dynamic_Link_Libraries](/19_Dynamic_Link_Libraries.md)
+
