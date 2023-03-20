@@ -46,3 +46,9 @@
 - [19_Dynamic_Link_Libraries](/19_Dynamic_Link_Libraries.md)
 - [20_Intro_to_WPF_Windows_Application](/20_Intro_to_WPF_Windows_Application.md)
 
+**Architecture patterns, MVP, design patterns**
+- [21_Architecture_Patterns](/21_Architecture_Patterns.md)
+- [21.1_MVP_Wordle_Example](/21.1_MVP_Wordle_Example.md)
+- [22_Design_Patterns](/22_Design_Patterns.md)
+- [23_Not_MVP](/23_Not_MVP.md)
+
