@@ -52,5 +52,6 @@
 - [22_Design_Patterns](/22_Design_Patterns.md)
 - [23_Not_MVP](/23_Not_MVP.md)
 
-**Milestone 6**
+**Milestone 6, WPF ComboBox**
 - [24_Milestone_6_stories](/24_Milestone_6_stories.md)
+- [25_WPF_Combobox_Control](/25_WPF_Combobox_Control.md)
