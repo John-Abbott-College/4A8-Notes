@@ -50,8 +50,11 @@
 - [21_Architecture_Patterns](/21_Architecture_Patterns.md)
 - [21.1_MVP_Wordle_Example](/21.1_MVP_Wordle_Example.md)
 - [22_Design_Patterns](/22_Design_Patterns.md)
-- [23_Not_MVP](/23_Not_MVP.md)
 
 **Milestone 6, WPF ComboBox**
+- [23_Not_MVP](/23_Not_MVP.md)
 - [24_Milestone_6_stories](/24_Milestone_6_stories.md)
 - [25_WPF_Combobox_Control](/25_WPF_Combobox_Control.md)
+
+**CI/CD**
+- [26_CI_CD](/26_CI_CD.md)
