@@ -56,5 +56,6 @@
 - [24_Milestone_6_stories](/24_Milestone_6_stories.md)
 - [25_WPF_Combobox_Control](/25_WPF_Combobox_Control.md)
 
-**CI/CD**
+**CI/CD, DataGrid**
 - [26_CI_CD](/26_CI_CD.md)
+- [27_DataGrid](/27_DataGrid.md)
