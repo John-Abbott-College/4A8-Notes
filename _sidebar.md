@@ -59,3 +59,4 @@
 **CI/CD, DataGrid**
 - [26_CI_CD](/26_CI_CD.md)
 - [27_DataGrid](/27_DataGrid.md)
+- [28_CICD_Lab_Compile_And_Test_From_Command_Line](/28_CICD_Lab_Compile_And_Test_From_Command_Line.md)
