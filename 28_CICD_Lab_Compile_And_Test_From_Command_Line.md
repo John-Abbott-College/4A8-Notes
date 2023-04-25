@@ -175,11 +175,12 @@ MSBuild version 17.4.1+9a89d02ff for .NET Framework
 ```
 
 OOPS, WE HAVE ERRORS!
-
+```text
 <span style="color:darkred">C:\Program Files\dotnet\sdk\7.0.102\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(267,
 5): error NETSDK1004: Assets file 'C:\Users\helen.katalifos\Downloads\26_PracticeCommandLine\PracticeCommandLine\Test\o
 bj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Users\helen.katalifos\Downloa
 ds\26_PracticeCommandLine\PracticeCommandLine\Test\Test.csproj]</span>
+```
 
 Reading the error message carefully, it mentions that we are missing a `Nuget` packages.  Our project uses packages, so I guess that's the problem.
 
