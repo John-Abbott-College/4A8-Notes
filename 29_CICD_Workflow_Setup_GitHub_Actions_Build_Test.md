@@ -83,7 +83,7 @@ The script steps run powershell command-line instructions that do what VisualStu
 
 You will start with a template workflow generated in GitHub under the Actions tab for your home budget application repository. 
 
-![GitHub Actions](./Images/GuthubActions.JPG)
+![GitHub Actions](./Images/GithubActions.PNG)
 
 
 
@@ -94,7 +94,7 @@ In the Actions window, a .NET Desktop template might be proposed. If it is not, 
 
 
 
-![Workflow template](./Images/Choose_Actions_template.JPG)
+![Workflow template](./Images/Choose_Actions_template.PNG)
 
 
 
