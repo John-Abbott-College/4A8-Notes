@@ -60,3 +60,4 @@
 - [26_CI_CD](/26_CI_CD.md)
 - [27_DataGrid](/27_DataGrid.md)
 - [28_CICD_Lab_Compile_And_Test_From_Command_Line](/28_CICD_Lab_Compile_And_Test_From_Command_Line.md)
+- [29_CICD_Workflow_Setup_GitHub_Actions_Build_Test](/29_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
