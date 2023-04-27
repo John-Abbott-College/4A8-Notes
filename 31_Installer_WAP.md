@@ -104,21 +104,23 @@ You may ignore any warning about requiring the Developer Mode for Windows. This 
 
 ## Link the Application to install
 
-First, we will set the application to install. Select `Dependencies`. right-click to select `Add Project Reference...`
+Set the application the installer will install. On the WAP project, select `Dependencies`. Right-click to select`Add Project Reference...`
 
 ![image-20230417040917029](./Images/Add_WAPP_Project.JPG)
 
 
 
-Select your `HomeBudget` application. Note that any assemblies the application depends on will be automatically be brought in by the installer.
+Select your `CICD_Practice` application. Note that any assemblies the application depends on will be automatically be brought in by the installer.
 
 
 
 ## Package Configuration
 
-Select the `Package.appx.manifest` file in the project. The manifest allows you to configure the package
+Select the `Package.appx.manifest` file in the project. The manifest allows you to configure the installer.
 
 ![image-20230424015454981](./Images/WAPP_Package_manifest.JPG)
+
+
 
 ### Display name
 
@@ -128,7 +130,7 @@ Customize the name you want as the installed application's display name. Describ
 
 ### Icons
 
-In Visual Assets, you will be able to se the Icons for your application. More on this next class.
+In Visual Assets, you will be able to se the Icons for your application. More on this next week.
 
 
 
@@ -136,19 +138,19 @@ In Visual Assets, you will be able to se the Icons for your application. More on
 
 Leave the unique Id Package name as is.
 
-Set the package display name. A first version of 1.0.0 makes sense.
+Set the package display name. The default first version of 1.0.0 makes sense.
 
 
 
 ### Certificate
 
-A signed package gives the user of the package the certainty that the code comes from a trusted source.
+A signed package gives the user of the installer package the certainty that the code comes from a trusted source.
 
 You sign your package with your certificate. 
 
-A proper certificate would be a certified trusted certificate. You would need to involve a trusted authority (Comodo, for example) you would pay annually to obtain a code signing certificate. 
+A proper certificate would be a certified trusted certificate. You would need to involve a trusted authority (Comodo, for example) that you would pay annually to obtain a code signing certificate. 
 
-Since we are only distributing our application internally (no one we don't know needs to trust us), we will generate a dev certificate. We will not get it authenticated by a trusted authority.
+Since we are only distributing our application internally, no one we don't know needs to trust us. We will generate a dev certificate to sign our installer package with. We will not bother getting this certificate authenticated by a trusted authority.
 
 
 
@@ -164,13 +166,19 @@ Note that when you View the certificate, `View Full Certificate`, you note that 
 
 
 
-The certificate expires in a year. We will "trust it" later. Select OK to create the certificate.  You could select Ok on the warning.
+The certificate expires in a year. When we use the installer this will generate, we will have to indicate that we "trust it". 
+
+Select `OK` to create the certificate.  You could select `Ok` on the warning.
 
 The certificate is now chosen for the installer.
 
-Note that a pfx file that has now been added to the project.
+Note that a pfx file that has now been added to the project. This file holds all the signing information for the certificate. Signing involves some private information that you do not share and public information you provide.  
+
+![image-20230427020038796](./Images/WAPP_PFXFile.PNG)
 
 You can now close the manifest file.
+
+We have specified the installer details.  Now we must build it.
 
 
 
@@ -178,21 +186,29 @@ You can now close the manifest file.
 
 Rebuild your solution.
 
-Note that MSIX allows you to publish your app to the Microsoft Store. We will be creating a local installer instead.
+Note that MSIX allows you to publish your desktop app to the Microsoft Store. We will not be doing this. Instead, we will be using the option to create a local installer instead. To distribute your application you could give that person the installer.
 
 To build the installer, choose `WAPP project -> Publish -> Create App packages...`
 
-We will not be publishing our apps on the Microsoft Store. Keep the `Sideloading` option.
+As we will not be publishing our apps on the Microsoft Store, we will keep the `Sideloading` option checked.
 
 ![image-20230424022421100](./Images/WAPP_Sideloading.JPG)
 
 Click `Next`.
 
-We will use the certificate we created, which should appear.
+We will use the dev certificate we created earlier. It will appear, which should appear and be selected by default.
+
+
+
+![image-20230427020927169](./Images/WAPP_sign_certificate.PNG)
+
+
 
 Click `Next`.
 
-We have to choose which architectures you want to support.  
+Next, we see the architectures we are choosing to support in our installer. Leave this as is for now.  
+
+Click `Next`.
 
 Choose the location where the installer will be placed. This could be a URL, or a folder. Updates will be checked for in that folder.
 
@@ -202,11 +218,11 @@ Choose `Create`.
 
 #### Configuration Architectures
 
-Note that the creation of the installer fails with errors about mismatches in the architectures. We need to be more specific about how our projects will be built for different architectures. 
+The creation of the installer fails with errors about mismatches in the architectures. We need to be more specific about how our projects will be built for different architectures. 
 
 Select `Build -> Configuration Manager`. 
 
-Setup the following configurations:
+Set up the following configurations:
 
 ​	Choose Release as the Active solution configuration.
 
@@ -240,17 +256,17 @@ Clicking on the output location will take you to the installer files.
 
 Note the index.html page that is generated.
 
-Also note that in the installer directory, the msix bundle and the public security certificate appear.
+Also note that in the installer directory, the msix bundle and the public security certificate information (the `.cer` file) appear.
 
 ![image-20230424031106894](./Images/WAPP_installer_certificate.JPG)
 
 
 
-Click Copy and Close to have the installer copied to the Installer location. 
+Click `Copy and Close` to have the installer copied to the Installer location. 
 
 You could launch the installer from the html files or the folder.
 
-Note that you are blocked from installing the application.  This is because the certificate is not trusted!
+Note that you are blocked from installing the application. This is because the certificate is not trusted!
 
 Since you know that you created the certificate you could indicate that you trust the certificate.
 
@@ -258,13 +274,15 @@ Since you know that you created the certificate you could indicate that you trus
 
 #### Trust the dev certificate
 
-Double-click the public certificate file to see that it is your certificate.
+In order to be able to use this 'signed' certificate we have to tell Windows that we trust it. To do this, we will add the certificate we made to our list of trusted certificates on our machines manually.
+
+Double-click the public .cer certificate file to see that it is your certificate.
 
 Right-click on the .cer file to choose `Install certificate`. 
 
 Choose `Local Machine`
 
-Choose the Certificate store: Trusted Root Certification Authorities
+For the Certificate store, choose `Trusted Root Certification Authorities`
 
 
 
@@ -274,7 +292,7 @@ Choose the Certificate store: Trusted Root Certification Authorities
 
 
 
-In a company you would have your company's certificate trusted by everyone. If it is not your company's application, you would want to make sure that the certificate is verified by a trusted authority.
+Note: Normally, in a company, you would have your company's certificate trusted by everyone. If it is not your company's application, you would want to make sure that the certificate is verified by a trusted authority.
 
 You could go to Windows Manage user certificates to delete the certificates when done. 
 
@@ -282,19 +300,19 @@ You could go to Windows Manage user certificates to delete the certificates when
 
 ### Install
 
-* Run `setup.exe`
+* Double click the msixbundle file to install your application.
 
-	> To test the installer, you must run `setup.exe` **AS ADMINISTRATOR**. 
+	> To test the installer, you must run  it **AS ADMINISTRATOR**. 
 
-* Select  `install for everyone`.
-* You could choose all the defaults for the rest to complete the installation. 
+* Select  `Install`.
+
+  
 
 #### Validate
+* Note that every build of the installer object increments the version number.
 * You should see:
-  * A desktop shortcut with your icon which launches your application
   * Your company name as a folder in the Start menu with your application in it. 
-  * Icons are correct and application can be launched.
-  * Your application installed at the location chosen during installation. 
-    * All DLLs and application exe are present. 
-  * Executable can be run.
+  * The application is launched by default.
+    * It works (all DLLs and the application exe are present). 
+  * Rerunning the installer attempts an update
 
