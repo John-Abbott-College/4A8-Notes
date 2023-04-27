@@ -6,7 +6,7 @@
 
 The default architecture in visual studio is `Any CPU`.
 
-![image-20220418101408149](./Images/vs_setting_architecture.png)
+![image-20220418101408149](.\Images\vs_setting_architecture.png)
 
 
 
