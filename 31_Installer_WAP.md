@@ -6,7 +6,7 @@
 
 The default architecture in visual studio is `Any CPU`.
 
-![image-20220418101408149](.\Images\vs_setting_architecture.png)
+![image-20220418101408149](./Images/vs_setting_architecture.png)
 
 
 
@@ -66,7 +66,7 @@ In 2018, Microsoft introduced the `msix` app packaging format which
 * installs the program in a container
 * allows you to publish to the Microsoft Store.
 
-![MSIX Package Diagram](.\Images\msixpackage.png)
+![MSIX Package Diagram](./Images/msixpackage.png)
 
 
 
@@ -106,7 +106,7 @@ You may ignore any warning about requiring the Developer Mode for Windows. This 
 
 First, we will set the application to install. Select `Dependencies`. right-click to select `Add Project Reference...`
 
-![image-20230417040917029](.\Images\Add_WAPP_Project.JPG)
+![image-20230417040917029](./Images/Add_WAPP_Project.JPG)
 
 
 
@@ -118,7 +118,7 @@ Select your `HomeBudget` application. Note that any assemblies the application d
 
 Select the `Package.appx.manifest` file in the project. The manifest allows you to configure the package
 
-![image-20230424015454981](.\Images\WAPP_Package_manifest.JPG)
+![image-20230424015454981](./Images/WAPP_Package_manifest.JPG)
 
 ### Display name
 
@@ -160,7 +160,7 @@ You could select your Team name as the Publisher Common Name. Choose a password 
 
 Note that when you View the certificate, `View Full Certificate`, you note that it is indicated that the certificate is not trusted. 
 
-![image-20230424020921468](.\Images\WAPP_dev_certificate.JPG)
+![image-20230424020921468](./Images/WAPP_dev_certificate.JPG)
 
 
 
@@ -184,7 +184,7 @@ To build the installer, choose `WAPP project -> Publish -> Create App packages..
 
 We will not be publishing our apps on the Microsoft Store. Keep the `Sideloading` option.
 
-![image-20230424022421100](.\Images\WAPP_Sideloading.JPG)
+![image-20230424022421100](./Images/WAPP_Sideloading.JPG)
 
 Click `Next`.
 
@@ -216,7 +216,7 @@ Setup the following configurations:
 
 ​	Make the same changes for x32. For each project, set x32 as the platform.
 
-![image-20230424025439541](.\Images\WAPP_configuration_projects.JPG)
+![image-20230424025439541](./Images/WAPP_configuration_projects.JPG)
 
 Regenerate the Installer:
 
@@ -224,7 +224,7 @@ Regenerate the Installer:
 
 In the `Select and configure packages` page, select the x86 and x64 architectures, instead of the generic Neutral:
 
-![image-20230424025234415](.\Images\WAPP_select_architectures.JPG)
+![image-20230424025234415](./Images/WAPP_select_architectures.JPG)
 
 
 
@@ -232,7 +232,7 @@ Click `Next` and `Create` to create the Installer. This takes some time.
 
 When it is done, a `Finished creating package` dialog will appear:
 
-![image-20230424030748154](.\Images\Wapp_finished_creating_package.JPG)
+![image-20230424030748154](./Images/Wapp_finished_creating_package.JPG)
 
 
 
@@ -242,7 +242,7 @@ Note the index.html page that is generated.
 
 Also note that in the installer directory, the msix bundle and the public security certificate appear.
 
-![image-20230424031106894](.\Images\WAPP_installer_certificate.JPG)
+![image-20230424031106894](./Images/WAPP_installer_certificate.JPG)
 
 
 
@@ -268,7 +268,7 @@ Choose the Certificate store: Trusted Root Certification Authorities
 
 
 
-![image-20230424032209019](.\Images\WAPP_Certificate_Store.JPG)
+![image-20230424032209019](./Images/WAPP_Certificate_Store.JPG)
 
 
 
