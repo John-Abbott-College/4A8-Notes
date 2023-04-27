@@ -6,7 +6,7 @@
 
 The default architecture in visual studio is `Any CPU`.
 
-![image-20220418101408149](./Images/vs_setting_architecture.png)
+![image-20220418101408149](.\Images\vs_setting_architecture.png)
 
 
 
@@ -14,7 +14,7 @@ The default architecture in visual studio is `Any CPU`.
 
   
 
-![image-20230424024156495](.\Images\WAPP_Configuration_Manager.JPG)
+![image-20230424024156495](./Images/WAPP_Configuration_Manager.JPG)
 
 
 
