@@ -37,9 +37,9 @@ In addition to the necessary files, there is often the request to add the applic
 
 When you build your solution or project, it will create an application executable, example: `myApp.exe`
 
-### Setup Executable and `msi` file
+### Older Windows desktop app installer: Setup Executable and `msi` file
 
-You could create a Windows installer you will generate a `setup.exe` and a Microsoft installer `myApp.msi`.
+Used to create a Windows msi installer that would generate a `setup.exe` and a Microsoft installer `myApp.msi`.
 
 `setup.exe`: 
 
@@ -58,7 +58,7 @@ You could create a Windows installer you will generate a `setup.exe` and a Micro
 
 * `msi` files allow IT people to create automated installs that bypass the user interaction with the installer.
 
-### Microsoft Installer (`msix` file): 
+### New Microsoft Installer (`msix` file): 
 
 In 2018, Microsoft introduced the `msix` app packaging format which 
 
@@ -110,7 +110,7 @@ First, we will set the application to install. Select `Dependencies`. right-clic
 
 
 
-Select your HomeBudget application. Note that any assemblies the application depends on will be automatically be brought in by the installer.
+Select your `HomeBudget` application. Note that any assemblies the application depends on will be automatically be brought in by the installer.
 
 
 
@@ -250,7 +250,7 @@ Click Copy and Close to have the installer copied to the Installer location.
 
 You could launch the installer from the html files or the folder.
 
-Note that you are blocked from installing the application.  This is because the certificate is not trusted.
+Note that you are blocked from installing the application.  This is because the certificate is not trusted!
 
 Since you know that you created the certificate you could indicate that you trust the certificate.
 
@@ -276,158 +276,9 @@ Choose the Certificate store: Trusted Root Certification Authorities
 
 In a company you would have your company's certificate trusted by everyone. If it is not your company's application, you would want to make sure that the certificate is verified by a trusted authority.
 
-
-
 You could go to Windows Manage user certificates to delete the certificates when done. 
 
 
-
-
-
-
-
-Follow these instructions to enable secrets on your Github repo:
-
-
-
-https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
-
-Follow the Actions script instructions to generate secrets for the encoded private key and password.
-
-
-
-Only Release configuration.
-
-Set the Wap project directory and path in the env section:
-
-![image-20230424034211147](.\Images\Actions_Wap_env.JPG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The project includes an Images folder
-
-* Select `Application Folder`
-
-<img src="./Images/vs_installer_view_file_system.png" alt="image-20220418100249789" style="zoom:80%;" />
-
-<img src="./Images/vs_installer_filesystem.png" alt="image-20220418100410989" style="zoom:80%;" />
-
-
-#### Project Output
-
-* Right-click on the application folder and choose `Add->Project Output`.
-
-<img src="Images/vs_setup_add_project_output.png" alt="image-20220418170838842" style="zoom:80%;" />
-
-
-
- 
-
-* In the Project Output Window, 
-  * for the project, make sure the one you want installed (the one with your application) is selected.
-  * Choose Primary output and select Ok.
-
-<img src="Images/vs_setup_select_primary_output.png" alt="image-20220418171801002" style="zoom:80%;" />
-
-
-* In addition to the primary output you will see the `dll`s included in your application listed (notice the `System.Data.Sqlite.dll` and the `Budget.dll`)
-<img src="Images/vs_setup_list_of_output_files.png" alt="image-20220418173038576" style="zoom:80%;" />
-
- 		
-
-#### Architecture Specific DLLs
-
-**One DLL (`SQLite.Interop.dll`) is missing** since it is in a sub-folder based on the Windows architecture (x64 vs x32).
-
-* Add the `SQLite.Interop.dll` file to the output manually by right-click on the application folder and select `Add->Assembly`
-
-![image-20220418174239854](./Images/vs_setup_add_assembly)
-
-
-
-
-
-* Navigate to the bin directory of your project, choose `Debug` or `Release` as necessary, and then choose the folder for the correct architecture, either x64 or x32 (see instructions at the beginning of this chapter to determine which architecture is appropriate)
-
-![image-20220418174708646](Images/vs_setup_add_architecture_specific_DLLs.png)
-
-* Select any DLLs you see there (you should see `SQLite.Interop.dll`)
-* **NOTE:** it is important to select the correct architecture!
-
-
-
-#### Icon
-
-Right-click on the application folder again and choose `Add->File`
-
-Navigate to your application icon (`*.ico`) file and select it as well.
-
-
-
-### Desktop Shortcut
-
-* Double-click on the User’s desktop folder. 
-* In the empty right panel, right-click and select Create New Shortcut. 
-
-​	<img src="./Images/vs_setup_new_desktop_shortcut.png" style="zoom:80%;" />
-
-* Navigate to the Application Folder and select the primary output, and then click `Ok`
-
-​		![](Images/vs_setup_desktop_shortcut_choosing.png)     ![](Images/vs_setup_desktop_shortcut_select_primary_output.png)
-
-* Rename the shortcut to the name of your application
-
-* Choose the new shortcut, right-click on it and select Properties Window
-
-  <img src="Images/vs_setup_desktop_shortcut_choose_properties.png" alt="image-20220420200456014" style="zoom:80%;" />
-
-* In the properties window, set the icon to the `.ico` file for your application by browsing to and choosing the one you set in the Application Folder.
-
-### Adding a Shortcut to the Start Menu
-
-* Right-click on the User’s Programs Menu folder and choose Add->Folder
-* Rename the folder to your company name (could be that of your team). 
-  * This will be the folder your application will be installed under when the user installs your application.
-* Double-click the new folder. 
-* In the empty right panel, right-click and select Create New Shortcut. 
-* Navigate to the Application Folder and select the primary output.
-* Choose the new shortcut, right-click on it and select Properties Window
-* In the properties window, set the icon to the .ico file for your application by browsing and choosing the one you set in the Application Folder.
-
-### Final Touches
-
-If your company name appears as *Default Company Name*, it makes your application look VERY unprofessional.
-
-Configure the following in the properties page of the setup project:
-
-* Choose the Setup project. 
-* In the Properties panel set the all of the properties appropriately 
-
-
-
-## Build and Test the Installer
-
-* Build the `setup` project (or `build solution`)
-
-	> Note: your application itself needs to build successfully for the installer to be built.
-
-### Verify setup.exe exists
-
-* Open your setup project folder in File Explorer.
-
-* The installer (`setup.exe` and *`YourApplication`*`.msi`) should be available in the `bin` directory
 
 ### Install
 
