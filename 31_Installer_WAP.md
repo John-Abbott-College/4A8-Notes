@@ -102,7 +102,7 @@ You may ignore any warning about requiring the Developer Mode for Windows. This 
 
 
 
-## Application to install
+## Link the Application to install
 
 First, we will set the application to install. Select `Dependencies`. right-click to select `Add Project Reference...`
 
