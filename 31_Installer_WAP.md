@@ -158,7 +158,11 @@ Since we are only distributing our application internally, no one we don't know 
 
 Select `Choose Certificate...` and `Create...`
 
-You could select your Team name as the Publisher Common Name. Choose a password that you will not lose! Create the certificate.
+You could enter your Team name as the Publisher Common Name. 
+
+Choose a password that you will **not lose**! 
+
+Create the certificate.
 
 Note that when you View the certificate, `View Full Certificate`, you note that it is indicated that the certificate is not trusted. 
 
@@ -188,7 +192,9 @@ Rebuild your solution.
 
 Note that MSIX allows you to publish your desktop app to the Microsoft Store. We will not be doing this. Instead, we will be using the option to create a local installer instead. To distribute your application you could give that person the installer.
 
-To build the installer, choose `WAPP project -> Publish -> Create App packages...`
+To build the installer, right-click on your installer project and choose `Publish -> Create App packages...`
+
+![image-20230504003655502](./Images/WAPP_publish_menu.PNG)
 
 As we will not be publishing our apps on the Microsoft Store, we will keep the `Sideloading` option checked.
 
