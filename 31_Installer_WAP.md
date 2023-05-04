@@ -104,7 +104,7 @@ You may ignore any warning about requiring the Developer Mode for Windows. This 
 
 ## Link the Application to install
 
-Set the application the installer will install. On the WAP project, select `Dependencies`. Right-click to select`Add Project Reference...`
+Set the application the installer will install. On the WAP project, select `Dependencies`. Right-click to select `Add Project Reference...`
 
 ![image-20230417040917029](./Images/Add_WAPP_Project.JPG)
 
@@ -200,9 +200,11 @@ As we will not be publishing our apps on the Microsoft Store, we will keep the `
 
 ![image-20230424022421100](./Images/WAPP_Sideloading.JPG)
 
+
+
 Click `Next`.
 
-We will use the dev certificate we created earlier. It will appear, which should appear and be selected by default.
+We will use the dev certificate we created earlier. It should appear and be selected by default.
 
 
 
@@ -216,7 +218,9 @@ Next, we see the architectures we are choosing to support in our installer. Leav
 
 Click `Next`.
 
-Choose the location where the installer will be placed. This could be a URL, or a folder. Updates will be checked for in that folder.
+Choose the location where the installer will be placed once built. This could be a URL (if you were providing this installer on a websever), or a folder.  You could choose a folder.
+
+Once a user installs your application, future updates will be looked for in that folder.
 
 Choose `Create`.
 
@@ -226,7 +230,7 @@ Choose `Create`.
 
 The creation of the installer fails with errors about mismatches in the architectures. We need to be more specific about how our projects will be built for different architectures. 
 
-Select `Build -> Configuration Manager`. 
+With the main CICD_Practice project selected, choose `Build -> Configuration Manager`. 
 
 Set up the following configurations:
 
@@ -236,9 +240,11 @@ Set up the following configurations:
 
 ​		`Choose Platform -> <New...>`.  In New platform, select x64.
 
-​	Make the same changes for x32. For each project, set x32 as the platform.
+​	Make the same changes for x86. Change the Active solution platform to x86. For each project, set x86 as the platform as you did fx64..
 
 ![image-20230424025439541](./Images/WAPP_configuration_projects.JPG)
+
+![image-20230504020328106](./Images/WAPP_x86Configuration.PNG)
 
 Regenerate the Installer:
 
