@@ -63,5 +63,9 @@
 - [29_CICD_Workflow_Setup_GitHub_Actions_Build_Test](/29_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 
 **Test 2 Info**
-- [30_Test_2_Info.md](/30_Test_2_Info.md.md)
+- [30_Test_2_Info.md](/30_Test_2_Info.md)
+
+**Installer, Icons**
+- [31_Installer.md](/31_Installer_WAP.md)
+
 

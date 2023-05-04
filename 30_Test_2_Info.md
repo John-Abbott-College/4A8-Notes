@@ -66,9 +66,10 @@
 - What are the advantages of having these steps automated?
 - Understand the parts of a CI/CD pipeline (like a GitHub Actions workflow)
   - Why did we use command-line to figure out the steps?
-    - Setting the PATH, restoring packages before building.
-    - Triggers, steps (review what steps are in the YAML file), produced artifacts
-    - Using environment variables and the configuration matrix
+    - Figured out that needed to set the PATH, restore packages before building.
+  - GitHub Actions
+    - Script is run on GitHub servers, independently of what is on my computer's copy of the repo
+    - GitHub installs a fresh OS version and clones a fresh copy of my repo from GitHub.
 
 #### Refactoring code
 
