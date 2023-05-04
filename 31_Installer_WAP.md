@@ -248,7 +248,7 @@ Set up the following configurations:
 
 Regenerate the Installer:
 
-​	`WAPP project -> Publish -> Create App packages...`
+​	Right-click on your installer project and choose `Publish -> Create App packages...`
 
 In the `Select and configure packages` page, select the x86 and x64 architectures, instead of the generic Neutral:
 
@@ -264,7 +264,7 @@ When it is done, a `Finished creating package` dialog will appear:
 
 
 
-Clicking on the output location will take you to the installer files.
+Clicking on the output location link will take you to the installer files.
 
 Note the index.html page that is generated.
 
@@ -278,9 +278,7 @@ Click `Copy and Close` to have the installer copied to the Installer location.
 
 You could launch the installer from the html files or the folder.
 
-Note that you are blocked from installing the application. This is because the certificate is not trusted!
-
-Since you know that you created the certificate you could indicate that you trust the certificate.
+Note that you are blocked from installing the application. This is because the certificate is not trusted! Since you know that you created the certificate you could indicate that you trust the certificate.
 
 
 
