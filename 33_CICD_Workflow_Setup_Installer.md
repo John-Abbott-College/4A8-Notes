@@ -26,7 +26,10 @@ We will now work on these steps and building our solution with the installer pro
 
 In GitHub, edit (small pencil at top right) the .yml file for your application. 
 
-Reminder:  indentation matters in YAML!
+> Reminder:  indentation matters in YAML!
+>
+
+If you are starting from scratch, you could start with the suggested .NET Desktop script in the GitHub Actions tab of your repository.
 
 
 
@@ -50,7 +53,7 @@ We specified the Release configuration for both x86 and x64 architectures. To si
     strategy:
       matrix:
         configuration: [Release]
-        targetPlatform: [x64]
+        targetPlatform: [x86, x64]
 ```
 
 
@@ -76,7 +79,6 @@ In the `Restore the application` step, specify the target platform to ensure tha
 ```yaml
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      #run: dotnet restore
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /p:RuntimeIdentifier=$env:RuntimeIdentifier
       env:
         Configuration: ${{ matrix.configuration }}

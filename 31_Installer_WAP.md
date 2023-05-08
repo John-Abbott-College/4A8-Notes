@@ -256,7 +256,7 @@ In the `Select and configure packages` page, select the x86 and x64 architecture
 
 
 
-Click `Next` and `Create` to create the Installer. This takes some time.
+Click `Next` and `Create` to create the Installer (or just `Create` on Win 11). This takes some time.
 
 When it is done, a `Finished creating package` dialog will appear:
 
@@ -264,11 +264,12 @@ When it is done, a `Finished creating package` dialog will appear:
 
 
 
-Clicking on the output location link will take you to the installer files.
+> Windows only, not shown in Windows 11:
+>
+> Clicking on the output location link will take you to the installer files and an index.html page is generated.
+>
 
-Note the index.html page that is generated.
-
-Also note that in the installer directory, the msix bundle and the public security certificate information (the `.cer` file) appear.
+In the installer directory, the msix bundle and the public security certificate information (the `.cer` file) appear.
 
 ![image-20230424031106894](./Images/WAPP_installer_certificate.JPG)
 
