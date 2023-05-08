@@ -256,7 +256,7 @@ In GitHub, on your repo, under **Settings > Branches**, add a rule:
 
 Create the rule:
 
-![add rule](./Images/GitHub_Actions_Rule_Status.png)
+![add rule](./Images/GitHub_Actions_Rule_Status.PNG)
 
 
 
