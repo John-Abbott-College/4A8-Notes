@@ -30,9 +30,9 @@ Reminder:  indentation matters in YAML!
 
 
 
-#### Only build in Release mode
+#### Build in Release mode, x86 and x64 architectures
 
-In the Windows Application Packaging (WAP) project, we only added build configurations for the Release mode. Change the script to only build in Release mode as well:
+In the Windows Application Packaging (WAP) project, we only added build configurations for the Release mode. Change the script to only build in Release mode, to reflect this:
 
 ```
   build:
@@ -117,7 +117,7 @@ In the GitHub Actions script, the encoded version of the .pfx file will be decod
 
 
 
-##### Add a step to decode the .pfx file to build our installer
+##### Add a step to decode the .pfx file where the script is run
 
 Uncomment the `Decode the pfx` step in the `dotnet-desktop.yml` script:
 
@@ -139,7 +139,7 @@ It failed! We did not set the env:Wap_Project_Directory.
 
 
 
-##### Set the WAP project environment variables
+#### Set the WAP project environment variables
 
 Go ahead and check the comments next to the following two script variables to set them to point to the installer project correctly:
 
@@ -150,9 +150,23 @@ Wap_Project_Path: your-wap-project-path
 
 
 
+#### Build the installer
 
+Last time, we set the `Create the app package` step to only build the WPF app. Now, we have an installer. Change the build step to build the installer, specifying that we are building a SideLoadOnly installer (not one to be published to the Microsoft store). For this step, we are also specifying where the decoded .pfx file can be found and the password so that our installer can be properly signed: 
 
-##### Clean up the .pfx file from the build setup
+```
+    # Create the app package by building and packaging the Windows Application Packaging project
+    - name: Create the app package
+      run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:TargetPlatform /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
+      env:
+        Appx_Package_Build_Mode: SideLoadOnly
+        Configuration: Release
+        TargetPlatform: ${{ matrix.targetplatform }}
+```
+
+ 
+
+#### Clean up the .pfx file from the build setup
 
 We do not want our secret .pfx file hanging around on the setup GitHub used to run our script. Uncomment the `Remove the pfx` step to ensure the file is removed.
 
