@@ -8,9 +8,9 @@ To create a custom User Control, in VS, right-click the project and select Add->
 
 
 
-Name your new control class as you want (DataGridView for example).
+Name your new control class as you want (ChartView or DataGridView for example).
 
-The xaml and code behind (xaml.cs) files will be automatically created for you. In the xaml file, you could add other sub-controls (you could move the DataGrid and search from the MainWindow into this custom control, for example).
+The xaml and code behind (xaml.cs) files will be automatically created for you. In the xaml file, you could add other sub-controls (you could move the DataGrid and search from the MainWindow into this custom control, for example). (you don't need to do this if it is too complicated)
 
 In the MainWindow, you can now use your new control directly:
 
@@ -30,6 +30,10 @@ We are going to make a custom control for displaying the data as a chart instead
 
 * using the `Nuget` package manager, install 
   * DotNetProjects.WPFToolKit.DataVisualization
+
+## Create the new user control
+
+Follow above instructions for making a new user control.
 
 ## Creating a Pie Chart
 
@@ -60,7 +64,7 @@ Window x:Class="EarthCoordinates.MainWindow"
         Title="MainWindow" Height="450" Width="800">
 ```
 
-### Making Controls available in code
+### Making Chart Controls available in code
 
 Add `using System.Windows.Controls.DataVisualization.Charting;` to your code
 
@@ -118,6 +122,10 @@ To see an actual pie-chart...
 
 
 # Chart for Budget, 
+
+## NOTE:
+
+After creating the new User Control, you must absolutely rebuild your code before you can use the new control.
 
 ## by Category and Month
 
@@ -417,6 +425,15 @@ namespace Budget
         }
     }
 }
+
+```
+
+## Using your new Chart Control
+
+```xaml
+
+               <local:DataChartControl x:Name="theChart"></local:DataChartControl>
+ 
 
 ```
 
