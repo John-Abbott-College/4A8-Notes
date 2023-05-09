@@ -24,12 +24,16 @@ We will now work on these steps and building our solution with the installer pro
 
 ### Edit the Workflow file
 
-In GitHub, edit (small pencil at top right) the .yml file for your application. 
+In GitHub, edit (small pencil at top right) the .github/workflows/dotnet-desktop.yml file for your application. 
 
 > Reminder:  indentation matters in YAML!
 >
 
-If you are starting from scratch, you could start with the suggested .NET Desktop script in the GitHub Actions tab of your repository.
+If you are starting from scratch:
+
+- you could start with the suggested .NET Desktop script in the GitHub Actions tab of your repository.
+- set the `Solution_Name` and `Test_Project_Path` env variables according to their adjacent comments.
+- make sure you have set the Release x86 and x64 build configurations on the projects  in VS.
 
 
 
@@ -45,7 +49,7 @@ In the Windows Application Packaging (WAP) project, we only added build configur
         configuration: [Release]
 ```
 
-We specified the Release configuration for both x86 and x64 architectures. To simplify our script, we will only build for Windows x64. Add a target platform to the build matrix:
+We specified the Release configurations for both x86 and x64 architectures. To simplify our script, we will only build for Windows x64. Add a target platform to the build matrix:
 
 ```
     build:
@@ -79,10 +83,10 @@ In the `Restore the application` step, specify the target platform to ensure tha
 ```yaml
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /p:RuntimeIdentifier=$env:RuntimeIdentifier
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:TargetPlatform
       env:
         Configuration: ${{ matrix.configuration }}
-        RuntimeIdentifier: win-${{ matrix.targetplatform }}
+        TargetPlatform: ${{ matrix.targetplatform }}
 ```
 
 
@@ -91,7 +95,7 @@ In the `Restore the application` step, specify the target platform to ensure tha
 
 As we saw, we must provide a certificate for our installer for users to be able to use it to install our application. 
 
-In the copy of the solution on the lab computers, we used a dev certificate to sign our installer. A .pfx file being added to the WAPP project.  This file is used to sign the certificate when generating the installer. It contains two keys for the certificate: a private and a public one. It is important to keep the private key secret, so others do not use it to sign other (possibly malicious) software with it. We don't want our users that have trusted our certificate to be misled.
+In the copy of the solution on the lab computers, we used a dev certificate to sign our installer. A .pfx file was added to the WAP project.  This file is used to sign the certificate when generating the installer. It contains two keys for the certificate: a private and a public one. It is important to keep the private key secret, so others do not use it to sign other (possibly malicious) software with it. We don't want our users that have trusted our certificate to be misled.
 
 > The `.pfx` file in the installer project did not make it onto the GitHub repo. Why do you think that is? What prevented it from being committed?
 
@@ -106,7 +110,8 @@ We will encode the contents of the `.pfx` file so that it is not in plain text .
 We will then add it to GitHub as a **GitHub secret**: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
 
 <p style="background:yellow"><b>MILESTONE 8 work: </b>
-     Follow the instructions to ENCODE the Windows Application Packaging project's .pfx file and ADD it to your GitHub repo as a secret: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository.</p>
+     Follow the instructions to ENCODE the Windows Application Packaging project's .pfx. Then, add the file to your GitHub repo as a secret: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository.</p>
+
 
 To sign your installer, GitHub will also need the password you used to create your certificate. This password should also be kept secret!
 
@@ -121,7 +126,7 @@ In the GitHub Actions script, the encoded version of the .pfx file will be decod
 
 ##### Add a step to decode the .pfx file where the script is run
 
-Uncomment the `Decode the pfx` step in the `dotnet-desktop.yml` script:
+Make sure the `Decode the pfx` step is not commented out:
 
 ```yaml
     # Decode the base 64 encoded pfx and save the Signing_Certificate
@@ -129,7 +134,7 @@ Uncomment the `Decode the pfx` step in the `dotnet-desktop.yml` script:
       run: |
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
         $currentDirectory = Get-Location
-        $certificatePath = Join-Path -Path $currentDirectory -ChildPath $env:Wap_Project_Directory -AdditionalChildPath $env:SigningCertificate
+        $certificatePath = Join-Path -Path $currentDirectory -ChildPath $env:Wap_Project_Directory -AdditionalChildPath GitHubActionsWorkflow.pfx
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 ```
 
@@ -137,7 +142,7 @@ Uncomment the `Decode the pfx` step in the `dotnet-desktop.yml` script:
 
 Commit the changed script. Go to the Actions tab to check the status of the build run.
 
-It failed! We did not set the env:Wap_Project_Directory. 
+It failed! We did not set the env:Wap_Project_Directory used in the decode step.. 
 
 
 
@@ -154,15 +159,16 @@ Wap_Project_Path: your-wap-project-path
 
 #### Build the installer
 
-Last time, we set the `Create the app package` step to only build the WPF app. Now, we have an installer. Change the build step to build the installer, specifying that we are building a SideLoadOnly installer (not one to be published to the Microsoft store). For this step, we are also specifying where the decoded .pfx file can be found and the password so that our installer can be properly signed: 
+Last time, we set the `Create the app package` step to only build the WPF app. Now, we have an installer. **Change** the build step to build the installer, specifying that we are building a SideLoadOnly installer (not one to be published to the Microsoft store). For this step, we are also specifying where the decoded .pfx file can be found and the password so that our installer can be properly signed: 
 
 ```
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
-      run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:TargetPlatform /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
+      run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
       env:
+        AppxBundle: Never
         Appx_Package_Build_Mode: SideLoadOnly
-        Configuration: Release
+        Configuration: ${{ matrix.configuration }}
         TargetPlatform: ${{ matrix.targetplatform }}
 ```
 
@@ -191,8 +197,8 @@ On a successful run of your workflow, we want to end up with an installer that i
 
 When the build succeeds, the msix installer bundle will be available by clicking on the run in Actions:
 
+![image-20230509103028088](./Images/GitHub_Actions_Artifacts.PNG)
 
 
-![build artifact](./Images/BuildArtifact.png)
 
 You can click on the artifact to download it. Run the installer to verify that your application, built up and tested on an independent machine looks right!
