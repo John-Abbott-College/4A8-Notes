@@ -167,8 +167,8 @@ Last time, we set the `Create the app package` step to only build the WPF app. N
       run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
       env:
         AppxBundle: Never
-        Appx_Package_Build_Mode: SideLoadOnly
-        Configuration: ${{ matrix.configuration }}
+        BuildMode: SideLoadOnly
+        Configuration: ${{ matrix.Configuration }}
         TargetPlatform: ${{ matrix.targetplatform }}
 ```
 
