@@ -68,4 +68,7 @@
 **Installer, Icons**
 - [31_Installer.md](/31_Installer_WAP.md)
 
+**New User Controls and Charts**
+- [32_Charts.md](/32_Charts.md)
+
 
