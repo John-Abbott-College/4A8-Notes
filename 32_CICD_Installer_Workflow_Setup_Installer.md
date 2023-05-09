@@ -86,6 +86,7 @@ In the `Restore the application` step, specify the target platform to ensure tha
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:TargetPlatform
       env:
         Configuration: ${{ matrix.configuration }}
+        RuntimeIdentifier: win-${{ matrix.targetplatform }}
         TargetPlatform: ${{ matrix.targetplatform }}
 ```
 
@@ -133,8 +134,7 @@ Make sure the `Decode the pfx` step is not commented out:
     - name: Decode the pfx
       run: |
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
-        $currentDirectory = Get-Location
-        $certificatePath = Join-Path -Path $currentDirectory -ChildPath $env:Wap_Project_Directory -AdditionalChildPath GitHubActionsWorkflow.pfx
+        $certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath GitHubActionsWorkflow.pfx
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 ```
 
@@ -142,7 +142,7 @@ Make sure the `Decode the pfx` step is not commented out:
 
 Commit the changed script. Go to the Actions tab to check the status of the build run.
 
-It failed! We did not set the env:Wap_Project_Directory used in the decode step.. 
+It failed! We did not set the env:Wap_Project_Directory used in the decode step. 
 
 
 
