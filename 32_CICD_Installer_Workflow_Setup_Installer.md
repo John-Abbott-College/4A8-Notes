@@ -195,6 +195,8 @@ On a successful run of your workflow, we want to end up with an installer that i
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
 
+
+
 When the build succeeds, the msix installer bundle will be available by clicking on the run in Actions:
 
 ![image-20230509103028088](./Images/GitHub_Actions_Artifacts.PNG)
