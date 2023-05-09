@@ -68,4 +68,9 @@
 **Installer, Icons**
 - [31_Installer.md](/31_Installer_WAP.md)
 
+**CI/CD Installer**
+- [32_CICD_Installer_Workflow_Setup_Installer](/32_CICD_Installer_Workflow_Setup_Installer.md)
+
+
+
 

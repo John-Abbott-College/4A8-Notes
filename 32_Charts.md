@@ -1,5 +1,7 @@
 # **Custom user control**
 
+***NOTE: Although the notes listed below should work, I (Sandy) got tied up in knots trying to get it to work, even though it is my own code.  I gave up.  If you want to try charts as your extra feature... go for it***
+
 It could be convenient to group controls into your own user control. 
 
 To create a custom User Control, in VS, right-click the project and select Add-> New Item. Search for ‘User Control’. Select the WPF User Control type:
