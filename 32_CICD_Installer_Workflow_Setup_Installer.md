@@ -64,19 +64,21 @@ We specified the Release configurations for both x86 and x64 architectures. To s
 
 
 
-#### Specify the unit test project to test
+#### Remove the dotnet test step
 
-Modify the `dotnet test` step to specify the unit test project. `dotnet` is not filtering out the installer project when looking for unit test projects to run in the solution. We could modify the installer project's `.csproj` file to mark it not a test project. The alternative we will use, is to explicitly run `dotnet test` on our one test project:
-
-Modify the `Execute unit tests` step:
+Remove the `Execute unit tests` step. We will run the unit tests using another command-line tool, vstest. Many of you will be unable to use dotnet test as it is unable to deal with the the addition of the Windows Forms assembly many of you added in order to use the Folder picker dialog.
 
 ```yaml
     # Execute all unit tests in the solution
-    - name: Execute unit tests
-      run: dotnet test $env:Test_Project_Path
+    #- name: Execute unit tests
+    #  run: dotnet test
 ```
 
+We will run vstest on the build up test project dll. We will therefore have to restore and build the solution first. 
 
+
+
+#### Restore the application
 
 In the `Restore the application` step, specify the target platform to ensure that the proper x64 packages are restored:
 
@@ -181,6 +183,30 @@ We do not want our secret .pfx file hanging around on the setup GitHub used to r
     # Remove the pfx
     - name: Remove the pfx
       run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
+
+
+
+#### Run the unit tests on the test project dll
+
+With the solution all built up, we could now run the unit tests on the test dll. We will first bring in a script to get the vstest command-line tool:
+
+
+
+        # Added - Setup vstest
+        - name: Setup vstest
+          uses: darenm/Setup-VSTest@v1
+
+
+
+Then we will run the tests on the dll:
+
+        # Added - Run unit tests
+        - name: Execute unit tests
+          run: vstest.console.exe $env:Test_DLL
+
+Notice that this last step uses an environment variable for the dll. Add an environment variable to the path and name of the dll that was built up. 
+
+    Test_DLL: MyTestProjectName\bin\${{ matrix.targetPlatform }}\${{ matrix.configuration }}\net6.0-windows\MyTestProjectName.dll
 
 
 
