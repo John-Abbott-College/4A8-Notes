@@ -13,7 +13,7 @@ namespace Calendar
 {
     // ====================================================================
     // CLASS: Category
-    //        - An individual category for budget program
+    //        - An individual category for Calendar program
     //        - Valid category types: Income, Event, Credit, Saving
     // ====================================================================
     public class Category
@@ -34,7 +34,7 @@ namespace Calendar
         // ====================================================================
         // Constructor
         // ====================================================================
-        public Category(int id, String description, CategoryType type = CategoryType.Expense)
+        public Category(int id, String description, CategoryType type = CategoryType.Event)
         {
             this.Id = id;
             this.Description = description;

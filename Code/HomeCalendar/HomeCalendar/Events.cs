@@ -14,8 +14,8 @@ using System.Xml;
 namespace Calendar
 {
     // ====================================================================
-    // CLASS: expenses
-    //        - A collection of expense items,
+    // CLASS: Events
+    //        - A collection of Event items,
     //        - Read / write to file
     //        - etc
     // ====================================================================
@@ -42,7 +42,7 @@ namespace Calendar
         {
 
             // ---------------------------------------------------------------
-            // reading from file resets all the current expenses,
+            // reading from file resets all the current Events,
             // so clear out any old definitions
             // ---------------------------------------------------------------
             _Events.Clear();
@@ -60,7 +60,7 @@ namespace Calendar
             filepath = CalendarFiles.VerifyReadFromFileName(filepath, DefaultFileName);
 
             // ---------------------------------------------------------------
-            // read the expenses from the xml file
+            // read the Events from the xml file
             // ---------------------------------------------------------------
             _ReadXMLFile(filepath);
 
@@ -113,7 +113,7 @@ namespace Calendar
 
 
         // ====================================================================
-        // Add expense
+        // Add Event
         // ====================================================================
         private void Add(Event exp)
         {
@@ -124,7 +124,7 @@ namespace Calendar
         {
             int new_id = 1;
 
-            // if we already have expenses, set ID to max
+            // if we already have Events, set ID to max
             if (_Events.Count > 0)
             {
                 new_id = (from e in _Events select e.Id).Max();
@@ -136,7 +136,7 @@ namespace Calendar
         }
 
         // ====================================================================
-        // Delete expense
+        // Delete Event
         // ====================================================================
         public void Delete(int Id)
         {
@@ -146,16 +146,16 @@ namespace Calendar
         }
 
         // ====================================================================
-        // Return list of expenses
+        // Return list of Events
         // Note:  make new copy of list, so user cannot modify what is part of
         //        this instance
         // ====================================================================
         public List<Event> List()
         {
             List<Event> newList = new List<Event>();
-            foreach (Event expense in _Events)
+            foreach (Event Event in _Events)
             {
-                newList.Add(new Event(expense));
+                newList.Add(new Event(Event));
             }
             return newList;
         }
@@ -174,17 +174,17 @@ namespace Calendar
                 doc.Load(filepath);
 
                 // Loop over each Event
-                foreach (XmlNode expense in doc.DocumentElement.ChildNodes)
+                foreach (XmlNode Event in doc.DocumentElement.ChildNodes)
                 {
-                    // set default expense parameters
-                    int id = int.Parse((((XmlElement)expense).GetAttributeNode("ID")).InnerText);
+                    // set default Event parameters
+                    int id = int.Parse((((XmlElement)Event).GetAttributeNode("ID")).InnerText);
                     String description = "";
                     DateTime date = DateTime.Parse("2000-01-01");
                     int category = 0;
-                    Double amount = 0.0;
+                    Double DurationInMinutes = 0.0;
 
-                    // get expense parameters
-                    foreach (XmlNode info in expense.ChildNodes)
+                    // get Event parameters
+                    foreach (XmlNode info in Event.ChildNodes)
                     {
                         switch (info.Name)
                         {
@@ -192,7 +192,7 @@ namespace Calendar
                                 date = DateTime.Parse(info.InnerText);
                                 break;
                             case "DurationInMinutes":
-                                amount = Double.Parse(info.InnerText);
+                                DurationInMinutes = Double.Parse(info.InnerText);
                                 break;
                             case "Items":
                                 description = info.InnerText;
@@ -203,8 +203,8 @@ namespace Calendar
                         }
                     }
 
-                    // have all info for expense, so create new one
-                    this.Add(new Event(id, date, category, amount, description));
+                    // have all info for Event, so create new one
+                    this.Add(new Event(id, date, category, DurationInMinutes, description));
 
                 }
 
@@ -227,7 +227,7 @@ namespace Calendar
             // ---------------------------------------------------------------
             try
             {
-                // create top level element of expenses
+                // create top level element of Events
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml("<Events></Events>");
 
@@ -241,7 +241,7 @@ namespace Calendar
                     ele.SetAttributeNode(attr);
                     doc.DocumentElement.AppendChild(ele);
 
-                    // child attributes (date, description, amount, category)
+                    // child attributes (date, description, DurationInMinutes, category)
                     XmlElement d = doc.CreateElement("StartDateTime");
                     XmlText dText = doc.CreateTextNode(exp.StartDateTime.ToString());
                     ele.AppendChild(d);

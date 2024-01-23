@@ -1,0 +1,5 @@
+C:\Users\helen.katalifos\Documents\GitHub\4A8-Notes\Code\HomeCalendar\TestHomeCalendar\obj\Debug\net6.0\TestHomeCalendar.csproj.AssemblyReference.cache
+C:\Users\helen.katalifos\Documents\GitHub\4A8-Notes\Code\HomeCalendar\TestHomeCalendar\obj\Debug\net6.0\TestHomeCalendar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\helen.katalifos\Documents\GitHub\4A8-Notes\Code\HomeCalendar\TestHomeCalendar\obj\Debug\net6.0\TestHomeCalendar.AssemblyInfoInputs.cache
+C:\Users\helen.katalifos\Documents\GitHub\4A8-Notes\Code\HomeCalendar\TestHomeCalendar\obj\Debug\net6.0\TestHomeCalendar.AssemblyInfo.cs
+C:\Users\helen.katalifos\Documents\GitHub\4A8-Notes\Code\HomeCalendar\TestHomeCalendar\obj\Debug\net6.0\TestHomeCalendar.csproj.CoreCompileInputs.cache

@@ -135,20 +135,20 @@ namespace Calendar
             // ---------------------------------------------------------------
             // Add Defaults
             // ---------------------------------------------------------------
-            Add("Utilities", Category.CategoryType.Expense);
-            Add("Rent", Category.CategoryType.Expense);
-            Add("Food", Category.CategoryType.Expense);
-            Add("Entertainment", Category.CategoryType.Expense);
-            Add("Education", Category.CategoryType.Expense);
-            Add("Miscellaneous", Category.CategoryType.Expense);
-            Add("Medical Events", Category.CategoryType.Expense);
-            Add("Vacation", Category.CategoryType.Expense);
+            Add("Utilities", Category.CategoryType.Event);
+            Add("Rent", Category.CategoryType.Event);
+            Add("Food", Category.CategoryType.Event);
+            Add("Entertainment", Category.CategoryType.Event);
+            Add("Education", Category.CategoryType.Event);
+            Add("Miscellaneous", Category.CategoryType.Event);
+            Add("Medical Events", Category.CategoryType.Event);
+            Add("Vacation", Category.CategoryType.Event);
             Add("Credit Card", Category.CategoryType.Credit);
-            Add("Clothes", Category.CategoryType.Expense);
-            Add("Gifts", Category.CategoryType.Expense);
-            Add("Insurance", Category.CategoryType.Expense);
-            Add("Transportation", Category.CategoryType.Expense);
-            Add("Eating Out", Category.CategoryType.Expense);
+            Add("Clothes", Category.CategoryType.Event);
+            Add("Gifts", Category.CategoryType.Event);
+            Add("Insurance", Category.CategoryType.Event);
+            Add("Transportation", Category.CategoryType.Event);
+            Add("Eating Out", Category.CategoryType.Event);
             Add("Savings", Category.CategoryType.Savings);
             Add("Income", Category.CategoryType.Income);
 
