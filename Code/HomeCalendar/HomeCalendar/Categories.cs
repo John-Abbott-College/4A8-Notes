@@ -141,15 +141,9 @@ namespace Calendar
             Add("Medical", Category.CategoryType.Event);
             Add("Sleep", Category.CategoryType.Event);
             Add("Vacation", Category.CategoryType.AllDayEvent);
-            Add("Credit Card", Category.CategoryType.Credit);
-            Add("Clothes", Category.CategoryType.Event);
-            Add("Gifts", Category.CategoryType.Event);
-            Add("Insurance", Category.CategoryType.Event);
-            Add("Transportation", Category.CategoryType.Event);
-            Add("Eating Out", Category.CategoryType.Event);
-            Add("Savings", Category.CategoryType.Savings);
-            Add("Income", Category.CategoryType.Income);
-
+            Add("Travel days", Category.CategoryType.AllDayEvent);
+            Add("Canadian Holidays", Category.CategoryType.Holiday);
+            Add("US Holidays", Category.CategoryType.Holiday);
         }
 
         // ====================================================================

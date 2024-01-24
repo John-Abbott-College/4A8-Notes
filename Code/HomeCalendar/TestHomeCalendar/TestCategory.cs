@@ -50,13 +50,13 @@ namespace CalendarCodeTests
         // ========================================================================
 
         [Fact]
-        public void CategoryObject_New_TypeIncome()
+        public void CategoryObject_New_TypeHoliday()
         {
 
             // Arrange
             string descr = "Work";
             int id = 42;
-            Category.CategoryType type = Category.CategoryType.Income;
+            Category.CategoryType type = Category.CategoryType.Holiday;
 
             // Act
             Category category = new Category(id, descr, type);
