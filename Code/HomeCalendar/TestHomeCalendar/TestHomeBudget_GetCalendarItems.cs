@@ -21,7 +21,7 @@ namespace CalendarCodeTests
             // Arrange
             string inFile = GetSolutionDir() + "\\" + testInputFile;
             HomeCalendar homeCalendar = new HomeCalendar(inFile);
-            List<Event> listEvents = homeCalendar.Events.List();
+            List<Event> listEvents = homeCalendar.events.List();
             List<Category> listCategories = homeCalendar.categories.List();
 
             // Act
@@ -36,7 +36,7 @@ namespace CalendarCodeTests
                 Assert.Equal(CalendarItem.Category, category.Description);
                 Assert.Equal(CalendarItem.CategoryID, Event.Category);
                 Assert.Equal(CalendarItem.DurationInMinutes, 0 - Event.DurationInMinutes);
-                Assert.Equal(CalendarItem.ShortDescription, Event.Description);
+                Assert.Equal(CalendarItem.ShortDescription, Event.Details);
             }
        }
 
@@ -55,7 +55,7 @@ namespace CalendarCodeTests
             foreach (CalendarItem CalendarItem in CalendarItems)
             {
                 balance = balance + CalendarItem.DurationInMinutes;
-                Assert.Equal(balance, CalendarItem.Balance);
+                Assert.Equal(balance, CalendarItem.BusyTime);
             }
 
         }
@@ -84,7 +84,7 @@ namespace CalendarCodeTests
                 Assert.Equal(CalendarItem.Category, category.Description);
                 Assert.Equal(CalendarItem.CategoryID, Event.Category);
                 Assert.Equal(CalendarItem.DurationInMinutes, 0 - Event.DurationInMinutes);
-                Assert.Equal(CalendarItem.ShortDescription, Event.Description);
+                Assert.Equal(CalendarItem.ShortDescription, Event.Details);
             }
         }
 
@@ -111,7 +111,7 @@ namespace CalendarCodeTests
                 Assert.Equal(CalendarItem.Category, category.Description);
                 Assert.Equal(CalendarItem.CategoryID, Event.Category);
                 Assert.Equal(CalendarItem.DurationInMinutes, 0 - Event.DurationInMinutes);
-                Assert.Equal(CalendarItem.ShortDescription, Event.Description);
+                Assert.Equal(CalendarItem.ShortDescription, Event.Details);
             }
         }
 
@@ -128,7 +128,7 @@ namespace CalendarCodeTests
 
             // Act
             List<CalendarItem> CalendarItems = homeCalendar.GetCalendarItems(null, null,  true, 9);
-            double total = CalendarItems[CalendarItems.Count-1].Balance;
+            double total = CalendarItems[CalendarItems.Count-1].BusyTime;
             
 
             // Assert
@@ -158,7 +158,7 @@ namespace CalendarCodeTests
                 Assert.Equal(CalendarItem.Category, category.Description);
                 Assert.Equal(CalendarItem.CategoryID, Event.Category);
                 Assert.Equal(CalendarItem.DurationInMinutes, 0 - Event.DurationInMinutes);
-                Assert.Equal(CalendarItem.ShortDescription, Event.Description);
+                Assert.Equal(CalendarItem.ShortDescription, Event.Details);
             }
         }
 

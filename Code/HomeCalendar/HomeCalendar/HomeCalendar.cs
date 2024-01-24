@@ -269,12 +269,12 @@ namespace Calendar
             // -----------------------------------------------------------------------
             // get all items first
             // -----------------------------------------------------------------------
-            List<CalendarItem> items = GetCalendarItems(Start, End, FilterFlag, CategoryID);
+            List<CalendarItem> filteredItems = GetCalendarItems(Start, End, FilterFlag, CategoryID);
 
             // -----------------------------------------------------------------------
             // Group by Category
             // -----------------------------------------------------------------------
-            var GroupedByCategory = items.GroupBy(c => c.Category);
+            var GroupedByCategory = filteredItems.GroupBy(c => c.Category);
 
             // -----------------------------------------------------------------------
             // create new list
@@ -284,18 +284,18 @@ namespace Calendar
             {
                 // calculate totalBusyTime for this category, and create list of items
                 double total = 0;
-                var details = new List<CalendarItem>();
+                var items = new List<CalendarItem>();
                 foreach (var item in CategoryGroup)
                 {
                     total = total + item.DurationInMinutes;
-                    details.Add(item);
+                    items.Add(item);
                 }
 
                 // Add new CalendarItemsByCategory to our list
                 summary.Add(new CalendarItemsByCategory
                 {
                     Category = CategoryGroup.Key,
-                    Items = details,
+                    Items = items,
                     TotalBusyTime = total
                 });
             }

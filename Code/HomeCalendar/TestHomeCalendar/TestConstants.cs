@@ -73,10 +73,10 @@ namespace CalendarCodeTests
         public static string CategoriesOutputTestFile = "test_output.cats";
 
         public static int numberOfEventsInFile = 6;
-        public static String testEventsInputFile = "test_Events.exps";
+        public static String testEventsInputFile = "test_events.evts";
         public static int maxIDInEventFile = 7;
         public static Event firstEventInFile { get { return Event1; } }
-        public static string EventOutputTestFile = "test_output.exps";
+        public static string EventOutputTestFile = "test_output.evts";
 
         public static string testCalendarFile = "test.Calendar";
         public static string outputTestCalendarFile = "output_test.Calendar";

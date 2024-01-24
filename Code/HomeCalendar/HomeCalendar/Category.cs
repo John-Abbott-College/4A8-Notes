@@ -14,7 +14,7 @@ namespace Calendar
     // ====================================================================
     // CLASS: Category
     //        - An individual category for Calendar program
-    //        - Valid category types: Income, Event, Credit, Saving
+    //        - Valid category types: Event,AllDayEvent,Holiday
     // ====================================================================
     public class Category
     {
@@ -26,9 +26,9 @@ namespace Calendar
         public CategoryType Type { get; set; }
         public enum CategoryType
         {
-            Personal,
-            Work,
-            School,
+            Event,
+            AllDayEvent,
+            Holiday,
         };
 
         // ====================================================================

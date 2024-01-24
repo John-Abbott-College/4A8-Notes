@@ -205,8 +205,8 @@ namespace Calendar
 
                 foreach (XmlNode category in doc.DocumentElement.ChildNodes)
                 {
-                    String? id = (((XmlElement)category).GetAttributeNode("ID")).InnerText;
-                    String? typestring = (((XmlElement)category).GetAttributeNode("type")).InnerText;
+                    String id = (((XmlElement)category).GetAttributeNode("ID")).InnerText;
+                    String typestring = (((XmlElement)category).GetAttributeNode("type")).InnerText;
                     String desc = ((XmlElement)category).InnerText;
 
                     Category.CategoryType type;

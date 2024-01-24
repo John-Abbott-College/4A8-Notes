@@ -65,7 +65,7 @@ namespace CalendarCodeTests
             Assert.Equal(numberOfEventsInFile, list.Count);
             Assert.Equal(firstEventInFile.Id, firstEvent.Id);
             Assert.Equal(firstEventInFile.DurationInMinutes, firstEvent.DurationInMinutes);
-            Assert.Equal(firstEventInFile.Description, firstEvent.Description);
+            Assert.Equal(firstEventInFile.Details, firstEvent.Details);
             Assert.Equal(firstEventInFile.Category, firstEvent.Category);
 
             String fileDir = Path.GetFullPath(Path.Combine(Events.DirName, ".\\"));
@@ -241,7 +241,7 @@ namespace CalendarCodeTests
             // Assert
             Assert.Equal(beforeSaving.Id, afterSaving.Id);
             Assert.Equal(beforeSaving.Category, afterSaving.Category);
-            Assert.Equal(beforeSaving.Description, afterSaving.Description);
+            Assert.Equal(beforeSaving.Details, afterSaving.Details);
             Assert.Equal(beforeSaving.DurationInMinutes, afterSaving.DurationInMinutes);
 
         }

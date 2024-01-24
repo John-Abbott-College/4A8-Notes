@@ -30,7 +30,7 @@ namespace CalendarCodeTests
             Assert.True(typeof(HomeCalendar).GetProperty("categories").CanWrite == false, "categories read only");
             Assert.True(typeof(HomeCalendar).GetProperty("Events").CanWrite == false, "Events read only");
 
-            Assert.Empty(homeCalendar.Events.List());
+            Assert.Empty(homeCalendar.events.List());
             Assert.NotEmpty(homeCalendar.categories.List());
         }
 
@@ -49,7 +49,7 @@ namespace CalendarCodeTests
 
             // Assert 
             Assert.IsType<HomeCalendar>(homeCalendar);
-            Assert.Equal(numEvents, homeCalendar.Events.List().Count);
+            Assert.Equal(numEvents, homeCalendar.events.List().Count);
             Assert.Equal(numCategories, homeCalendar.categories.List().Count);
 
         }
@@ -69,14 +69,14 @@ namespace CalendarCodeTests
 
             // Act
             homeCalendar.ReadFromFile(file);
-            Event firstEvent = homeCalendar.Events.List()[0];
+            Event firstEvent = homeCalendar.events.List()[0];
             Category firstCategory = homeCalendar.categories.List()[0];
 
 
             // Assert 
-            Assert.Equal(numEvents, homeCalendar.Events.List().Count);
+            Assert.Equal(numEvents, homeCalendar.events.List().Count);
             Assert.Equal(numCategories, homeCalendar.categories.List().Count);
-            Assert.Equal(firstEventInFile.Description, firstEvent.Description);
+            Assert.Equal(firstEventInFile.Details, firstEvent.Details);
             Assert.Equal(firstCategoryInFile.Description, firstCategory.Description);
         }
 
@@ -97,7 +97,7 @@ namespace CalendarCodeTests
             String file = Path.GetFileNameWithoutExtension(outputFile);
             String ext = Path.GetExtension(outputFile);
             String output_Calendar = outputFile;
-            String output_Events = Path.Combine(path, file + "_Events.exps");
+            String output_Events = Path.Combine(path, file + "_events.evts");
             String output_categories = Path.Combine(path, file + "_categories.cats");
 
             File.Delete(output_Calendar);
@@ -132,7 +132,7 @@ namespace CalendarCodeTests
             String file = Path.GetFileNameWithoutExtension(outputFile);
             String ext = Path.GetExtension(outputFile);
             String output_Calendar = outputFile;
-            String output_Events = Path.Combine(path, file + "_Events.exps");
+            String output_Events = Path.Combine(path, file + "_events.evts");
             String output_categories = Path.Combine(path, file + "_categories.cats");
             string input_Events = Path.Combine(GetSolutionDir(), TestConstants.testEventsInputFile);
             string input_categories = Path.Combine(GetSolutionDir(), TestConstants.testCategoriesInputFile);
@@ -152,7 +152,7 @@ namespace CalendarCodeTests
             string[] contents = File.ReadAllLines(output_Calendar);
             Assert.True(contents.Length==2);
             Assert.True(contents[0] == file + "_categories.cats", "categorie file " + contents[0]);
-            Assert.True(contents[1] == file + "_Events.exps", "Events file " + contents[1]);
+            Assert.True(contents[1] == file + "_events.evts", "Events file " + contents[1]);
 
             Assert.True(File.Exists(output_Calendar));
             Assert.True(FileSameSize(input_categories, output_categories),
