@@ -20,8 +20,8 @@ namespace Calendar
 
     public class HomeCalendar
     {
-        private string _FileName;
-        private string _DirName;
+        private string? _FileName;
+        private string? _DirName;
         private Categories _categories;
         private Events _events;
 
@@ -30,9 +30,9 @@ namespace Calendar
         // ===================================================================
 
         // Properties (location of files etc)
-        public String FileName { get { return _FileName; } }
-        public String DirName { get { return _DirName; } }
-        public String PathName
+        public String? FileName { get { return _FileName; } }
+        public String? DirName { get { return _DirName; } }
+        public String? PathName
         {
             get
             {
@@ -75,7 +75,7 @@ namespace Calendar
         // Read
         // Throws Exception if any problem reading this file
         // ---------------------------------------------------------------
-        public void ReadFromFile(String calendarFileName)
+        public void ReadFromFile(String? calendarFileName)
         {
             // ---------------------------------------------------------------
             // read the calendar file and process
@@ -91,7 +91,7 @@ namespace Calendar
                 // ----------------------------------------------------------------
                 // Save information about the calendar file
                 // ----------------------------------------------------------------
-                string folder = Path.GetDirectoryName(calendarFileName);
+                string? folder = Path.GetDirectoryName(calendarFileName);
                 _FileName = Path.GetFileName(calendarFileName);
 
                 // read the events and categories from their respective files
@@ -136,7 +136,7 @@ namespace Calendar
             // ---------------------------------------------------------------
             filepath = CalendarFiles.VerifyWriteToFileName(filepath, "");
 
-            String path = Path.GetDirectoryName(Path.GetFullPath(filepath));
+            String? path = Path.GetDirectoryName(Path.GetFullPath(filepath));
             String file = Path.GetFileNameWithoutExtension(filepath);
             String ext = Path.GetExtension(filepath);
 

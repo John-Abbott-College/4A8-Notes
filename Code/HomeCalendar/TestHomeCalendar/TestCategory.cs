@@ -13,9 +13,9 @@ namespace CalendarCodeTests
         {
 
             // Arrange
-            string descr = "Clothing";
+            string descr = "App Dev I";
             int id = 42;
-            Category.CategoryType type = Category.CategoryType.Credit;
+            Category.CategoryType type = Category.CategoryType.Event;
 
             // Act
             Category category = new Category(id, descr, type);
@@ -88,13 +88,13 @@ namespace CalendarCodeTests
         // ========================================================================
 
         [Fact]
-        public void CategoryObject_New_TypeCredit()
+        public void CategoryObject_New_TypeEvent()
         {
 
             // Arrange
-            string descr = "MasterCard";
+            string descr = "Brush teeth";
             int id = 42;
-            Category.CategoryType type = Category.CategoryType.Credit;
+            Category.CategoryType type = Category.CategoryType.Event;
 
             // Act
             Category category = new Category(id, descr, type);
@@ -107,13 +107,13 @@ namespace CalendarCodeTests
         // ========================================================================
 
         [Fact]
-        public void CategoryObject_New_TypeSavings()
+        public void CategoryObject_New_TypeAllDayEvent()
         {
 
             // Arrange
-            string descr = "For House";
+            string descr = "Wellness day";
             int id = 42;
-            Category.CategoryType type = Category.CategoryType.Savings;
+            Category.CategoryType type = Category.CategoryType.AllDayEvent;
 
             // Act
             Category category = new Category(id, descr, type);
@@ -140,12 +140,12 @@ namespace CalendarCodeTests
             // Act
             category.Id = newID;
             category.Description = newDescr;
-            category.Type = Category.CategoryType.Savings;
+            category.Type = Category.CategoryType.Event;
 
             // Assert 
             Assert.Equal(newID, category.Id);
             Assert.Equal(newDescr, category.Description);
-            Assert.Equal(Category.CategoryType.Savings, category.Type);
+            Assert.Equal(Category.CategoryType.Event, category.Type);
 
         }
 

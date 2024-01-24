@@ -131,8 +131,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByMonth
             {
                 Month = "2018/01",
-                Details = CalendarItems,
-                Total = CalendarItem1.DurationInMinutes + CalendarItem2.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem1.DurationInMinutes + CalendarItem2.DurationInMinutes
             });
             return list;
         }
@@ -147,8 +147,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByMonth
             {
                 Month = "2018/01",
-                Details = CalendarItems,
-                Total = CalendarItem2.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem2.DurationInMinutes
             });
             return list;
         }
@@ -175,8 +175,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByCategory
             {
                 Category = "Clothes",
-                Details = CalendarItems,
-                Total = CalendarItem1.DurationInMinutes+ CalendarItem3.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem1.DurationInMinutes+ CalendarItem3.DurationInMinutes
             });
             return list;
         }
@@ -191,8 +191,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByCategory
             {
                 Category = "Credit Card",
-                Details = CalendarItems,
-                Total = CalendarItem2.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem2.DurationInMinutes
             });
             return list;
         }
@@ -207,8 +207,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByCategory
             {
                 Category = "Clothes",
-                Details = CalendarItems,
-                Total = CalendarItem1.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem1.DurationInMinutes
             });
 
 
@@ -218,8 +218,8 @@ namespace CalendarCodeTests
             list.Add(new CalendarItemsByCategory
             {
                 Category = "Credit Card",
-                Details = CalendarItems,
-                Total = CalendarItem2.DurationInMinutes
+                Items = CalendarItems,
+                TotalBusyTime = CalendarItem2.DurationInMinutes
             });
             return list;
         }

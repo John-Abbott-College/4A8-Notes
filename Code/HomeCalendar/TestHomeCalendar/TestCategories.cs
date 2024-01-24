@@ -89,7 +89,7 @@ namespace CalendarCodeTests
         // ========================================================================
 
         [Fact]
-        public void Categories_TypeSavingsReadCorrectlyFromFile()
+        public void Categories_TypeAllDayEventReadCorrectlyFromFile()
         {
             // Bug: failed test where data was written to another file, category Savings was changed
             // checking here to see if it is read correctly in an effort to debug
@@ -104,7 +104,7 @@ namespace CalendarCodeTests
             Category category = categories.GetCategoryFromId(IDWithSaveType);
 
             // Assert
-            Assert.Equal(Category.CategoryType.Savings, category.Type);
+            Assert.Equal(Category.CategoryType.AllDayEvent, category.Type);
 
         }
 
@@ -138,7 +138,7 @@ namespace CalendarCodeTests
             List<Category> list = categories.List();
 
             // Act
-            list[0].Type = Category.CategoryType.Credit;
+            list[0].Type = Category.CategoryType.Event;
 
             // Assert
             Assert.NotEqual(list[0].Type, categories.List()[0].Type);
@@ -155,7 +155,7 @@ namespace CalendarCodeTests
             Categories categories = new Categories();
             categories.ReadFromFile(dir + "\\" + testInputFile);
             string descr = "New Category";
-            Category.CategoryType type = Category.CategoryType.Income;
+            Category.CategoryType type = Category.CategoryType.Event;
 
             // Act
             categories.Add(descr,type);
@@ -319,7 +319,7 @@ namespace CalendarCodeTests
             categories.Delete(1);
             categories.Delete(2);
             categories.Delete(3);
-            categories.Add("Another one ", Category.CategoryType.Credit);
+            categories.Add("Another one ", Category.CategoryType.Event);
 
             //"just double check that initial conditions are correct");
             Assert.NotEqual(originalList.Count, categories.List().Count);

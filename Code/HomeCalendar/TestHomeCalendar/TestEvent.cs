@@ -27,9 +27,9 @@ namespace CalendarCodeTests
 
             Assert.Equal(id, Event.Id);
             Assert.Equal(DurationInMinutes, Event.DurationInMinutes);
-            Assert.Equal(descr, Event.Description);
+            Assert.Equal(descr, Event.Details);
             Assert.Equal(category, Event.Category);
-            Assert.Equal(now, Event.Date);
+            Assert.Equal(now, Event.StartDateTime);
         }
 
         // ========================================================================
@@ -54,9 +54,9 @@ namespace CalendarCodeTests
             Assert.Equal(id, Event.Id);
             Assert.NotEqual(DurationInMinutes, copy.DurationInMinutes);
             Assert.Equal(Event.DurationInMinutes + 15, copy.DurationInMinutes);
-            Assert.Equal(descr, Event.Description);
+            Assert.Equal(descr, Event.Details);
             Assert.Equal(category, Event.Category);
-            Assert.Equal(now, Event.Date);
+            Assert.Equal(now, Event.StartDateTime);
         }
 
 
@@ -82,13 +82,13 @@ namespace CalendarCodeTests
             // Act
             Event.DurationInMinutes = newDurationInMinutes;
             Event.Category = newCategory;
-            Event.Description = newDescr;
+            Event.Details = newDescr;
 
             // Assert 
             Assert.True(typeof(Event).GetProperty("Date").CanWrite == false);
             Assert.True(typeof(Event).GetProperty("Id").CanWrite == false);
             Assert.Equal(newDurationInMinutes, Event.DurationInMinutes);
-            Assert.Equal(newDescr, Event.Description);
+            Assert.Equal(newDescr, Event.Details);
             Assert.Equal(newCategory, Event.Category);
         }
 

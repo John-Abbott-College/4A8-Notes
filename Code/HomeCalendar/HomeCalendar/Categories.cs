@@ -21,14 +21,14 @@ namespace Calendar
     {
         private static String DefaultFileName = "calendarCategories.txt";
         private List<Category> _Categories = new List<Category>();
-        private string _FileName;
-        private string _DirName;
+        private string? _FileName;
+        private string? _DirName;
 
         // ====================================================================
         // Properties
         // ====================================================================
-        public String FileName { get { return _FileName; } }
-        public String DirName { get { return _DirName; } }
+        public String? FileName { get { return _FileName; } }
+        public String? DirName { get { return _DirName; } }
 
         // ====================================================================
         // Constructor
@@ -43,7 +43,7 @@ namespace Calendar
         // ====================================================================
         public Category GetCategoryFromId(int i)
         {
-            Category c = _Categories.Find(x => x.Id == i);
+            Category? c = _Categories.Find(x => x.Id == i);
             if (c == null)
             {
                 throw new Exception("Cannot find category with id " + i.ToString());
@@ -57,7 +57,7 @@ namespace Calendar
         // Throws System.IO.FileNotFoundException if file does not exist
         // Throws System.Exception if cannot read the file correctly (parsing XML)
         // ====================================================================
-        public void ReadFromFile(String filepath = null)
+        public void ReadFromFile(String? filepath = null)
         {
 
             // ---------------------------------------------------------------
@@ -89,7 +89,7 @@ namespace Calendar
         // save to a file
         // if filepath is not specified, read/save in AppData file
         // ====================================================================
-        public void SaveToFile(String filepath = null)
+        public void SaveToFile(String? filepath = null)
         {
             // ---------------------------------------------------------------
             // if file path not specified, set to last read file
@@ -135,14 +135,12 @@ namespace Calendar
             // ---------------------------------------------------------------
             // Add Defaults
             // ---------------------------------------------------------------
-            Add("Utilities", Category.CategoryType.Event);
-            Add("Rent", Category.CategoryType.Event);
-            Add("Food", Category.CategoryType.Event);
-            Add("Entertainment", Category.CategoryType.Event);
-            Add("Education", Category.CategoryType.Event);
-            Add("Miscellaneous", Category.CategoryType.Event);
-            Add("Medical Events", Category.CategoryType.Event);
-            Add("Vacation", Category.CategoryType.Event);
+            Add("School", Category.CategoryType.Event);
+            Add("Personal", Category.CategoryType.Event);
+            Add("VideoGames", Category.CategoryType.Event);
+            Add("Medical", Category.CategoryType.Event);
+            Add("Sleep", Category.CategoryType.Event);
+            Add("Vacation", Category.CategoryType.AllDayEvent);
             Add("Credit Card", Category.CategoryType.Credit);
             Add("Clothes", Category.CategoryType.Event);
             Add("Gifts", Category.CategoryType.Event);
@@ -213,24 +211,24 @@ namespace Calendar
 
                 foreach (XmlNode category in doc.DocumentElement.ChildNodes)
                 {
-                    String id = (((XmlElement)category).GetAttributeNode("ID")).InnerText;
-                    String typestring = (((XmlElement)category).GetAttributeNode("type")).InnerText;
+                    String? id = (((XmlElement)category).GetAttributeNode("ID")).InnerText;
+                    String? typestring = (((XmlElement)category).GetAttributeNode("type")).InnerText;
                     String desc = ((XmlElement)category).InnerText;
 
                     Category.CategoryType type;
                     switch (typestring.ToLower())
                     {
-                        case "personal":
-                            type = Category.CategoryType.Personal;
+                        case "event":
+                            type = Category.CategoryType.Event;
                             break;
-                        case "work":
-                            type = Category.CategoryType.Work;
+                        case "allday":
+                            type = Category.CategoryType.AllDayEvent;
                             break;
-                        case "school":
-                            type = Category.CategoryType.School;
+                        case "holiday":
+                            type = Category.CategoryType.Holiday;
                             break;
                         default:
-                            type = Category.CategoryType.Personal;
+                            type = Category.CategoryType.Event;
                             break;
                     }
                     this.Add(new Category(int.Parse(id), desc, type));

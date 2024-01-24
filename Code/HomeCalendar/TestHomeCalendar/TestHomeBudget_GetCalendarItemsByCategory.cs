@@ -126,11 +126,11 @@ namespace CalendarCodeTests
             // verify 1st record
             Assert.Equal(firstRecord.Category, firstRecordTest.Category);
             Assert.Equal(firstRecord.TotalBusyTime, firstRecordTest.TotalBusyTime);
-            Assert.Equal(firstRecord.Details.Count, firstRecordTest.Details.Count);
-            for (int record = 0; record < firstRecord.Details.Count; record++)
+            Assert.Equal(firstRecord.Items.Count, firstRecordTest.Items.Count);
+            for (int record = 0; record < firstRecord.Items.Count; record++)
             {
-                CalendarItem validItem = firstRecord.Details[record];
-                CalendarItem testItem = firstRecordTest.Details[record];
+                CalendarItem validItem = firstRecord.Items[record];
+                CalendarItem testItem = firstRecordTest.Items[record];
                 Assert.Equal(validItem.DurationInMinutes, testItem.DurationInMinutes);
                 Assert.Equal(validItem.CategoryID, testItem.CategoryID);
                 Assert.Equal(validItem.EventID, testItem.EventID);

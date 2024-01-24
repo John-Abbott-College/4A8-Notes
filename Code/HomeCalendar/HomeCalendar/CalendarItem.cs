@@ -21,8 +21,8 @@ namespace Calendar
         public int CategoryID { get; set; }
         public int EventID { get; set; }
         public DateTime StartDateTime { get; set; }
-        public String Category { get; set; }
-        public String ShortDescription { get; set; }
+        public String? Category { get; set; }
+        public String? ShortDescription { get; set; }
         public Double DurationInMinutes { get; set; }
         public Double BusyTime { get; set; }
 
@@ -30,16 +30,16 @@ namespace Calendar
 
     public class CalendarItemsByMonth
     {
-        public String Month { get; set; }
-        public List<CalendarItem> Items { get; set; }
+        public String? Month { get; set; }
+        public List<CalendarItem>? Items { get; set; }
         public Double TotalBusyTime { get; set; }
     }
 
 
     public class CalendarItemsByCategory
     {
-        public String Category { get; set; }
-        public List<CalendarItem> Items { get; set; }
+        public String? Category { get; set; }
+        public List<CalendarItem>? Items { get; set; }
         public Double TotalBusyTime { get; set; }
 
     }

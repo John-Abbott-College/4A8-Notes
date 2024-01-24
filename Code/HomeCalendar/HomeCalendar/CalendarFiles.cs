@@ -26,7 +26,7 @@ namespace Calendar
         // is it readable?
         // throws System.IO.FileNotFoundException if file does not exist
         // ====================================================================
-        public static String VerifyReadFromFileName(String FilePath, String DefaultFileName)
+        public static String VerifyReadFromFileName(String? FilePath, String DefaultFileName)
         {
 
             // ---------------------------------------------------------------
@@ -57,7 +57,7 @@ namespace Calendar
         // is it writable
         // ====================================================================
 
-        public static String VerifyWriteToFileName(String FilePath, String DefaultFileName)
+        public static String VerifyWriteToFileName(String? FilePath, String DefaultFileName)
         {
             // ---------------------------------------------------------------
             // if the directory for the path was not specified, then use standard application data
@@ -86,7 +86,7 @@ namespace Calendar
             // does directory where you want to save the file exist?
             // ... this is possible if the user is specifying the file path
             // ---------------------------------------------------------------
-            String folder = Path.GetDirectoryName(FilePath);
+            String? folder = Path.GetDirectoryName(FilePath);
             String delme = Path.GetFullPath(FilePath);
             if (!Directory.Exists(folder))
             {
