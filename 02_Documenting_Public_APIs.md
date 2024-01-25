@@ -4,7 +4,7 @@
 
 An application programming interface is a connection between computers or between computer programs. **It is a type of software interface, offering a service to other pieces of software.** A document or standard that describes how to build or use such a connection or interface is called an API specification. [Wikipedia](https://en.wikipedia.org/wiki/API)
 
-The *Home Budget* program will eventually be turned into an API, so that it can be used as a library when we create a GUI budget program.
+The *Home Calendar* program will eventually be turned into an API, so that it can be used as a library when we create a GUI budget program.
 
 ## Why Do We Need to Document Them? 
 
