@@ -65,7 +65,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
   * You must `use` the namespace of the code you want to test.
 
-  * Example: `using Budget;`
+  * Example: `using Calendar;`
 
 ## Writing a Test
 
