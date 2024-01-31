@@ -1,4 +1,4 @@
-# Create Test Files for a Project
+r# Create Test Files for a Project
 
 **Console (.NET)**
 
@@ -112,13 +112,13 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-* a Console .NET Framework project (call it 'Budget' to keep it simple).
+* a Console .NET Framework project (call it 'Calendar' to keep it simple).
 * Add all the necessary files (get them from LEA)
 * Create a new `Xunit` project (within the same solution)
-  * Don't forget to add the reference to the budget project
+  * Don't forget to add the reference to the calendar project
 * Add all the test files to the test project.
 
-> NOTE: For HomeBudget tests, there are additional test files which must also be included into the project. In other words, include all files.
+> NOTE: For HomeCalendar tests, there are additional test files which must also be included into the project. In other words, include all files.
 
 * Delete `unitTest1.cs`
 
@@ -144,9 +144,9 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-In our course, we will eventually be building a WPF (gui) app using the BudgetCode files, however…
+In our course, we will eventually be building a WPF (gui) app using the calendar code files, however…
 
 * Out of 60 tests, there are 4 failing tests! 
   * you will expected to debug, and fix before proceeding to make any modifications
 
-* In class exercise... debug the failing test: `BudgetCodeTests.TestCategories.Categories_TypeSavingsReadCorrectlyFromFile`
+* In class exercise... debug the failing test: `TestCategories.Categories_TypeHolidayReadCorrectlyFromFile`
