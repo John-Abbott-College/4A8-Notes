@@ -149,4 +149,4 @@ In our course, we will eventually be building a WPF (gui) app using the calendar
 * Out of 60 tests, there are 4 failing tests! 
   * you will expected to debug, and fix before proceeding to make any modifications
 
-* In class exercise... debug the failing test: `TestCategories.Categories_TypeHolidayReadCorrectlyFromFile`
+* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEVentReadCorrectlyFromFile`
