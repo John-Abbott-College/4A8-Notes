@@ -30,7 +30,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
 * Click `Next`
 
-* **BEFORE CLICKING `CREATE`**…Make sure that the “option” for the “solution” is `add to solution`, not “create new solution”.
+* **IF PROMPTED,BEFORE CLICKING `CREATE`**…Make sure that the “option” for the “solution” is `add to solution`, not “create new solution”.
 
   ![image](./Images/04_add_to_solution.png)
 
@@ -112,7 +112,7 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-* a Console .NET Framework project (call it 'Calendar' to keep it simple).
+* a Console .NET project (call it 'Calendar' to keep it simple).
 * Add all the necessary files (get them from LEA)
 * Create a new `Xunit` project (within the same solution)
   * Don't forget to add the reference to the calendar project
