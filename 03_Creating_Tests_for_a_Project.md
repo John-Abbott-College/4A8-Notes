@@ -30,7 +30,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
 * Click `Next`
 
-* **IF PROMPTED,BEFORE CLICKING `CREATE`**…Make sure that the “option” for the “solution” is `add to solution`, not “create new solution”.
+* **BEFORE CLICKING `CREATE`**…Make sure that the “option” for the “solution” is `add to solution`, not “create new solution”.
 
   ![image](./Images/04_add_to_solution.png)
 
