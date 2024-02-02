@@ -135,7 +135,7 @@ public void CategoriesMethod_Delete()
 
 ### Debug a Failing Test
 
-* The details of a failing test (if selected) will shown in the `Test Detail Summary` window.  This information includes a stack trace, which will indicate which `assert` failed.
+* The details of a failing test (if selected) will be shown in the `Test Detail Summary` window.  This information includes a stack trace, which will indicate which `assert` failed.
   * This will allow you to go directly to the failing Assert.
 
 * Debugging
@@ -146,7 +146,7 @@ public void CategoriesMethod_Delete()
 
 In our course, we will eventually be building a WPF (gui) app using the calendar code files, however…
 
-* Out of 60 tests, there are 4 failing tests! 
-  * you will expected to debug, and fix before proceeding to make any modifications
+* Out of 60-some tests, there are some failing tests! 
+  * you will expected to debug, and fix them before proceeding to make any modifications
 
-* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEVentReadCorrectlyFromFile`
+* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
