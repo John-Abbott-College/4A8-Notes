@@ -151,3 +151,4 @@ In our course, we will eventually be building a WPF (gui) app using the calendar
 
 * In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
 * next, debug the failing test: `TestCategories.Categories_TypeAvailabilityReadCorrectlyFromFile`
+* what other tests are still failing?
