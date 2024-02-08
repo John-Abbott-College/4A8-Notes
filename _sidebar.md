@@ -9,6 +9,7 @@
 
 **Agile, SCRUM, SDLC**
 - [4_Software_Development_Life_Cycle](04_software_development_life.md)
+- [5_SCRUM](05_scrum.md)
 
 
 
