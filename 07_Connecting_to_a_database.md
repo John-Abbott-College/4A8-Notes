@@ -72,4 +72,21 @@ After completing the above tutorial, you should be able to answer the following 
 6. The tutorial claims that the primary key is automatically incremented in sqlite, but it did not work for me. Did it work for you?
 
 
+SECTION 2 activity
+Amaan, Kainath, TJ - https://www.canva.com/design/DAF8l6lz9Gs/8JjDMyYFUlg3P8X8zFreHA/edit?utm_content=DAF8l6lz9Gs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Taryn, Eric, Julien - https://www.canva.com/design/DAF8l8ivfI0/0wd1IMsTTiiX6qRanOht-A/edit?utm_content=DAF8l8ivfI0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Brayden, Hana, Ryan - https://www.canva.com/design/DAF8l_36rKs/SlEBJhVLA0fSG9Ualn6GSQ/edit?utm_content=DAF8l_36rKs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Zachary, Sam, Saul - https://www.canva.com/design/DAF8l5k2SCQ/R-XKk3Gjj-J2uZTWauGQ0g/edit?utm_content=DAF8l5k2SCQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+David, Kyle, Rayan - https://www.canva.com/design/DAF8l157S6k/6t87ThEEj11gex3JSnG2oA/edit?utm_content=DAF8l157S6k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Dylan, Shijian, Nahor, Abhay - https://www.canva.com/design/DAF8l8vhcZk/_xdb1F2DCp3jWb2n1jWVag/edit?utm_content=DAF8l8vhcZk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Lucas, Joseph, Joshua - https://www.canva.com/design/DAF8lywzh2I/74nXUeU2DyKHxLBZuLVfaQ/edit?utm_content=DAF8lywzh2I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+
 
