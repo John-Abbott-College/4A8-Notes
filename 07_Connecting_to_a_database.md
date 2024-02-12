@@ -73,6 +73,7 @@ After completing the above tutorial, you should be able to answer the following 
 
 
 SECTION 2 activity
+
 Amaan, Kainath, TJ - https://www.canva.com/design/DAF8l6lz9Gs/8JjDMyYFUlg3P8X8zFreHA/edit?utm_content=DAF8l6lz9Gs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Taryn, Eric, Julien - https://www.canva.com/design/DAF8l8ivfI0/0wd1IMsTTiiX6qRanOht-A/edit?utm_content=DAF8l8ivfI0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
