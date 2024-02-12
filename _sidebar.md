@@ -12,6 +12,10 @@
 - [5_SCRUM](05_scrum.md)
 - [6_User_Stories](06_user_stories.md)
 
+**SQLite**
+- [7_Connecting_to_a_database](07_Connecting_to_a_database.md)
+
+
 
 
 
