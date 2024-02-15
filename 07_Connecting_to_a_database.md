@@ -74,19 +74,19 @@ After completing the above tutorial, you should be able to answer the following 
 
 SECTION 2 activity
 
-Amaan, Kainath, TJ - https://www.canva.com/design/DAF8l6lz9Gs/8JjDMyYFUlg3P8X8zFreHA/edit?utm_content=DAF8l6lz9Gs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Amaan, Kainath, TJ - https://www.canva.com/design/DAF83t0BqJk/VIf35Wi9qOCMxHnEdE6KYA/edit?utm_content=DAF83t0BqJk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Taryn, Eric, Julien - https://www.canva.com/design/DAF8l8ivfI0/0wd1IMsTTiiX6qRanOht-A/edit?utm_content=DAF8l8ivfI0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Taryn, Eric, Julien - https://www.canva.com/design/DAF83hG6D94/zEEua3goygH-ZxhdWbobAg/edit?utm_content=DAF83hG6D94&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Brayden, Hana, Ryan - https://www.canva.com/design/DAF8l_36rKs/SlEBJhVLA0fSG9Ualn6GSQ/edit?utm_content=DAF8l_36rKs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Brayden, Hana, Ryan - https://www.canva.com/design/DAF83aidDHM/QnVFHCdcakXE8ewK8Um5Mw/edit?utm_content=DAF83aidDHM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Zachary, Sam, Saul - https://www.canva.com/design/DAF8l5k2SCQ/R-XKk3Gjj-J2uZTWauGQ0g/edit?utm_content=DAF8l5k2SCQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Zachary, Sam, Saul - https://www.canva.com/design/DAF83iRRBF4/TGeDhGfCnIZ1-QDe-XE0-A/edit?utm_content=DAF83iRRBF4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-David, Kyle, Rayan - https://www.canva.com/design/DAF8l157S6k/6t87ThEEj11gex3JSnG2oA/edit?utm_content=DAF8l157S6k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+David, Kyle, Rayan - https://www.canva.com/design/DAF83q5k4Y4/rprFOPt4CTC6-zXtWn1tiA/edit?utm_content=DAF83q5k4Y4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Dylan, Shijian, Nahor, Abhay - https://www.canva.com/design/DAF8l8vhcZk/_xdb1F2DCp3jWb2n1jWVag/edit?utm_content=DAF8l8vhcZk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Dylan, Shijian, Nahor, Abhay - https://www.canva.com/design/DAF83q52wVs/Lt51r_mbsonnv9KY5xK6VQ/edit?utm_content=DAF83q52wVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Lucas, Joseph, Joshua - https://www.canva.com/design/DAF8lywzh2I/74nXUeU2DyKHxLBZuLVfaQ/edit?utm_content=DAF8lywzh2I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Lucas, Joseph, Joshua - https://www.canva.com/design/DAF83ubZgkY/mW07gK0X6ZL-qijmVF0DRA/edit?utm_content=DAF83ubZgkY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 
