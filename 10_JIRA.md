@@ -38,29 +38,33 @@ Create an account using an email address. You could use your JAC email address o
 
    
 
-6. On the Jira Software page, choose Get It Free.
+5. On the Jira Software page, choose Get It Free.
 
    ![](./Images/GetItFree.PNG)
 
    
 
-7. Click next without selecting a second product.
+6. Click next without selecting a second product.
 
-8. Create your team site! Use this site name format (no upper case letters allowed):
+7. Create your team site! Use this site name format (no upper case letters allowed):
 
    ##### **jacappdev1-2024-yourteamname**
 
    ![](./Images/teamName.PNG)
 
-9. Select 'Go to Jira'. Choose Software Development for the type of team
+8. Select 'Go to Jira'. Choose Software Development for the type of team
 
    ![](./Images/softwareDev.PNG)
 
-10. Software Engineer as the profile <!--(Software Developer and Software Engineer are often used interchangeably even though you technically need an engineer certification to be called an engineer in an official capacity)-->
+9. Software Engineer as the profile <!--(Software Developer and Software Engineer are often used interchangeably even though you technically need an engineer certification to be called an engineer in an official capacity)-->
 
     ![](./Images/SoftEng.PNG)
 
-11. Enter the email addresses of your **teammates** and **BOTH** teachers (you could also add them later, see later step):
+10. Selectthe SCRUM template
+
+    ![](./Images/JIRA-SCRUM.PNG)
+    
+12. Enter the email addresses of your **teammates** and **BOTH** teachers (you could also add them later, see later step):
 
     sandra.bultena@johnabbott.qc.ca
 
@@ -70,49 +74,49 @@ Create an account using an email address. You could use your JAC email address o
 
     ![](./Images/teammates.PNG)
 
-12. You could answer the questions to set up Jira
+13. You could answer the questions to set up Jira
 
     ![](./Images/newToJira.PNG)
 
-13. You could add more teammates/teachers from your JIRA page:
+14. You could add more teammates/teachers from your JIRA page:
 
     ![](./Images/addMoreTeammates.PNG)
 
-14. Create a project
+15. Create a project
 
     ![](./Images/AddProject.PNG)
 
-15. In the backlog view, you could create issues (stories) to be added in the backlog. You could enable the Epic view and epics to your project.
+16. In the backlog view, you could create issues (stories) to be added in the backlog. You could enable the Epic view and epics to your project.
 
     ![](./Images/backlogView.PNG)
 
-16. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
+17. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
 
     ![](./Images/storyEdit.PNG)
 
     
 
-17. Fill in your backlog!
+18. Fill in your backlog!
 
-18. After a sprint planning meeting, create a sprint.
+19. After a sprint planning meeting, create a sprint.
 
-19. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints):
+20. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints):
 
     ![](./Images/filter.PNG)
 
     
 
-20. Check the sprint filter.
+21. Check the sprint filter.
 
     ![](./Images/sprintFilter.PNG)
 
     
 
-21. Select the sprint in the left panel and save the filter:
+22. Select the sprint in the left panel and save the filter:
 
     ![](./Images/sprintFilterSave.PNG)
 
-22. Name the filter for the sprint:
+23. Name the filter for the sprint:
 
     ![](./Images/saveFilter.PNG)
 
