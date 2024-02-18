@@ -18,23 +18,19 @@ https://www.atlassian.com
 
 Create an account using an email address. You could use your JAC email address or any other one (you will need to access your email to confirm your registration).
 
-1. Select My Account -> Log In
+1. Select Sign in
 
    ![](./Images/LogInAtlassian.PNG)
 
    
 
-2. Select Sign up for an account.
+2. Select Create an account. Enter the email address you would like to create an account with (need to be able to access the confirmation email). Enter your name if there is a field for it.
 
    ![](./Images/signUp.PNG)
 
-3. Enter the email address you would like to create an account with (need to be able to access the confirmation email). Enter your name if there is a field for it.
+3. Access your email and confirm your registration, creating a password.
 
-   ![](./Images/addEmail.PNG)
-
-4. Access your email and confirm your registration, creating a password.
-
-5. Once confirmed, select Jira Software
+4. Once confirmed, select Jira Software
 
    ![](./Images/chooseJIRA.PNG)
 
