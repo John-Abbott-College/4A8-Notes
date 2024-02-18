@@ -24,11 +24,13 @@ Create an account using an email address. You could use your JAC email address o
 
    
 
-2. Select Create an account. Enter the email address you would like to create an account with (need to be able to access the confirmation email). Enter your name if there is a field for it.
+2. Select Create an account. Enter the email address you would like to create an account with (need to be able to access the confirmation email). 
 
    ![](./Images/signUp.PNG)
 
+
 3. Access your email and confirm your registration, creating a password.
+
 
 4. Once confirmed, select Jira Software
 
