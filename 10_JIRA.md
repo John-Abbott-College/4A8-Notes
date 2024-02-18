@@ -46,13 +46,13 @@ Create an account using an email address. You could use your JAC email address o
 
 7. Click next without selecting a second product.
 
-8. Create your team site! Use this site name format:
+8. Create your team site! Use this site name format (no upper case letters allowed):
 
-   ##### **jacappdevI-2022-yourteamname**
+   ##### **jacappdev1-2024-yourteamname**
 
    ![](./Images/teamName.PNG)
 
-9. Choose Software Development for the type of team
+9. Select 'Go to Jira'. Choose Software Development for the type of team
 
    ![](./Images/softwareDev.PNG)
 
