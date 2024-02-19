@@ -83,21 +83,21 @@ Create an account using an email address. You could use your JAC email address o
    ![](./Images/JIRA_addPeople.PNG)
 
 
-15. Back in the project, in the backlog view, you could create issues (stories) to be added in the backlog. You could show the Epic view and epics to your project.
+15. Back in the project, in the backlog view, you could create issues (stories) to be added in the backlog. You could show the Epic view, add epics to your project and associate stories to epics (categories of stories)
 
     ![](./Images/backlogView.PNG)
 
-18. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
+16. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
 
     ![](./Images/storyEdit.PNG)
 
     
 
-19. Fill in your backlog!
+17. Fill in your backlog!
 
-20. After a sprint planning meeting, create a sprint.
+18. After a sprint planning meeting, create a sprint.
 
-21. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints):
+19. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints). Select View all issues:
 
     ![](./Images/filter.PNG)
 
