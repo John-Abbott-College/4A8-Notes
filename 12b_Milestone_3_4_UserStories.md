@@ -26,7 +26,7 @@ I expect the displayed busy time to be consistent with the fact that availabilit
 
 **Acceptance Criteria**
 
-* The busytime amounts in a CalendarItem* object should only reflect be consistent with the CalendarItem amount.
+* The busytime amounts in a CalendarItem* object should only reflect the duration of events that are not used to show availability.
 
 ### Category class variables should be readonly
 
@@ -44,7 +44,7 @@ I am able to rely on proper coding practices, so that I do not accidently creati
 
 As a user of the Calendar API,
 
-I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the event ID.
+I am able to rely on proper coding practices, so that I do not accidently create a bug by changing the event ID.
 
 **Assumptions**
 
@@ -88,7 +88,7 @@ I am able to create a new calendar database to a given file so I can access and 
 * Create the database file and connect to it
 * Create the tables
 * Specify the columns, primary keys, foreign keys
-* Add the category types to the table (income, savings, expense and credit)
+* Add the category types to the table
 * Add the default categories (input hardcoded list to database)
 * Tests updated/added
 
@@ -201,7 +201,7 @@ I am able to add a uniquely identified event that has
 
 *  a startDateTime,
 *  a durationInMinutes,
-*  a dedetails and 
+*  a details and 
 *  a categoryId
    to the database so that I can store and access it in a scalable, maintainable manner.	
 
