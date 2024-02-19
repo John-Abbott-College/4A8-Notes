@@ -20,13 +20,13 @@ I am able to rely on the proper functioning of this API.
 
 As a user of the Calendar API, 
 
-I expect the displayed data (busytime amount) to be consistent with what is stored externally (XML or database).
+I expect the displayed busy time to be consistent with the fact that availability events do not block time.
 
 **Assumptions**
 
 **Acceptance Criteria**
 
-* The Event amount stored in an event object should be negative (if it was a purchase) and be consistent with the CalendarItem amount.
+* The busytime amounts in a CalendarItem* object should only reflect be consistent with the CalendarItem amount.
 
 ### Category class variables should be readonly
 
@@ -191,7 +191,7 @@ I am able to retrieve events that have been previously stored in a database so I
 
 * Method that returns a list of Events objects is updated to retrieve them from the database. 
 * The list should be sorted by Id. 
-* Date is returned as a DateTime object
+* StartDateTime is returned as a DateTime object
 * Tests updated/added
 
 ### New Event
@@ -199,9 +199,9 @@ I am able to retrieve events that have been previously stored in a database so I
 As a user of the Calendar API,
 I am able to add a uniquely identified event that has 
 
-*  a date,
-*  an amount,
-*  a description and 
+*  a startDateTime,
+*  a durationInMinutes,
+*  a dedetails and 
 *  a categoryId
    to the database so that I can store and access it in a scalable, maintainable manner.	
 
@@ -214,7 +214,7 @@ I am able to add a uniquely identified event that has
 
 * Method in Events allows for the addition of a new Event to the database table.
 * All Event object information should be stored in the database directly and not in memory.
-* Date specified as a DateTime object
+* StartDateTime specified as a DateTime object
 * Tests updated/added
 
 ### Update event
@@ -265,7 +265,7 @@ I only provide the database filename only so that I can manage a HomeCalendar in
 ### Update GetCalendarItems
 
 As a user of the Calendar API, 
-I can retrieve a customizable (date, category) list of CalendarItem objects (each include categoryId, eventId, date, amount, event description, category description, dynamic balance) using the database so that I can retrieve the information in a scalable, maintainable manner.
+I can retrieve a customizable (date, category) list of CalendarItem objects (each include categoryId, eventId, startDateTime, durationInMinutes, event description, category description, dynamic busyTime) using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
@@ -274,7 +274,7 @@ I can retrieve a customizable (date, category) list of CalendarItem objects (eac
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category
-* Balance is a running total of the resulting calendar items.
+* BusyTime is a running total of the resulting calendar items.
 * Should use a database query.
 * List of CalendarItems should be sorted by date. 
 * Tests updated/added
@@ -291,7 +291,7 @@ I can retrieve a customizable (date, categoryId) list of CalendarItemsByMonth ob
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500.
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category.
-* The total in a given CalendarItemsByMonth object is the total amount for the CalendarItems of that month.
+* The total in a given CalendarItemsByMonth object is the total busy time for the CalendarItems of that month.
 * Tests updated/added
 
 ### Update GetCalendarItemsByCategory
@@ -306,7 +306,7 @@ I can retrieve a customizable (date, categoryId) list of CalendarItemsByCategory
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500.
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category.
-* The total in a given CalendarItemsByCategory object is the total amount for the CalendarItems of that category.
+* The total in a given CalendarItemsByCategory object is the total busy time for the CalendarItems of that category.
 * The returned list of CalendarItemsByCategory objects should be sorted by category description, alphabetically.
 * In each CalendarItemsByCategory object’s details property, the list of CalendarItems should be sorted by date. 
   *Tests updated/added
@@ -327,7 +327,7 @@ I can retrieve a customizable (date, categoryId) list of Dictionary<string,objec
 ### Error handling
 
 As a user of the Calendar API, 
-I receive an exception when my actions cause a database error so I be notified when attempting invalid or failed operations.
+I receive an exception when my actions cause a database error so I am notified when attempting invalid or failed operations.
 
 **Assumptions**
 
@@ -341,13 +341,13 @@ I receive an exception when my actions cause a database error so I be notified w
 
 ### events
 
-| Keys               | Column      | Column Type |
-| ------------------ | ----------- | ----------- |
-| PK                 | Id          | Int         |
-|                    | Date        | Text        |
-|                    | Description | Text        |
-|                    | Amount      | Double      |
-| FK - categories Id | CategoryId  | Int         |
+| Keys               | Column              | Column Type |
+| ------------------ | ------------------- | ----------- |
+| PK                 | Id                  | Int         |
+|                    | DateTime            | Text        |
+|                    | Details             | Text        |
+|                    | DurationInMinutes   | Double      |
+| FK - categories Id | CategoryId          | Int         |
 
 ### categories
 
