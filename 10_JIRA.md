@@ -56,15 +56,19 @@ Create an account using an email address. You could use your JAC email address o
 
    ![](./Images/softwareDev.PNG)
 
-9. Software Engineer as the profile <!--(Software Developer and Software Engineer are often used interchangeably even though you technically need an engineer certification to be called an engineer in an official capacity)-->
+9. Software Engineer as the role <!--(Software Developer and Software Engineer are often used interchangeably even though you technically need an engineer certification to be called an engineer in an official capacity)-->
 
     ![](./Images/SoftEng.PNG)
 
-10. Selectthe SCRUM template
+10. You could choose Code writing and reviews and Project planninf ans coordination as the main tasks.
+
+    ![](./Images/Jira_Tasks.PNG)
+   
+11. Select the SCRUM template
 
     ![](./Images/JIRA-SCRUM.PNG)
     
-12. Enter the email addresses of your **teammates** and **BOTH** teachers (you could also add them later, see later step):
+13. Enter the email addresses of your **teammates** and **BOTH** teachers (you could also add them later, see later step):
 
     sandra.bultena@johnabbott.qc.ca
 
@@ -74,49 +78,49 @@ Create an account using an email address. You could use your JAC email address o
 
     ![](./Images/teammates.PNG)
 
-13. You could answer the questions to set up Jira
+14. You could answer the questions to set up Jira
 
     ![](./Images/newToJira.PNG)
 
-14. You could add more teammates/teachers from your JIRA page:
+15. You could add more teammates/teachers from your JIRA page:
 
     ![](./Images/addMoreTeammates.PNG)
 
-15. Create a project
+16. Create a project
 
     ![](./Images/AddProject.PNG)
 
-16. In the backlog view, you could create issues (stories) to be added in the backlog. You could enable the Epic view and epics to your project.
+17. In the backlog view, you could create issues (stories) to be added in the backlog. You could enable the Epic view and epics to your project.
 
     ![](./Images/backlogView.PNG)
 
-17. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
+18. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
 
     ![](./Images/storyEdit.PNG)
 
     
 
-18. Fill in your backlog!
+19. Fill in your backlog!
 
-19. After a sprint planning meeting, create a sprint.
+20. After a sprint planning meeting, create a sprint.
 
-20. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints):
+21. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints):
 
     ![](./Images/filter.PNG)
 
     
 
-21. Check the sprint filter.
+22. Check the sprint filter.
 
     ![](./Images/sprintFilter.PNG)
 
     
 
-22. Select the sprint in the left panel and save the filter:
+23. Select the sprint in the left panel and save the filter:
 
     ![](./Images/sprintFilterSave.PNG)
 
-23. Name the filter for the sprint:
+24. Name the filter for the sprint:
 
     ![](./Images/saveFilter.PNG)
 
