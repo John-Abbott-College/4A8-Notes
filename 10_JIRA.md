@@ -68,29 +68,22 @@ Create an account using an email address. You could use your JAC email address o
 
     ![](./Images/JIRA-SCRUM.PNG)
     
-13. Enter the email addresses of your **teammates** and **BOTH** teachers (you could also add them later, see later step):
+12. You could indicate that you not familiar with Jira in order to see the tip prompts.
+    
+13. On the left hand panel, choose Project settings
+
+    ![](./Images/JIRA_ProjectSettings.PNG)
+    
+14.  Choose Access => Add People to add the email addresses of your **teammates** and **BOTH** teachers:
 
     sandra.bultena@johnabbott.qc.ca
 
     helen.katalifos@johnabbott.qc.ca
 
-    
+   ![](./Images/JIRA_addPeople.PNG)
 
-    ![](./Images/teammates.PNG)
 
-14. You could answer the questions to set up Jira
-
-    ![](./Images/newToJira.PNG)
-
-15. You could add more teammates/teachers from your JIRA page:
-
-    ![](./Images/addMoreTeammates.PNG)
-
-16. Create a project
-
-    ![](./Images/AddProject.PNG)
-
-17. In the backlog view, you could create issues (stories) to be added in the backlog. You could enable the Epic view and epics to your project.
+15. Back in the project, in the backlog view, you could create issues (stories) to be added in the backlog. You could show the Epic view and epics to your project.
 
     ![](./Images/backlogView.PNG)
 
