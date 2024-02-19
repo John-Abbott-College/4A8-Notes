@@ -2,7 +2,7 @@
 
 ## Reminders
 
-* You must add `System.Data.SQLite` to both your HomeBudget project, *and* to your test project.
+* You must add `System.Data.SQLite` to both your HomeCalendar project, *and* to your test project.
 * If you do not understand a story properly, check in with the product owner (Helen and Sandy)
 
 ## Helper Files
@@ -24,7 +24,7 @@ On Lea, you can find
    1. Replace TestCategory.cs
    2. All TestCategory.cs files should pass
 4. Copy over all new tests to your project
-   1. Temporarily change home budget constructor (see code below). 
+   1. Temporarily change home calendar constructor (see code below). 
    2. Note that this is a TEMPORARY fix
 5. Modify categories to use the database
    1. Remove all references to the `List<category>` property.
@@ -34,21 +34,21 @@ On Lea, you can find
 
 **SUGGESTED END OF SPRINT 1**
 
-7. Modify expenses to use the database
+7. Modify events to use the database
    1. Adjust tests to the new situation
    2. Your new tests must pass
-9. Update HomeBudget constructor to take in one file, and one file only
-   1. Adjust HomeBudget tests
+9. Update HomeCalendar constructor to take in one file, and one file only
+   1. Adjust HomeCalendar tests
    2. all tests pass
-10. If not already done, remove the HomeBudget constructor that takes in zero arguments and uses a default file. 
+10. If not already done, remove the HomeCalendar constructor that takes in zero arguments and uses a default file. 
    1. Remove all code associated with default file.
-   2. Update TestHomeBudget.cs
+   2. Update TestHomeCalendar.cs
    3. all tests pass
 11. Remove any 'dead' or 'useless' code
     1. all tests pass
 
 ```csharp
-public HomeBudget(String databaseFile, String expensesXMLFile, bool newDB=false)    
+public HomeCalendar(String databaseFile, String eventsXMLFile, bool newDB=false)    
 {
   	  // if database exists, and user doesn't want a new database, open existing DB
       if (! newDB && File.Exists(databaseFile))
@@ -59,16 +59,16 @@ public HomeBudget(String databaseFile, String expensesXMLFile, bool newDB=false)
   		// file did not exist, or user wants a new database, so open NEW DB
       else
       {
-      		Database.newDatabase(databaseFile);
+          Database.newDatabase(databaseFile);
           newDB = true;
       }
   
-  		// create the category object
-      _categories = new Categories(Database.dbConnection,newDB);
+      // create the category object
+      _categories = new Categories(Database.dbConnection, newDB);
       
-     // create the _expenses course
- 		 _expenses = new Expenses();
-     _expenses.ReadFromFile(expensesXMLFile);   
+     // create the _events course
+     _events = new Events();
+     _events.ReadFromFile(eventsXMLFile);   
 }
 ```
 
@@ -123,7 +123,7 @@ sqlite> .quit
 Example:
 
 ```sql
-select * from expenses 
+select * from events 
 		where Date >= ‘2020-01-01’ and Date <= ‘2020-01-31’;
 ```
 
@@ -147,9 +147,9 @@ String str = myDateTime.ToString("yyyy-MM-dd")
 ```
 
 **IMPORTANT:**
-In HomeBudget, we are using 
+In HomeCalendar, we are using 
 ```csharp
-GetBudgetItems(DateTime? Start, DateTime? End, ...)
+GetCalendarItems(DateTime? Start, DateTime? End, ...)
 ```
 Because Start and End are of type `DateTime?`, the `ToString` method does not work. 
 
@@ -196,7 +196,7 @@ You will need to get parts of the date string for various uses. For example:
   > NOTE: indices specified in substr() are 1-based!!
 ```sql
   # get the “year-month” part of the Date string.
-  select substr(Date, 1, 7) from expenses;
+  select substr(Date, 1, 7) from events;
 ```
 
 #### Group by syntax refresher
