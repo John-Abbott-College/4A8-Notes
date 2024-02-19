@@ -157,7 +157,7 @@ For any code block that exceeds ½ page, there should be a comment describing wh
 
 Documenting code is useful when:
 
-* Explaining an API for someone that will use but is unlikely to look through code (XML comments from assignment 1).
+* Explaining an API for someone that will use it but is unlikely to look through code (XML comments from assignment 1).
 * You want to denote something unintuitive or weird in the code.
 
 Otherwise... 
