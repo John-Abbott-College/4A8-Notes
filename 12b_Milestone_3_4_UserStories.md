@@ -344,7 +344,7 @@ I receive an exception when my actions cause a database error so I am notified w
 | Keys               | Column              | Column Type |
 | ------------------ | ------------------- | ----------- |
 | PK                 | Id                  | Int         |
-|                    | DateTime            | Text        |
+|                    | StartDateTime       | Text        |
 |                    | Details             | Text        |
 |                    | DurationInMinutes   | Double      |
 | FK - categories Id | CategoryId          | Int         |
