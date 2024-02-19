@@ -17,6 +17,12 @@
 - [8_SQLite_from_C#_SQLInjection](08_SQLite_and_Csharp.md)
 
 
+**JIRA, Git**
+- [9_coding_standards](09_coding_standards.md)
+- [10_JIRA](10_JIRA.md)
+- [11.1_using_git_solo](11.1_using_git_solo.pdf)
+
+
 
 
 
