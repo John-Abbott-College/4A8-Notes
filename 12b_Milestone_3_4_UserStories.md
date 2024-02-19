@@ -16,7 +16,7 @@ I am able to rely on the proper functioning of this API.
 
 * Stories are written and added to the backlog for every unit test that does not pass
 
-### Expenses should be a negative value
+### Events should be a negative value
 
 As a user of the Calendar API, 
 
@@ -26,7 +26,7 @@ I expect the displayed data (busytime amount) to be consistent with what is stor
 
 **Acceptance Criteria**
 
-* The Expense amount stored in an expense object should be negative (if it was a purchase) and be consistent with the CalendarItem amount.
+* The Event amount stored in an event object should be negative (if it was a purchase) and be consistent with the CalendarItem amount.
 
 ### Category class variables should be readonly
 
@@ -40,17 +40,17 @@ I am able to rely on proper coding practices, so that I do not accidently creati
 
 * The Category class properties should be changed to now be read-only
 
-### Expense class variables should be readonly
+### Event class variables should be readonly
 
 As a user of the Calendar API,
 
-I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the expense ID.
+I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the event ID.
 
 **Assumptions**
 
 **Acceptance Criteria**
 
-* The Expense class properties should be changed to now be read-only
+* The Event class properties should be changed to now be read-only
 
 ### 
 
@@ -73,7 +73,7 @@ I should no longer be able to rely on a calendar being saved or accessed from a 
 ## EPIC Category and Categories using database
 
 * Categories and Category work as per stories
-* Expenses work as before (no changes)
+* Events work as before (no changes)
 * HomeCalendar constructor modified to use both XML file (events) and the database (categories)
 
 ### Create and connect to a new database
@@ -114,7 +114,7 @@ I am able to retrieve categories that have been previously stored in a database 
 **Assumptions**
 
 * Connection to a valid database
-* Expenses still stored in XML file
+* Events still stored in XML file
 
 **Acceptance Criteria**
 
@@ -173,15 +173,15 @@ I am able to delete a category stored in a database so I can change it in a scal
 * Throws exception if not allowed to delete in database (foreign key constraint).
 * Tests updated/added
 
-## EPIC Expense and Expenses using database
+## EPIC Event and Events using database
 
-* Expense and Expenses work as per stories
+* Event and Events work as per stories
 * HomeCalendar constructor modified to only use the database.
 
-### Retrieve expenses
+### Retrieve events
 
 As a user of the Calendar API,
-I am able to retrieve expenses that have been previously stored in a database so I can access them in a scalable, maintainable manner.	
+I am able to retrieve events that have been previously stored in a database so I can access them in a scalable, maintainable manner.	
 
 **Assumptions**
 
@@ -189,15 +189,15 @@ I am able to retrieve expenses that have been previously stored in a database so
 
 **Acceptance Criteria**
 
-* Method that returns a list of Expense objects is updated to retrieve them from the database. 
+* Method that returns a list of Events objects is updated to retrieve them from the database. 
 * The list should be sorted by Id. 
 * Date is returned as a DateTime object
 * Tests updated/added
 
-### New expense
+### New Event
 
 As a user of the Calendar API,
-I am able to add a uniquely identified expense that has 
+I am able to add a uniquely identified event that has 
 
 *  a date,
 *  an amount,
@@ -212,15 +212,15 @@ I am able to add a uniquely identified expense that has
 
 **Acceptance Criteria**
 
-* Method in Expenses allows for the addition of a new Expense to the database table.
-* All Expense object information should be stored in the database directly and not in memory.
+* Method in Events allows for the addition of a new Event to the database table.
+* All Event object information should be stored in the database directly and not in memory.
 * Date specified as a DateTime object
 * Tests updated/added
 
-### Update expense
+### Update event
 
 As a user of the Calendar API,
-I am able to update an expense in the database so I can change it in a scalable, maintainable manner.	
+I am able to update an event in the database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
 
@@ -228,16 +228,16 @@ I am able to update an expense in the database so I can change it in a scalable,
 
 **Acceptance Criteria**
 
-* The Expense class properties should be changed to now be read-only
-* An Expenses method allows the API user to update the database passing in all the Expense properties, including the *date* property
-* The Id of the Expense to be updated must be provided.
+* The Event class properties should be changed to now be read-only
+* An Events method allows the API user to update the database passing in all the Event properties, including the *date* property
+* The Id of the Event to be updated must be provided.
 * The method updates the properties (except the Id) in the database row.
 * Tests updated/added
 
-### Delete expense
+### Delete event
 
 As a user of the Calendar API,
-I am able to delete an expense stored in a database so I can change it in a scalable, maintainable manner.	
+I am able to delete an event stored in a database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
 
@@ -245,7 +245,7 @@ I am able to delete an expense stored in a database so I can change it in a scal
 
 **Acceptance Criteria**
 
-* Able to delete by expense id in Expenses.
+* Able to delete by event id in Events.
 * Row deleted from database.
 * Ignore if Id does not exist
 * Throws exception if not allowed to delete in database (foreign key constraint).
@@ -265,7 +265,7 @@ I only provide the database filename only so that I can manage a HomeCalendar in
 ### Update GetCalendarItems
 
 As a user of the Calendar API, 
-I can retrieve a customizable (date, category) list of CalendarItem objects (each include categoryId, expenseId, date, amount, expense description, category description, dynamic balance) using the database so that I can retrieve the information in a scalable, maintainable manner.
+I can retrieve a customizable (date, category) list of CalendarItem objects (each include categoryId, eventId, date, amount, event description, category description, dynamic balance) using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
@@ -339,7 +339,7 @@ I receive an exception when my actions cause a database error so I be notified w
 
 # Database design
 
-### expenses
+### events
 
 | Keys               | Column      | Column Type |
 | ------------------ | ----------- | ----------- |
