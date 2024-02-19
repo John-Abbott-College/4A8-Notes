@@ -29,7 +29,7 @@ On Lea, you can find
 5. Modify categories to use the database
    1. Remove all references to the `List<category>` property.
    2. All tests in TestCategories.cs should pass
-6. Fix the negative expense story
+6. Fix the availabiliy category story
    1. All tests should pass (except for date issues)
 
 **SUGGESTED END OF SPRINT 1**
