@@ -4,9 +4,9 @@
 
 ## EPIC Bug Fixes and Proper Coding
 
-### Create stories for all failing unit tests
+### Create stories for any failing unit tests
 
-As a user of the Budget API,
+As a user of the Calendar API,
 
 I am able to rely on the proper functioning of this API.
 
@@ -18,19 +18,19 @@ I am able to rely on the proper functioning of this API.
 
 ### Expenses should be a negative value
 
-As a user of the Budget API, 
+As a user of the Calendar API, 
 
-I expect the displayed data (budget amount) to be consistent with what is stored externally (XML or database).
+I expect the displayed data (busytime amount) to be consistent with what is stored externally (XML or database).
 
 **Assumptions**
 
 **Acceptance Criteria**
 
-* The Expense amount stored in an expense object should be negative (if it was a purchase) and be consistent with the BudgetItem amount.
+* The Expense amount stored in an expense object should be negative (if it was a purchase) and be consistent with the CalendarItem amount.
 
 ### Category class variables should be readonly
 
-As a user of the Budget API,
+As a user of the Calendar API,
 
 I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the category ID.
 
@@ -42,7 +42,7 @@ I am able to rely on proper coding practices, so that I do not accidently creati
 
 ### Expense class variables should be readonly
 
-As a user of the Budget API,
+As a user of the Calendar API,
 
 I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the expense ID.
 
@@ -58,28 +58,28 @@ I am able to rely on proper coding practices, so that I do not accidently creati
 
 ### Have to specify file 
 
-As a user of the Budget API, 
+As a user of the Calendar API, 
 
-I should no longer be able to rely on a budget being saved or accessed from a default file location so that a storage location must be explicitly specified.	
+I should no longer be able to rely on a calendar being saved or accessed from a default file location so that a storage location must be explicitly specified.	
 
 **Acceptance criteria**
 
-* Can only create a HomeBudget by specifying a file.
+* Can only create a HomeCalendar by specifying a file.
 * The specified file will be created if it does not exist. 
-* The default categories are added to the budget
-* .If the file exists, the HomeBudget is read.
+* The default categories are added to the calendar
+* .If the file exists, the HomeCalendar is read.
 * Tests updated/added
 
 ## EPIC Category and Categories using database
 
 * Categories and Category work as per stories
 * Expenses work as before (no changes)
-* HomeBudget constructor modified to use both XML file (expenses) and the database (categories)
+* HomeCalendar constructor modified to use both XML file (events) and the database (categories)
 
 ### Create and connect to a new database
 
-As a user of the Budget API,
-I am able to create a new budget database to a given file so I can access and store information in a scalable, maintainable manner
+As a user of the Calendar API,
+I am able to create a new calendar database to a given file so I can access and store information in a scalable, maintainable manner
 
 .**Assumptions**
 
@@ -94,7 +94,7 @@ I am able to create a new budget database to a given file so I can access and st
 
 ### Connect to an existing database
 
-As a user of the Budget API, 
+As a user of the Calendar API, 
 I am able to connect to an existing database from a given file so I can access and store information in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -108,7 +108,7 @@ I am able to connect to an existing database from a given file so I can access a
 
 ### Retrieve categories
 
-As a user of the Budget API, 
+As a user of the Calendar API, 
 I am able to retrieve categories that have been previously stored in a database so I can access them in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -124,7 +124,7 @@ I am able to retrieve categories that have been previously stored in a database 
 
 ### New category 
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to add a uniquely identified category that has a description and a typeId in the database so that I can store and access it in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -141,7 +141,7 @@ I am able to add a uniquely identified category that has a description and a typ
 
 ### Update category
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to update a category in the database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -158,7 +158,7 @@ I am able to update a category in the database so I can change it in a scalable,
 
 ### Delete category
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to delete a category stored in a database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -176,11 +176,11 @@ I am able to delete a category stored in a database so I can change it in a scal
 ## EPIC Expense and Expenses using database
 
 * Expense and Expenses work as per stories
-* HomeBudget constructor modified to only use the database.
+* HomeCalendar constructor modified to only use the database.
 
 ### Retrieve expenses
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to retrieve expenses that have been previously stored in a database so I can access them in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -196,7 +196,7 @@ I am able to retrieve expenses that have been previously stored in a database so
 
 ### New expense
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to add a uniquely identified expense that has 
 
 *  a date,
@@ -219,7 +219,7 @@ I am able to add a uniquely identified expense that has
 
 ### Update expense
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to update an expense in the database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -236,7 +236,7 @@ I am able to update an expense in the database so I can change it in a scalable,
 
 ### Delete expense
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I am able to delete an expense stored in a database so I can change it in a scalable, maintainable manner.	
 
 **Assumptions**
@@ -251,10 +251,10 @@ I am able to delete an expense stored in a database so I can change it in a scal
 * Throws exception if not allowed to delete in database (foreign key constraint).
 * Tests updated/added
 
-## EPIC: HomeBudget using database
+## EPIC: HomeCalendar using database
 
-As a user of the Budget API, 
-I only provide the database filename only so that I can manage a HomeBudget in a streamlined, scalable, maintainable manner.	
+As a user of the Calendar API, 
+I only provide the database filename only so that I can manage a HomeCalendar in a streamlined, scalable, maintainable manner.	
 
 **Assumptions**
 
@@ -262,10 +262,10 @@ I only provide the database filename only so that I can manage a HomeBudget in a
 
 * No longer pass in or use any XML files.
 
-### Update GetBudgetItems
+### Update GetCalendarItems
 
-As a user of the Budget API, 
-I can retrieve a customizable (date, category) list of BudgetItem objects (each include categoryId, expenseId, date, amount, expense description, category description, dynamic balance) using the database so that I can retrieve the information in a scalable, maintainable manner.
+As a user of the Calendar API, 
+I can retrieve a customizable (date, category) list of CalendarItem objects (each include categoryId, expenseId, date, amount, expense description, category description, dynamic balance) using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
@@ -274,15 +274,15 @@ I can retrieve a customizable (date, category) list of BudgetItem objects (each 
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category
-* Balance is a running total of the resulting budget items.
+* Balance is a running total of the resulting calendar items.
 * Should use a database query.
-* List of BudgetItems should be sorted by date. 
+* List of CalendarItems should be sorted by date. 
 * Tests updated/added
 
-### Update GetBudgetItemsByMonth
+### Update GetCalendarItemsByMonth
 
-As a user of the Budget API,
-I can retrieve a customizable (date, categoryId) list of BudgetItemsByMonth objects (each include details - a list of BudgetItems for that month, month identifier string, total) using the database so that I can retrieve the information in a scalable, maintainable manner.
+As a user of the Calendar API,
+I can retrieve a customizable (date, categoryId) list of CalendarItemsByMonth objects (each include details - a list of CalendarItems for that month, month identifier string, total) using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
@@ -291,13 +291,13 @@ I can retrieve a customizable (date, categoryId) list of BudgetItemsByMonth obje
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500.
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category.
-* The total in a given BudgetItemsByMonth object is the total amount for the BudgetItems of that month.
+* The total in a given CalendarItemsByMonth object is the total amount for the CalendarItems of that month.
 * Tests updated/added
 
-### Update GetBudgetItemsByCategory
+### Update GetCalendarItemsByCategory
 
-As a user of the Budget API, 
-I can retrieve a customizable (date, categoryId) list of BudgetItemsByCategory objects (each include the category description, details - a list of BudgetItems for that category, total) using the database so that I can retrieve the information in a scalable, maintainable manner.
+As a user of the Calendar API, 
+I can retrieve a customizable (date, categoryId) list of CalendarItemsByCategory objects (each include the category description, details - a list of CalendarItems for that category, total) using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
@@ -306,19 +306,19 @@ I can retrieve a customizable (date, categoryId) list of BudgetItemsByCategory o
 * Start and end time if unspecified default to January 1st 1900 and January 1st 2500.
 * Category Id only used for filtering if the filter flag is set to true. 
 * No default category.
-* The total in a given BudgetItemsByCategory object is the total amount for the BudgetItems of that category.
-* The returned list of BudgetItemsByCategory objects should be sorted by category description, alphabetically.
-* In each BudgetItemsByCategory object’s details property, the list of BudgetItems should be sorted by date. 
+* The total in a given CalendarItemsByCategory object is the total amount for the CalendarItems of that category.
+* The returned list of CalendarItemsByCategory objects should be sorted by category description, alphabetically.
+* In each CalendarItemsByCategory object’s details property, the list of CalendarItems should be sorted by date. 
   *Tests updated/added
 
-### Update GetBudgetDictionaryByCategoryAndMonth
+### Update GetCalendarDictionaryByCategoryAndMonth
 
-As a user of the Budget API,
+As a user of the Calendar API,
 I can retrieve a customizable (date, categoryId) list of Dictionary<string,object> objects using the database so that I can retrieve the information in a scalable, maintainable manner.
 
 **Assumptions**
 
-* That this will just work once the GetBudgetItemsByMonth method is converted.
+* That this will just work once the GetCalendarItemsByMonth method is converted.
 
 **Acceptance Criteria**
 
@@ -326,7 +326,7 @@ I can retrieve a customizable (date, categoryId) list of Dictionary<string,objec
 
 ### Error handling
 
-As a user of the Budget API, 
+As a user of the Calendar API, 
 I receive an exception when my actions cause a database error so I be notified when attempting invalid or failed operations.
 
 **Assumptions**
