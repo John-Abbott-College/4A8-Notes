@@ -79,8 +79,8 @@ Many of you have been closing your database connection to get the tests to work,
 
 * Do NOT close the SQLiteConnection, it slows everything down!!!!
 
-* Do close the SQLiteDataReaderNOTE:, 
-
+* Do close the SQLiteDataReader
+* NOTE:
   * if you use the SQLiteDataReader in a while loop, it will close itself once there are no more records to read, but if you do NOT use a while loop, then it will remain open, preventing other accesses to the database.
 * Do dispose of any SQLite command variables
 
