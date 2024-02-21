@@ -11,8 +11,7 @@ On Lea, you can find
 
 * a zip of test files.
   * Note that these test files are not complete, but have tests for Category and Categories (after changes to database).  See suggested workflow
-* a test database file
-  * Needed once you start converting to database storage instead of xml storage
+  * includes a test database file that is needed once you start converting to database storage instead of xml storage
 
 ## Suggested Workflow
 
