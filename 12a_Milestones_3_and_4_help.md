@@ -9,7 +9,7 @@
 
 On Lea, you can find
 
-* a zip of test files.
+* a zip of test files
   * Note that these test files are not complete, but have tests for Category and Categories (after changes to database).  See suggested workflow
   * includes a test database file that is needed once you start converting to database storage instead of xml storage
 
