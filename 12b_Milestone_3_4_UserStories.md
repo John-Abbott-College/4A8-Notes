@@ -16,7 +16,7 @@ I am able to rely on the proper functioning of this API.
 
 * Stories are written and added to the backlog for every unit test that does not pass
 
-### Events should be a negative value
+### Events for availability should not count towards busy time
 
 As a user of the Calendar API, 
 
