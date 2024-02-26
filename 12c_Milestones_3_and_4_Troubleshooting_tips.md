@@ -6,14 +6,6 @@ Is the unit tests project able to access the code? Adding a project reference en
 
 
 
-
-#### The unit tests do not see the HomeCalendar code?
-
-Is the unit tests project able to access the code? Adding a project reference ensures this.
-
-
-
-
 #### Run the tests and see errors about sqlite3 not being found?
 
 The unit tests run the sqlite command. The executable needs to be accessible to VS. Make sure it is in your user account path.
