@@ -6,9 +6,11 @@ Is the unit tests project able to access the code? Adding a project reference en
 
 
 
+
 #### The unit tests do not see the HomeCalendar code?
 
 Is the unit tests project able to access the code? Adding a project reference ensures this.
+
 
 
 
@@ -18,9 +20,11 @@ The unit tests run the sqlite command. The executable needs to be accessible to 
 
 
 
+
 #### Run the tests and see errors about Database.dbConnection being null?
 
 Are you sure your code is setting it?
+
 
 
 
