@@ -29,7 +29,8 @@
 
 **Milestones 3 & 4**
 - [12a Milestones_3_and_4_help.md](12a_Milestones_3_and_4_help.md)
-- [12b Milestone_3_4_UserStories.md](12b_Milestone_3_4_UserStories.md)
+- [12b Milestones_3_and 4_UserStories.md](12b_Milestone_3_4_UserStories.md)
+- [12c Milestones_3_and_4_troubleshooting tips.md](12c_Milestones_3_and_4_Troubleshooting_tips.md)
 
 
 
