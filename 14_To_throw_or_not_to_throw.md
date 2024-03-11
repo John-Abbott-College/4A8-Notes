@@ -204,9 +204,9 @@ catch (Exception e) {
 
 
 
-# HomeBudget Possible Errors
+# HomeCalendar Possible Errors
 
-Technically speaking, HomeBudget is a 'model', i.e it retrieves and saves data, that is all that it supposed to do. It is *back-end* code.
+Technically speaking, HomeCalendar is a 'model', i.e it retrieves and saves data, that is all that it supposed to do. It is *back-end* code.
 
 
 
@@ -214,7 +214,7 @@ Technically speaking, HomeBudget is a 'model', i.e it retrieves and saves data, 
 
 ### Data Errors
 
-What if a user is asking to delete a category, but there are expenses that are linked to this category.  This would create a **FOREIGN KEY** error.
+What if a user is asking to delete a category, but there are events that are linked to this category.  This would create a **FOREIGN KEY** error.
 
 * Who needs to know? The front-end needs to know that the category could not be deleted.
 * How to inform them? Throw a specific exception.
