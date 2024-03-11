@@ -33,7 +33,15 @@
 - [12c Milestones_3_and_4_troubleshooting tips.md](12c_Milestones_3_and_4_Troubleshooting_tips.md)
 
 
+**Dates and Time**
+- [13_DateTimeNonsense.md](13_DateTimeNonsense.md)
 
+**Errors**
+- [14 To Throw or Not to Throw](14_To_throw_or_not_to_throw.md)
+
+**Testing**
+- [15 Writing Unit Tests](15_Writing_unit_tests.md)
+- [16 Application Testing](16_ApplicationTesting_CodeCoverage.md)
 
 
 
