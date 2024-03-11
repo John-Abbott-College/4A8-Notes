@@ -2,7 +2,7 @@
 
 material from: https://tableplus.com/blog and https://www.sqlite.org/
 
-#### We changed the HomeBudget code to be backed by a database instead of XML files. We chose to use SQLite as the database. Why?
+#### We changed the code to be backed by a database instead of XML files. We chose to use SQLite as the database. Why?
 
 SQLite is:
 
@@ -50,7 +50,7 @@ SQLite is:
 
 - When scalability is not a concern - small applications that won't expand
 
-- When it is handy to include the database with the application - small devices, standalone applications (do not connect to a server, like our HomeBudget right now)
+- When it is handy to include the database with the application - small devices, standalone applications (do not connect to a server, like our HomeCalendar right now)
 
 - When developing and testing with a simple database.
 
