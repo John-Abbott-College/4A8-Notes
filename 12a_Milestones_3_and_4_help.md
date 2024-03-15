@@ -136,13 +136,13 @@ Query SQL by year/month?
 ```csharp
 using System.Globalization;
 DateTime date = DateTime.ParseExact(
-			string, “yyyy-MM-dd”, 
+			string, "yyyy-MM-dd H:mm:ss", 
 			CultureInfo.InvariantCulture
 );
 ```
 To convert a DateTime to a string in the proper format:
 ```csharp
-String str = myDateTime.ToString("yyyy-MM-dd")
+String str = myDateTime.ToString(""yyyy-MM-dd H:mm:ss"")
 ```
 
 **IMPORTANT:**
