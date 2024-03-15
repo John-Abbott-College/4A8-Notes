@@ -142,7 +142,7 @@ DateTime date = DateTime.ParseExact(
 ```
 To convert a DateTime to a string in the proper format:
 ```csharp
-String str = myDateTime.ToString(""yyyy-MM-dd H:mm:ss"")
+String str = myDateTime.ToString("yyyy-MM-dd H:mm:ss")
 ```
 
 **IMPORTANT:**
