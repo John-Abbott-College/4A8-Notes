@@ -46,6 +46,10 @@
   **Test 1**
  - [16a When to use SQLite](16a_When_to_use_SQLite.md)
  - [17 Test 1 Info](17_Test_1_Info.md)
+   
+  **DLLs, Access Modifiers**
+ - [18 Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
+
 
 
 
