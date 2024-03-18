@@ -58,6 +58,7 @@ Very briefly…
 
 ## How to Create a DLL and How to Use a DLL
 
+[Video to come]
 Watch the following video.
 
 There is no sound track (other than the sound of clicking keys), so you can watch with the volume turned off.
@@ -66,4 +67,3 @@ The audio was giving me trouble, so I went with the silent version.
 
 Is is slow moving, but I want to show everyone what's going on.  Watch it carefully!
 
-[video](https://drive.google.com/file/d/12m0R_LVVs5DNoCYq5DfPApCz0XCz_vfG/view?usp=sharing)
