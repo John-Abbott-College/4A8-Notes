@@ -41,7 +41,7 @@
 
 **Testing**
 - [15 Writing Unit Tests](15_Writing_Unit_Tests.md)
-- [16 Application Testing](16_ApplicationTesting_CodeCoverage.md)
+- [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
 
   **Test 1**
  - [16a When to use SQLite](16a_When_to_use_SQLite.md)
