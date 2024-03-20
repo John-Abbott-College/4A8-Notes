@@ -59,7 +59,8 @@ Very briefly…
 ## How to Create a DLL and How to Use a DLL
 
 
-Watch the following video. [video]https://drive.google.com/file/d/12m0R_LVVs5DNoCYq5DfPApCz0XCz_vfG/view?usp=sharing
+Watch the following video. 
+[video]https://drive.google.com/file/d/12m0R_LVVs5DNoCYq5DfPApCz0XCz_vfG/view?usp=sharing
 
 There is no sound track (other than the sound of clicking keys), so you can watch with the volume turned off.
 
