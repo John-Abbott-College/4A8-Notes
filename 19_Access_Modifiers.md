@@ -23,13 +23,13 @@ In object orientated programming, the *scope* of a class, property, or method is
 
 #### Example
 
-In the following example, the class `HomeBudget` is **public**, as well as the property `Categories`, whilst the backing fields `Categories` and `Expenses` are **private**.
+In the following example, the class `HomeBudget` is **public**, as well as the property `Categories`, whilst the backing fields `Categories` and `Events` are **private**.
 
 ```csharp
     public class HomeBudget
     {
         private Categories _categories;
-        private Expenses _expenses;
+        private Events _events;
 
         public Categories categories { get { return _categories; } }
 
@@ -55,7 +55,7 @@ Any class within the `System.Data.SQLite` code that has been declared `public` i
 
 * `SQLiteConnection` is a public class.
 
-Likewise, only `public` methods of the `SQLiteConnection` connection class is available to HomeBudget.
+Likewise, only `public` methods of the `SQLiteConnection` connection class is available to HomeCalendar.
 
 
 
@@ -87,17 +87,17 @@ Enumeration members are always `public`, and no access modifiers can be applied.
 
 
 
-# Access Modifiers in HomeBudget
+# Access Modifiers in HomeCalendar
 
-While developing HomeBudget, we wanted to ensure that it worked properly. 
+While developing HomeCalendar, we wanted to ensure that it worked properly. 
 
-To do so, we used Xunit tests, *which is a **separate** assembly from our HomeBudget*!
+To do so, we used Xunit tests, *which is a **separate** assembly from our HomeCalendar*!
 
 TO ENABLE UNIT TESTING, WHICH IS A SEPARATE ASSEMBLY, ALL THE CLASSES AND METHODS WERE DECLARED PUBLIC.
 
 **THIS IS NOT GOOD!**
 
-## Deciding on the Proper Access Modifiers for HomeBudget
+## Deciding on the Proper Access Modifiers for HomeCalendar
 
 Ask the following questions:
 
@@ -108,13 +108,13 @@ Ask the following questions:
 
 ```csharp
 // NOT realistic code
-myHomeBudget = new HomeBudget(“abc.db”);
-var e = homeBudget.Categories;
+myHomeCalendar = new HomeCalendar(“abc.db”);
+var e = homeCalendar.Categories;
 var c = new Categories(Database.Open("def.db"));
 c.Add(“whatever”);
 ```
 
-​	Would the `whatever` category be part of the HomeBudget? 
+​	Would the `whatever` category be part of the HomeCalendar? 
 
 * Maybe?  depends on how it is coded behind the scenes
 
@@ -126,13 +126,13 @@ c.Add(“whatever”);
 
 What if we make `Categories` an *internal* class?
 
-* Then we could not use the `homeBudget.Categories.Add` function.
-  * fix: Create a method `homeBudget.AddCategory` method that takes care of it for us, and make sure that `AddCategory` is *public*
+* Then we could not use the `homeCalendar.Categories.Add` function.
+  * fix: Create a method `homeCalendar.AddCategory` method that takes care of it for us, and make sure that `AddCategory` is *public*
 
 What if we make `Categories` a *public* class?
 
 * Then the user could create their own `Categories` object, and really make for some confusing code.
-  * fix: Make the constructor for the `Categories` class *internal*, thus `HomeBudget` class methods can use it because it is part of the same assembly, but an external assembly could not.
+  * fix: Make the constructor for the `Categories` class *internal*, thus `HomeCalendar` class methods can use it because it is part of the same assembly, but an external assembly could not.
 
 ### Database class - which Access Modifier?
 
@@ -165,10 +165,10 @@ The external *assembly* ...
 * but, it can access the `Categories` methods
 
 How does that work?
-Well, the HomeBudget class creates the `Categories` object, which then can be accessed via the HomeBudget object.
+Well, the HomeCalendar class creates the `Categories` object, which then can be accessed via the HomeBudget object.
 
 ```csharp
-var hb = new HomeBudget(...);
+var hb = new HomeCalendar(...);
 hb.Categories.Add(...);  // allowed, because 'Add' is public
 
 // not allowed, because the constructor is internal
@@ -183,13 +183,13 @@ If the class is `internal`, then by definition, another assembler (such as unit 
 
 The fix: (I think this works for both `debug` mode and `release` mode, but have not tested in `release` mode)
 
-Add this to your HomeBudget code.
+Add this to your HomeCalendar code.
 
-> NOTE: `HomeBudgetTesting` is the name of *my* project for testing.  Modify the code below to use the name of *your* testing project.
+> NOTE: `HomeCalendarTesting` is the name of *my* project for testing.  Modify the code below to use the name of *your* testing project.
 
 ```csharp
 using System.Runtime.CompilerServices;
-[assembly: InternalsVisibleToAttribute("HomeBudgetTesting")]
+[assembly: InternalsVisibleToAttribute("HomeCalendarTesting")]
 
 ```
 
