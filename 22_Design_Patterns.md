@@ -37,7 +37,7 @@ Pattern:
 * Create a static method that acts as a constructor
 * Call the constructor, and save the object in a static field
 
-> An example would be what we have done for the `Database` class in `HomeBudget`, but with an instance of Database itself.
+> An example would be what we have done for the `Database` class in `HomeCalendar`, but with an instance of Database itself.
 
 ### Observer
 
