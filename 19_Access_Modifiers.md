@@ -23,10 +23,10 @@ In object orientated programming, the *scope* of a class, property, or method is
 
 #### Example
 
-In the following example, the class `HomeBudget` is **public**, as well as the property `Categories`, whilst the backing fields `Categories` and `Events` are **private**.
+In the following example, the class `HomeCalendar` is **public**, as well as the property `Categories`, whilst the backing fields `Categories` and `Events` are **private**.
 
 ```csharp
-    public class HomeBudget
+    public class HomeCalendar
     {
         private Categories _categories;
         private Events _events;
@@ -161,11 +161,11 @@ It is what one would expect, where anything that is `public` or `internal` is av
 This is a little more complicated.
 
 The external *assembly* ...
-* cannot create a new `Categories` object, because the constructor is `internal` (hence no one outside of the HomeBudget assembly can access it)
+* cannot create a new `Categories` object, because the constructor is `internal` (hence no one outside of the HomeCalendar assembly can access it)
 * but, it can access the `Categories` methods
 
 How does that work?
-Well, the HomeCalendar class creates the `Categories` object, which then can be accessed via the HomeBudget object.
+Well, the HomeCalendar class creates the `Categories` object, which then can be accessed via the HomeCalendar object.
 
 ```csharp
 var hb = new HomeCalendar(...);
