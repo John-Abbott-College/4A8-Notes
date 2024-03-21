@@ -16,7 +16,6 @@
 - [7_Connecting_to_a_database](07_Connecting_to_a_database.md)
 - [8_SQLite_from_C#_SQLInjection](08_SQLite_and_Csharp.md)
 
-
 **JIRA, Git**
 - [9_coding_standards](09_coding_standards.md)
 - [10_JIRA](10_JIRA.md)
@@ -42,19 +41,19 @@
 **Testing**
 - [15 Writing Unit Tests](15_Writing_Unit_Tests.md)
 - [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
+- [16a When to use SQLite](16a_When_to_use_SQLite.md)
 
-  **Test 1**
- - [16a When to use SQLite](16a_When_to_use_SQLite.md)
- - [17 Test 1 Info](17_Test_1_Info.md)
+**Test 1**
+- [17 Test 1 Info](17_Test_1_Info.md)
    
-  **DLLs, Access Modifiers**
- - [18 Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
- - [19 Access Modifiers](19_Access_Modifiers.md)
+**DLLs, Access Modifiers**
+- [18 Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
+- [19 Access Modifiers](19_Access_Modifiers.md)
 
- **Architecture, Design Patterns, MVP**
- - [21 Architecture Patterns](21_Architecture_Patterns.md)
- - [21.1 MVP Wordle Example](21.1_MVP_Wordle_Example.md)
- - [22 Design Patterns](22_Design_Patterns.md)
+**Architecture, Design Patterns, MVP**
+- [21 Architecture Patterns](21_Architecture_Patterns.md)
+- [21.1 MVP Wordle Example](21.1_MVP_Wordle_Example.md)
+- [22 Design Patterns](22_Design_Patterns.md)
 
 
 
