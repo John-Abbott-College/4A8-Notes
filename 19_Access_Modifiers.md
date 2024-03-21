@@ -108,10 +108,10 @@ Ask the following questions:
 
 ```csharp
 // NOT realistic code
-myHomeCalendar = new HomeCalendar(“abc.db”);
+myHomeCalendar = new HomeCalendar("abc.db");
 var e = homeCalendar.Categories;
 var c = new Categories(Database.Open("def.db"));
-c.Add(“whatever”);
+c.Add("whatever");
 ```
 
 ​	Would the `whatever` category be part of the HomeCalendar? 
