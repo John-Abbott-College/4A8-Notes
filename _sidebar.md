@@ -49,6 +49,7 @@
    
   **DLLs, Access Modifiers**
  - [18 Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
+ - [19 Access Modifiers](19_Access_Modifiers.md)
 
 
 
