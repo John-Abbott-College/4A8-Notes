@@ -2,7 +2,7 @@
 
 > This book is an absolute *must* for software developers:
 >
-> [Design Patterns](https://www.amazon.ca/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) 
+> [Design Patterns](https://www.amazon.ca/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) by 'the gang of four'
 
 ## What is a Design Pattern?
 
