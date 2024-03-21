@@ -154,7 +154,7 @@ Questions:
 
 It is what one would expect, where anything that is `public` or `internal` is available to all code, and `private` is restricted to the class where it was defined.
 
-![image](./Images/access_modifiers_1.png)
+![image](./Images/access_modifiers_1_Calendar.png)
 
 #### External access privileges
 
@@ -175,7 +175,7 @@ hb.Categories.Add(...);  // allowed, because 'Add' is public
 // var cat = new Categories(...); 
 ```
 
-![image](./Images/access_modifiers_2.png)
+![image](./Images/access_modifiers_2_Calendar.png)
 
 ## How to test `Internal` Classes
 
