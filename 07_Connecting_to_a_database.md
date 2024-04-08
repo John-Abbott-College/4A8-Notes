@@ -32,7 +32,8 @@ What is SQLite?
 
 ## Summary
 
-* Relational - stored in a file
+* Relational - table-based
+* Stored in a file
 * Very lightweight - ‘at home’ database
 * No configuration, no server required
 
