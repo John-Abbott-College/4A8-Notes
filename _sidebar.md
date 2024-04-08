@@ -58,6 +58,10 @@
 **WPF**
 - [23_Intro_to_WPF_Windows_Application](23_Intro_to_WPF_Windows_Application.md)
 
+**Milestone 6**
+- [24_Milestone_6_Calendar_stories](24_Milestone_6_Calendar_stories.md)
+
+
 
 
 
