@@ -40,7 +40,7 @@
 
 1. **As a user, I want to be able to enter the info of my events into a GUI form, and have two buttons, one for adding to the calendar, and one for cancelling this event so that I could add events in a graphical manner.**
 
-2. As a user, I want the application to verify my input data so that I do not enter invalid data.**
+2. **As a user, I want the application to verify my input data so that I do not enter invalid data.**
 
 3. As a user, I want a DateTime picker to pick my date and time, so that I don’t have to enter it manually.
 
