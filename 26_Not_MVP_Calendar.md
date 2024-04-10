@@ -1,27 +1,26 @@
-# An MVP Design Flaw in HomeBudget
-
-These notes are going to discuss the necessity of breaking the MVP pattern for our application due to a design flaw in the HomeBudget API.
+# An MVP Design Flaw in HomeCalendar
+These notes are going to discuss the necessity of breaking the MVP pattern for our application due to a design flaw in the HomeCalendar API.
 
 > Sandy's thoughts about this.
 >
-> * It was my original code that formed the basis of the Home Budget API, and it was created long before I understood the MVP design pattern.  
+> * The basis of the Home Calendar API was created long before we added the MVP design pattern.  
 > * One of the down-sides of *agile* development is that a 'top-down' view of the project is not really given the proper amount of consideration when starting a project, because everything is based on sprints (again, this is only my opinion).
 
 ## The Context
 
-The HomeBudget API uses the following classes almost like data-types 
+The HomeCalendar API uses the following classes almost like data-types 
 
 > in C++ or C we could explicitly define a data type, but C# uses classes or structs instead)
 
 Those data types are:
 
-* `BudgetItem`
+* `CalendarItem`
 
-* `BydgetItemsByMonth`
+* `CalendarItemsByMonth`
 
-* `BudgetItemsByCategory`
+* `CalendarItemsByCategory`
 
-  > I used to have another class `BudgetItemsByMonthAndCategory` which required some really funky dynamic class stuff, but I removed it because I didn't want to have to explain it.  Instead, I used a dictionary.
+  > I used to have another class `CalendarItemsByMonthAndCategory` which required some really funky dynamic class stuff, but I removed it because I didn't want to have to explain it.  Instead, I used a dictionary.
 
 * `Category`
 
@@ -31,11 +30,11 @@ Those data types are:
 
 #### Consistency
 
-* Make a new class `BudgetCategory`, located in the file BudgetItems.cs, with the same properties as the current `Category` object.
+* Make a new class `CalendarCategory`, located in the file CalendarItems.cs, with the same properties as the current `Category` object.
 
   > Maybe remove the `Category` object explicitly, or keep it as a wrapper ??
 
-* Make a new class `BudgetItemsByMonthAndCategory` which is just a type `Dictionary<string,object>` 
+* Make a new class `CalendarItemsByMonthAndCategory` which is just a type `Dictionary<string,object>` 
 
 #### Non-mutable
 
@@ -45,11 +44,11 @@ Those data types are:
 
 ## What is the MVP Related Flaw?
 
-The way it is currently coded, even if the above improvements were implemented, every code that uses the data from the HomeBudget API would need to include dll.
+The way it is currently coded, even if the above improvements were implemented, every code that uses the data from the HomeCalendar API would need to include dll.
 
 Which means when the view needs to display the data it needs to know the data-type classes described above.
 
-So, **your View needs to have access to HomeBudget via the `using Budget;` code**.  This exposes all of the HomeBudget API methods to the View, which is inconsistent with MVP.  
+So, **your View needs to have access to HomeCalendar via the `using Calendar;` code**.  This exposes all of the HomeCalendar API methods to the View, which is inconsistent with MVP.  
 
 
 
@@ -57,13 +56,13 @@ So, **your View needs to have access to HomeBudget via the `using Budget;` code*
 
 There is probably many ways to do this, but I (Sandy) would propose the following:
 
-1) Use a different namespace for HomeBudget data-types, isolating it from the HomeBudget `using Budget` code.
+1) Use a different namespace for HomeCalendar data-types, isolating it from the HomeCalendar `using Calendar` code.
 
 2) Now the presenter could have code like:
 
    ```csharp
-   using HomeBudgetDataTypes; 
-   using Budget; // presenter still has access to home budget's methods
+   using HomeCalendarDataTypes; 
+   using Calendar; // presenter still has access to home calendar's methods
    
    public class DataPresenter {
      IDataView dataView;
@@ -73,9 +72,9 @@ There is probably many ways to do this, but I (Sandy) would propose the followin
      }
      
      public void SomeMethod() {
-       HomeBudget budget = new HomeBudget("data.db");
-       list<BudgetItem> budgetItems = budget.GetBudgetItems(null,null,false,0);
-       dataView.DisplayData(budgetItems);
+       HomeCalendar calendar = new HomeCalendar("data.db");
+       list<CalendarItem> calendarItems = calendar.GetCalendarItems(null,null,false,0);
+       dataView.DisplayData(calendarItems);
      }
    }
    ```
@@ -85,12 +84,12 @@ There is probably many ways to do this, but I (Sandy) would propose the followin
 3) Now, the View could do something like:
 
    ```csharp
-   using HomeBudgetDataTypes;
-   // view only has access to the datatypes, not the budget methods
+   using HomeCalendarDataTypes;
+   // view only has access to the datatypes, not the calendar methods
    
    public class mainWindow: Window, IView {
      
-   	public void DisplayData( List<BudgetItem> budgetItems) {
+   	public void DisplayData( List<CalendarItem> calendarItems) {
        // ...
      }
    }
