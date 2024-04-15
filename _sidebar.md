@@ -61,6 +61,7 @@
 
 **Milestone 6**
 - [24_Milestone_6_Calendar_stories](24_Milestone_6_Calendar_stories.md)
+- [26_Not_MVP](26_Not_MVP_Calendar.md)
 
 
 

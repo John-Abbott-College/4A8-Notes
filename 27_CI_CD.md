@@ -124,6 +124,7 @@ open-source continuous integration server, very extendable (plugins)
 
 #### GitHub Actions
 
+![CI/CD GitHub Actions](./Images/CICD_GitHubActions.JPG)
 Allows you to create custom workflows directly in your GitHub repository. You can discover, create, and share actions to perform any job you’d like, including CI/CD, and combine actions in a completely customized workflow. 
 
 You can create continuous integration (CI) workflows that build, and test projects written in different programming languages.
