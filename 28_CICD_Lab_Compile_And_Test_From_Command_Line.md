@@ -100,7 +100,7 @@ We know that Visual Studio uses it to build. It must be included with the VS app
 >
 > To list a specific file, use `dir `*`filename`*
 >
-> If you hare looking for files, but you don't know which sub-directory it is in, you can use the switch `/s` (you could read about this switch and others available on the dir command by accessing its help page: >dir /? or >dir -help)
+> If you are looking for files, but you don't know which sub-directory it is in, you can use the switch `/s` (you could read about this switch and others available on the dir command by accessing its help page: >dir /? or >dir -help)
 >
 > * BUT: you can only search through sub-directories below the one you are currently in (sigh)
 
