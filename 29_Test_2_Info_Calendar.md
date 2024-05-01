@@ -48,6 +48,7 @@
 
 - What should I add to my combo box? The actual object? Just the displayed string? Why?
 - How to set the displayed property of an object added to the combobox
+- Be able to get and work with the selected item
 
 #### DataGrid
 
