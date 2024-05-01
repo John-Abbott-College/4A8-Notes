@@ -9,7 +9,7 @@
 - public, protected internal, protected, internal, private protected, private 
   - Scope of each
 - Why do you want to always limit to the most restrictive scope possible?
-- What access modifiers make sense in classes of the HomeBudget dll
+- What access modifiers make sense in classes of the HomeCalendar dll
 - Testing an internal class
 
 #### Dynamic Link Library - dll
@@ -18,10 +18,10 @@
 - Can it be executed on its own?
 - Can another program use it? 
 - How is it used (calling functions)
-- Good to include documentation to know how to use it.
+- It is a good to include documentation so that users know how to use it.
 - Loaded in memory when needed.
 - A single copy can be used by different programs at the same time
-- Creating and using a dll in VisualStudio
+- Be able to create and use a dll from/in a project in VisualStudio
 
 #### WPF controls, layout
 
@@ -39,8 +39,10 @@
 
 - Be able to explain the basic differences and pros/cons of each
 - Does WPF imply MVVM?
-- Be able to mplement the MVP pattern and how you would go about changing something in MVC into MVP in WPF.
-- How to test an MVP Presenter layer
+
+#### MVP Implementation
+- Be able to implement the MVP pattern and how you would go about taking something that is in MVC or not separated into layers and transform it into MVP in WPF.
+- Be able to test an MVP Presenter layer. Create and use test interface implementations
 
 #### Combo boxes
 
@@ -78,7 +80,7 @@
 - Understand goals: go back and improve code made fragile with piled on changes, change of requirements, change of frameworks/libraries, improving separation of concerns, improve robustness.
 - The longer you wait the riskier it gets to go back and refactor.
 - Example: 
-  - Having to bring the model namespace Budget into the UI layer. Why did we have to? What could have been done instead?
+  - Having to bring the model namespace Calendar into the UI layer. Why did we have to? What could have been done instead?
 
 
 
