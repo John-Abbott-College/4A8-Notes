@@ -61,7 +61,7 @@
   - When the ItemsSource is a List of Dictionary objects (key-value pairs), you need to bind to the indexed key value: new Binding([myKey])
 - Adding a context menu
 
-#### CI/CD
+#### CI/CD (Stop right before the CI/CD Automation tools section in the CI/CD notes. What is before the Tools section in the CI/CD notes is in the test)
 
 - What does it stand for, what is the goal?
 - How does it fit into Agile thinking?
