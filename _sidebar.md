@@ -64,11 +64,15 @@
 - [25_WPF_Combobox_Control](25_WPF_Combobox_Control.md)
 - [28 DataGrid](28_DataGrid.md)
 
+ **Test 2**
+- [29 Test 2 Info](29_Test_2_Info_Calendar.md)
+
  **CI/CD**
 - [27 CI/CD](27_CI_CD.md)
+- [30 CICD_Lab_Compile_And_Test_From_Command_Line](30_CICD_Lab_Compile_And_Test_From_Command_Line.md)
+- [31_CICD_Workflow_Setup_GitHub_Actions_Build_Test](31_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 
-**Test 2**
-- [29 Test 2 Info](29_Test_2_Info_Calendar.md)
+
 
 
 
