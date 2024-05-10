@@ -24,7 +24,7 @@ The default architecture in visual studio is `Any CPU`.
 
 Beyond the application executable, an application often involves more components
 
-* generic `dll`s, such as `HomeBudget.dll`, `sqlite.dll`
+* generic `dll`s, such as `HomeCalendar.dll`, `sqlite.dll`
 * specific `dll`s to match the processor (64 vs 32 bit), such as `sqlite.Interop.dll`
 
 In addition to the necessary files, there is often the request to add the application to the desktop, and/or the windows menu. Modern installers include ways to update and digitally sign the app files.
@@ -70,7 +70,7 @@ In 2018, Microsoft introduced the `msix` app packaging format which
 
 
 
-# Creating an `MSIX` Installer for `HomeBudget`
+# Creating an `MSIX` Installer for `HomeCalendar`
 
 ## Preparation
 
