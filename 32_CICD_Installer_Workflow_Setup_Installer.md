@@ -33,7 +33,7 @@ If you are starting from scratch:
 
 - you could start with the suggested .NET Desktop script in the GitHub Actions tab of your repository.
 - set the `Solution_Name` and `Test_Project_Path` env variables according to their adjacent comments.
-- make sure you have set the Release x86 and x64 build configurations on the projects  in VS.
+- make sure you have set the Release x86 and x64 build configurations on the projects in VS.
 
 
 
@@ -66,7 +66,7 @@ We specified the Release configurations for both x86 and x64 architectures. To s
 
 #### Remove the dotnet test step
 
-Remove the `Execute unit tests` step. We will run the unit tests using another command-line tool, vstest. Many of you will be unable to use dotnet test as it is unable to deal with the the addition of the Windows Forms assembly many of you added in order to use the Folder picker dialog.
+Remove the `Execute unit tests` step. We will run the unit tests using another command-line tool, vstest. Many of you will be unable to use dotnet test as it is unable to deal with the addition of the Windows Forms assembly in order to use the Folder picker dialog.
 
 ```yaml
     # Execute all unit tests in the solution
@@ -74,7 +74,7 @@ Remove the `Execute unit tests` step. We will run the unit tests using another c
     #  run: dotnet test
 ```
 
-We will run vstest on the build up test project dll. We will therefore have to restore and build the solution first. 
+We will run vstest on the built up test project dll. We will therefore have to restore and build the solution first. 
 
 
 
@@ -204,7 +204,7 @@ Then we will run the tests on the dll:
         - name: Execute unit tests
           run: vstest.console.exe $env:Test_DLL
 
-Notice that this last step uses an environment variable for the dll. Add an environment variable to the path and name of the dll that was built up. 
+Notice that this last step uses an environment variable for the dll. **Add an environment variable** to the path and name of the dll that was built up. 
 
     Test_DLL: MyTestProjectName\bin\${{ matrix.targetPlatform }}\${{ matrix.configuration }}\net6.0-windows\MyTestProjectName.dll
 
@@ -229,4 +229,4 @@ When the build succeeds, the msix installer bundle will be available by clicking
 
 
 
-You can click on the artifact to download it. Run the installer to verify that your application, built up and tested on an independent machine looks right!
+You can click on the artifact to download it. Run the installer to verify that your application was properly built up. Test on an independent machine to make sure it looks right!
