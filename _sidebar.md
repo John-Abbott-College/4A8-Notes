@@ -73,9 +73,9 @@
 - [31_CICD_Workflow_Setup_GitHub_Actions_Build_Test](31_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 
 **Create Installer Manually, and through CI/CD**
-- [32 Installer WAP](32_Installer_WAP_Calendar_.md)
-- [33 Icons](33_icons.md)
-- [33 Create Installer Automatically in GitHub](33_CICD_Installer_Workflow_Setup_Installer.md)
+- [32 Installer WAP](32_Installer_WAP_Calendar.md)
+- [33 Icons](33_Icons.md)
+- [33 Create Installer Automatically in GitHub](34_CICD_Installer_Workflow_Setup_Installer.md)
 
 
 
