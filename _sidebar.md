@@ -72,7 +72,10 @@
 - [30 CICD_Lab_Compile_And_Test_From_Command_Line](30_CICD_Lab_Compile_And_Test_From_Command_Line.md)
 - [31_CICD_Workflow_Setup_GitHub_Actions_Build_Test](31_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 
-
+**Installer**
+- [32 Installer WAP Calendar](32_Installer_WAP Calendar.md)
+- [32 Installer WAP](32_Installer_WAP.md)
+- [33 Icons](33_icons.md)
 
 
 
