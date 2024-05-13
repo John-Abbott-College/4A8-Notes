@@ -75,7 +75,7 @@
 **Create Installer Manually, and through CI/CD**
 - [32 Installer WAP](32_Installer_WAP_Calendar.md)
 - [33 Icons](33_Icons.md)
-- [33 Create Installer Automatically in GitHub](34_CICD_Installer_Workflow_Setup_Installer.md)
+- [34 Create Installer Automatically in GitHub](34_CICD_Installer_Workflow_Setup_Installer.md)
 
 
 
