@@ -73,8 +73,7 @@
 - [31_CICD_Workflow_Setup_GitHub_Actions_Build_Test](31_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 
 **Installer**
-- [32 Installer WAP Calendar](32_Installer_WAP Calendar.md)
-- [32 Installer WAP](32_Installer_WAP.md)
+- [32 Installer WAP](32_Installer_WAP_Calendar_.md)
 - [33 Icons](33_icons.md)
 
 
