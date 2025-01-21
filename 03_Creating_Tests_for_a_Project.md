@@ -65,7 +65,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
   * You must `use` the namespace of the code you want to test.
 
-  * Example: `using Calendar;`
+  * Example: `using Budget;`
 
 ## Writing a Test
 
@@ -112,13 +112,13 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-* a Console .NET project (call it 'Calendar' to keep it simple).
+* a Console .NET project (call it 'Budget' to keep it simple).
 * Add all the necessary files (get them from LEA)
 * Create a new `Xunit` project (within the same solution)
-  * Don't forget to add the reference to the calendar project
+  * Don't forget to add the reference to the budget project
 * Add all the test files to the test project.
 
-> NOTE: For HomeCalendar tests, there are additional test files which must also be included into the project. In other words, include all files.
+> NOTE: For HomeBudget tests, there are additional test files which must also be included into the project. In other words, include all files.
 
 * Delete `unitTest1.cs`
 
@@ -144,7 +144,7 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-In our course, we will eventually be building a WPF (gui) app using the calendar code files, however…
+In our course, we will eventually be building a WPF (gui) app using the budget code files, however…
 
 * Out of 60-some tests, there are some failing tests! 
   * you will expected to debug, and fix them before proceeding to make any modifications
