@@ -149,5 +149,5 @@ In our course, we will eventually be building a WPF (gui) app using the budget c
 * Out of 60-some tests, there are some failing tests! 
   * you will expected to debug, and fix them before proceeding to make any modifications
 
-* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
+* In class exercise... debug the failing test: `TestCategories.Categories_TypeSavingsReadCorrectlyFromFile`
 * what other tests are still failing?
