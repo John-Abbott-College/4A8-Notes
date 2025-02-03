@@ -15,6 +15,8 @@
 - [5_SCRUM](05_scrum.md)
 - [6_User_Stories](06_user_stories.md)
 
-
+**SQLite, SQLInjection**
+- [7_Connecting_to_a_database](07_Connecting_to_a_database.md)
+- [8_SQLite_from_C#_SQLInjection](08_SQLite_and_Csharp.md)
 
 
