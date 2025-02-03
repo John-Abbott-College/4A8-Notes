@@ -71,7 +71,7 @@ After completing the above tutorial, you should be able to answer the following 
 4. What is the sqlite command to get a list of tables in the database
 5. What is the sqlite command to list columns in a table
 6. The tutorial claims that the primary key is automatically incremented in sqlite, but it did not work for me. Did it work for you?
-
+<!---
 
 SECTION 2 activity
 
@@ -88,6 +88,9 @@ David, Kyle, Rayan - https://www.canva.com/design/DAF83q5k4Y4/rprFOPt4CTC6-zXtWn
 Dylan, Shijian, Nahor, Abhay - https://www.canva.com/design/DAF83q52wVs/Lt51r_mbsonnv9KY5xK6VQ/edit?utm_content=DAF83q52wVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Lucas, Joseph, Joshua - https://www.canva.com/design/DAF83ubZgkY/mW07gK0X6ZL-qijmVF0DRA/edit?utm_content=DAF83ubZgkY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+-->
+
 
 
 
