@@ -144,6 +144,11 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
+Write a console app with class MathUtils with one method GetAverage. 
+Add unit test project, write 3 unit tests to test GetAverage. 
+
+## Student Activity
+
 In our course, we will eventually be building a WPF (gui) app using the budget code files, however…
 
 * Out of 60-some tests, there are some failing tests! 
