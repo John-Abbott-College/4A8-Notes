@@ -144,8 +144,8 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-Write a console app with class MathUtils with one method GetAverage. 
-Add unit test project, write 3 unit tests to test GetAverage. 
+Write a console app with class MathUtils with one method GetAverage that takes two numbers. Make your method throw an exception for an edge case of your choice.
+Add an xunit test project, write 3 unit tests to test GetAverage. 
 
 ## Student Activity
 
