@@ -19,4 +19,12 @@
 - [7_Connecting_to_a_database](07_Connecting_to_a_database.md)
 - [8_SQLite_from_C#_SQLInjection](08_SQLite_and_Csharp.md)
 
+**JIRA, Git**
+- [9_coding_standards]
+- [10_JIRA]
+- [11.1_using_git_solo](https://drive.google.com/file/d/1CKXzVzqlzD4T8eK5vpWtUZnUO65S5Zfs/view?usp=share_link)
+- [11.2_git_ignore](https://drive.google.com/file/d/1ojSClOnWaxk0DHTPfmgAhz_w2beTw_q0/view?usp=share_link)
+- [11.3_Tale_of_the_git_pull_request](https://drive.google.com/file/d/1mcvrfejqrmnHfo5zaBIUhGphnR4px5It/view?usp=share_link)
+- [11.4_working_in_teams_with_git](https://drive.google.com/file/d/1ZMj097yKSdP6b6s9bkbHlXNW2q78Bba1/view?usp=share_link)
+
 
