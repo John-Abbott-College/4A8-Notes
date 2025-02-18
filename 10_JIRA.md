@@ -12,8 +12,6 @@ JIRA is a widely-used industry tool for software project management
 
 https://www.atlassian.com
 
-![](./Images/atlassian.PNG)
-
 ## Create a JIRA account (<u>**ONE team member**</u> per team)
 
 Create an account using an email address. You could use your JAC email address or any other one (you will need to access your email to confirm your registration).
