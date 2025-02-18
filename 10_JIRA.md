@@ -72,7 +72,7 @@ Create an account using an email address. You could use your JAC email address o
     
 14.  Choose Access => Add People to add the email addresses of your **teammates** and **BOTH** teachers:
 
-    sandra.bultena@johnabbott.qc.ca
+    alex.fulleringer@johnabbott.qc.ca
 
     helen.katalifos@johnabbott.qc.ca
 
