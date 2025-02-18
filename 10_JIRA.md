@@ -46,26 +46,7 @@ Create an account using an email address. You could use your JAC email address o
    ##### **jacappdevI-2025-yourteamname**
 
    ![](./Images/teamName.PNG)
-
-4. Once confirmed, select Jira Software
-
-   ![](./Images/chooseJIRA.PNG)
-
    
-
-5. On the Jira Software page, choose Get It Free.
-
-   ![](./Images/GetItFree.PNG)
-
-   
-
-6. Click next without selecting a second product.
-
-7. Create your team site! Use this site name format (no upper case letters allowed):
-
-   ##### **jacappdev1-2024-yourteamname**
-
-   ![](./Images/teamName.PNG)
 
 8. Select 'Go to Jira'. Choose Software Development for the type of team
 
@@ -118,21 +99,21 @@ Create an account using an email address. You could use your JAC email address o
 
     
 
-22. Check the sprint filter.
+20. Check the sprint filter.
 
     ![](./Images/sprintFilter.PNG)
 
     
 
-23. Select the sprint in the left panel and save the filter:
+21. Select the sprint in the left panel and save the filter:
 
     ![](./Images/sprintFilterSave.PNG)
 
-24. Name the filter for the sprint:
+22. Name the filter for the sprint:
 
     ![](./Images/saveFilter.PNG)
 
-21. Name the filter for the sprint:
+23. Name the filter for the sprint:
 
     ![](./Images/saveFilter.PNG)
 
