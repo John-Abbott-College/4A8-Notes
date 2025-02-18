@@ -41,9 +41,9 @@ Create an account using an email address. You could use your JAC email address o
 
 6. Click next without selecting a second product.
 
-7. Create your team site! Use this site name format:
+7. Create your team site! Use this site name format (use only lowercase letters, numbers and hyphen):
 
-   ##### **jacappdevI-2025-yourteamname**
+   ##### **jacappdev1-2025-yourteamname**
 
    ![](./Images/teamName.PNG)
    
