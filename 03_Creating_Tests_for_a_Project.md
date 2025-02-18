@@ -144,10 +144,15 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
+Write a console app with class MathUtils with one method GetAverage that takes two numbers. Make your method throw an exception for an edge case of your choice.
+Add an xunit test project, write 3 unit tests to test GetAverage. 
+
+## Student Activity
+
 In our course, we will eventually be building a WPF (gui) app using the budget code files, however…
 
 * Out of 60-some tests, there are some failing tests! 
   * you will expected to debug, and fix them before proceeding to make any modifications
 
-* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
+* In class exercise... debug the failing test: `TestCategories.Categories_TypeSavingsReadCorrectlyFromFile`
 * what other tests are still failing?
