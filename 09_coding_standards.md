@@ -1,5 +1,7 @@
 # Coding Standards
 
+Styles can differ (see below). In a professional setting it is best to adapt to the established standards. If you have insights or a perspectove that could be helpful, you can respectfully share it and try to change the standard!
+
 ## Warning!
 
 **Do NOT change existing Code base just to correct for coding standards** 
@@ -13,7 +15,7 @@ Changing existing code unnecessarily can…
 * Make it more difficult to know when a bug was introduced 
   * based on what code has changed since the last release
 
-## Helen vs Sandy
+## Helen vs Sandy (taught this course last year, but interesting here in showing different coding styles!)
 
 Helen and Sandy disagree on certain style guidelines (mostly commenting)
 
@@ -157,7 +159,7 @@ For any code block that exceeds ½ page, there should be a comment describing wh
 
 Documenting code is useful when:
 
-* Explaining an API for someone that will use but is unlikely to look through code (XML comments from assignment 1).
+* Explaining an API for someone that will use it but is unlikely to look through code (XML comments from assignment 1).
 * You want to denote something unintuitive or weird in the code.
 
 Otherwise... 
