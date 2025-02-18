@@ -48,7 +48,7 @@ Create an account using an email address. You could use your JAC email address o
    ![](./Images/teamName.PNG)
    
 
-8. Select 'Go to Jira'. Choose Software Development for the type of team
+8. Choose Software Development for the kind of work you do:
 
    ![](./Images/softwareDev.PNG)
 
