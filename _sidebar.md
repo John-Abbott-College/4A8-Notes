@@ -26,5 +26,5 @@
 - [11.2_git_ignore](https://drive.google.com/file/d/1ojSClOnWaxk0DHTPfmgAhz_w2beTw_q0/view?usp=share_link)
 - [11.3_Tale_of_the_git_pull_request](https://drive.google.com/file/d/1mcvrfejqrmnHfo5zaBIUhGphnR4px5It/view?usp=share_link)
 - [11.4_working_in_teams_with_git](https://drive.google.com/file/d/1ZMj097yKSdP6b6s9bkbHlXNW2q78Bba1/view?usp=share_link)
-
+- [11_git](11.5_git.md)
 
