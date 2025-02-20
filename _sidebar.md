@@ -4,9 +4,10 @@
 
 **Assignments**
   - [Milestone 1 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESWwSknSuoJHlaZkFMgPdpYBMy2z8O74jgbIWazMNy4ueg?e=ndjwFd)
+  
   - [Milestone_3_User_Stories_and_DB](UserStories.md)
-  - [Milestones_3_and_4_guide.md](12_Milestones_3_and_4_help.md)
-  - [Milestones_3_and_4_troubleshooting tips.md](12c_Milestones_3_and_4_Troubleshooting_tips.md)
+  - [Milestones_3_and_4_guide](12_Milestones_3_and_4_help.md)
+  - [Milestones_3_and_4_troubleshooting tips](12c_Milestones_3_and_4_Troubleshooting_tips.md)
 
 **Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
