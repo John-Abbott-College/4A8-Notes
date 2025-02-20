@@ -3,7 +3,7 @@
 ## Reminders
 
 * You must add `System.Data.SQLite` to both your HomeBudget project, *and* to your test project.
-* If you do not understand a story properly, check in with the product owner (Helen and Sandy)
+* If you do not understand a story properly, check in with the product owner (Helen and Alex)
 
 ## Helper Files
 
@@ -11,8 +11,7 @@ On Lea, you can find
 
 * a zip of test files.
   * Note that these test files are not complete, but have tests for Category and Categories (after changes to database).  See suggested workflow
-* a test database file
-  * Needed once you start converting to database storage instead of xml storage
+  * includes a test database file that is needed once you start converting to database storage instead of xml storage
 
 ## Suggested Workflow
 
@@ -80,8 +79,8 @@ Many of you have been closing your database connection to get the tests to work,
 
 * Do NOT close the SQLiteConnection, it slows everything down!!!!
 
-* Do close the SQLiteDataReaderNOTE:, 
-
+* Do close the SQLiteDataReader
+* NOTE:
   * if you use the SQLiteDataReader in a while loop, it will close itself once there are no more records to read, but if you do NOT use a while loop, then it will remain open, preventing other accesses to the database.
 * Do dispose of any SQLite command variables
 
