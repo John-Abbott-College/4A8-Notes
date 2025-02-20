@@ -4,7 +4,7 @@
 
 **Assignments**
   - [Assignment 1 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESWwSknSuoJHlaZkFMgPdpYBMy2z8O74jgbIWazMNy4ueg?e=ndjwFd)
-
+  - [Milestone_3_User_Stories_and_DB](UserStories.md)
 **Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
 - [2_Documenting_Public_APIs](/02_Documenting_Public_APIs.md)
