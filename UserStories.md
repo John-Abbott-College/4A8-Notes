@@ -1,12 +1,11 @@
-# User Stories for Assignment 3
-
+# User Stories for Milestones 3 and 4
 
 
 ## EPIC Bug Fixes and Proper Coding
 
 ### Create stories for all failing unit tests
 
-As a user of the Budget API,
+As a user of the Budget API, 
 
 I am able to rely on the proper functioning of this API.
 
@@ -23,16 +22,17 @@ As a user of the Budget API,
 I expect the displayed data (budget amount) to be consistent with what is stored externally (XML or database).
 
 **Assumptions**
+Any previously stored expense has the proper sign.
 
 **Acceptance Criteria**
 
-* The Expense amount stored in an expense object should be negative (if it was a purchase) and be consistent with the BudgetItem amount.
+* Assume that the Expense amount stored in an expense object is negative (if it was a purchase). Treat an expense consistently when creating a BudgetItem by always adding Expense amounts. Negative amounts will automatically be deducted.
 
 ### Category class variables should be readonly
 
 As a user of the Budget API,
 
-I am able to rely on proper coding practices, so that I do not accidently creating a bug by changing the category ID.
+I am able to rely on proper coding practices, so that I do not accidently create a bug by changing the category ID.
 
 **Assumptions**
 
