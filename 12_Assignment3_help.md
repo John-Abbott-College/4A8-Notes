@@ -1,4 +1,4 @@
-# Assignment 3 - Extra Info
+# Milestones 3 and 4 - Extra Info
 
 ## Reminders
 
