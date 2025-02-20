@@ -27,5 +27,11 @@
 - [11.2_git_ignore](https://drive.google.com/file/d/1ojSClOnWaxk0DHTPfmgAhz_w2beTw_q0/view?usp=share_link)
 - [11.3_Tale_of_the_git_pull_request](https://drive.google.com/file/d/1mcvrfejqrmnHfo5zaBIUhGphnR4px5It/view?usp=share_link)
 - [11.4_working_in_teams_with_git](https://drive.google.com/file/d/1ZMj097yKSdP6b6s9bkbHlXNW2q78Bba1/view?usp=share_link)
-- [11_git](11.5_git.md)
+- [11.5_git](11.5_git.md)
+- [11.6_Git_Merge_Conflicts](/11.9_Git_Merge_Conflicts.md)
+
+- **Milestones 3 & 4**
+- [12a Milestones_3_and_4_help.md](12a_Milestones_3_and_4_help.md)
+- [12b Milestones_3_and 4_UserStories.md](12b_Milestone_3_4_UserStories.md)
+- [12c Milestones_3_and_4_troubleshooting tips.md](12c_Milestones_3_and_4_Troubleshooting_tips.md)
 
