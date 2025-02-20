@@ -1,6 +1,6 @@
 # Milestones 3 and 4 - Troubleshooting tips
 
-#### The unit tests do not see the HomeCalendar code?
+#### The unit tests do not see the HomeBudget code?
 
 Is the unit tests project able to access the code? Adding a project reference ensures this.
 
