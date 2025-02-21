@@ -33,6 +33,8 @@ On Lea, you can find
 
 **SUGGESTED END OF SPRINT 1**
 
+**BELOW IS SPRINT 2 functionality**
+
 7. Modify expenses to use the database
    1. Adjust tests to the new situation
    2. Your new tests must pass
