@@ -36,7 +36,7 @@ Adding_2_And_4_Should_Return_6
 
 You are testing a hypothesis.
 
-Arrange - setup the 
+Arrange - setup the necessary variables and values
 
 Act - run the method you are testing
 
