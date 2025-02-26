@@ -32,4 +32,7 @@
 - [11.5_git](11.5_git.md)
 - [11.6_Git_Merge_Conflicts](/11.9_Git_Merge_Conflicts.md)
 
-
+**Testing**
+- [15 Writing Unit Tests](15_Writing_Unit_Tests.md)
+- [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
+- [16a When to use SQLite](16a_When_to_use_SQLite.md)
