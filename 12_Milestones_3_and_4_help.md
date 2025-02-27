@@ -1,5 +1,12 @@
-# Milestones 3 and 4 - Extra Info
+# Milestones 3 and 4 - Guide and Extra Info
 
+## Professionalism reminders
+* Your team is as strong in the code as the person that is least comfortable in the code
+* A distracted teammate is frustrating. You want to work with people that are all there.
+* Missing a stand up not fun for the team, they don’t know where you are at, they might be blocked by something you were working on, you are not coordinating.
+* Taking long or frequent breaks affects your team – miss conersations, miss the visit by the product owner, miss team discussion 
+* Is a teammate falling behind despite their best efforts? Put them in the middle
+  
 ## Reminders
 
 * You must add `System.Data.SQLite` to both your HomeBudget project, *and* to your test project.
@@ -48,6 +55,9 @@ On Lea, you can find
 11. Remove any 'dead' or 'useless' code
     1. all tests pass
 
+**SUGGESTED END OF SPRINT 2**
+
+**HomeBudget Constructor to use for internediate state where Categories are in the database and expenses are still in XML files**
 ```csharp
 public HomeBudget(String databaseFile, String expensesXMLFile, bool newDB=false)    
 {
