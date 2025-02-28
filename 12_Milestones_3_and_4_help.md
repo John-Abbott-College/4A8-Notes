@@ -1,5 +1,13 @@
 # Milestones 3 and 4 - Guide and Extra Info
 
+## Technical reminders
+* Parameterizing any data in your SQL statements prevents SQLInjection vulnerability. SQLInjection vulnerability is bad.
+* Select * is bad - why? assums a column order, exposes all columns (review the notes if this doesn't sound familiar)
+* You are switching the API to use a database because the user wants more scalability. They should be able to expect the API methods (except for the HomeBudget constructor to be the same per their perspective - behaviour, parameters, return values, exceptions
+* A story is only done when unit tests for it are complete and pass and the documentation of the public parts of the API are up to date
+* Dead code - comment it out and leave it around?  Nope, you have version control to be able to go see it if you need it later. Commented out code causes clutter - cluttered code is more prone to bugs.  Clean code is the way to go.
+* Milestone 3: all the unit tests should pass. Have a unit test where the two files are not the same? Check the XML files yourself. Is the difference the way the dates are expressed?  Look below for info on Dates to see how to fix this.
+  
 ## Professionalism reminders
 * Your team is as strong in the code as the person that is least comfortable in the code
 * A distracted teammate is frustrating. You want to work with people that are all there.
