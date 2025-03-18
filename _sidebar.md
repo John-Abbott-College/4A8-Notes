@@ -5,9 +5,12 @@
 **Milestone Info**
   - [Milestone 1 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESWwSknSuoJHlaZkFMgPdpYBMy2z8O74jgbIWazMNy4ueg?e=ndjwFd)
   - [Milestone 3 _and_4_assignment instructions](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/EXYlhSynvYhDpfQP9Br0LHMBSaJlFyZSaw0iB_Kf-vlxPg?e=yjXFZZ)
-  - [Milestone_3_User_Stories_and_DB](UserStories.md)
-  - [Milestones_3_and_4_guide](12_Milestones_3_and_4_help.md)
-  - [Milestones_3_and_4_troubleshooting tips](12c_Milestones_3_and_4_Troubleshooting_tips.md)
+  - [12_Milestone_3_User_Stories_and_DB](UserStories.md)
+  - [13_Milestones_3_and_4_guide](12_Milestones_3_and_4_help.md)
+  - [14_Milestones_3_and_4_troubleshooting tips](12c_Milestones_3_and_4_Troubleshooting_tips.md)
+
+**Test Info**
+- [17_Test 1 Info](17_Test_1_Info.md)
 
 **Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
