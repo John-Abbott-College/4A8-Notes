@@ -116,7 +116,7 @@ Consider the following method:
 
 And the unit test that tests it:
 
-    [TestMethod]
+    [Fact]
     public void Test_getFuelPerKilometerCorrectedForTemperature()
     {
     	//Arrange
@@ -144,7 +144,7 @@ The current unit tests are inadequate. The code coverage analysis shows 50% cove
 
 Adding the following test, brings code coverage to 100%!
 
-    [TestMethod]
+    [Fact]
     public void Test_getFuelPerKilometerCorrectedForTemperature_litersTooBig_exceptionExpected()
     {
         //Arrange
