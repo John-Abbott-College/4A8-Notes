@@ -65,7 +65,16 @@ On Lea, you can find
 
 **SUGGESTED END OF SPRINT 2**
 
-**HomeBudget Constructor to use for internediate state where Categories are in the database and expenses are still in XML files**
+**What needs to be done for the GetBudgetItems.... methods for Sprint 2:**
+
+* GetBudgetItems: should query the database directly, instead of calling List() on the Expenses or Categories instances. We should not be doing SQL-like manipulations on Lists now that we have a database to work on.
+
+* GetBudgetItemsByMonth/ByCategory: Do not call GetBudgetItems to figure out the groups. Use a database query to get the Month/Category groups instead.  When building the BudgetItemByMonth/Category for each group however, you can call GetBudgetItems() with the appropriate filtering to get the BudgetItems list to set as the Details property of the BudgetItemByMonth/Category
+
+* GetBudgetDictionaryByCategoryAndMonth: no implementation changes needed! Calls GetBudgetItemsByMonth internally. Unit tests should pass.
+
+
+**HomeBudget Constructor to use for intermediate state where Categories are in the database and expenses are still in XML files**
 ```csharp
 public HomeBudget(String databaseFile, String expensesXMLFile, bool newDB=false)    
 {
