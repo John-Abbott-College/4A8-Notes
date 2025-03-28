@@ -41,3 +41,7 @@
 - [15 Writing Unit Tests](15_Writing_Unit_Tests.md)
 - [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
 - [16a When to use SQLite](16a_When_to_use_SQLite.md)
+
+**Architecture, Design Patterns, MVP**
+- [21 Architecture Patterns](21_Architecture_Patterns.md)
+- [22 Design Patterns](22_Design_Patterns.md)
