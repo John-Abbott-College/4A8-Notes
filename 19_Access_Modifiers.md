@@ -26,7 +26,7 @@ In object orientated programming, the *scope* of a class, property, or method is
 In the following example, the class `HomeBudget` is **public**, as well as the property `Categories`, whilst the backing fields `Categories` and `Expenses` are **private**.
 
 ```csharp
-    public class HomeBudgetr
+    public class HomeBudget
     {
         private Categories _categories;
         private Expenses _expenses;
@@ -55,7 +55,7 @@ Any class within the `System.Data.SQLite` code that has been declared `public` i
 
 * `SQLiteConnection` is a public class.
 
-Likewise, only `public` methods of the `SQLiteConnection` connection class is available to HomeCalendar.
+Likewise, only `public` methods of the `SQLiteConnection` connection class is available to HomeBudget.
 
 
 
@@ -154,18 +154,18 @@ Questions:
 
 It is what one would expect, where anything that is `public` or `internal` is available to all code, and `private` is restricted to the class where it was defined.
 
-![image](./Images/access_modifiers_1_Calendar.png)
+![image](./Images/access_modifiers_1.png)
 
 #### External access privileges
 
 This is a little more complicated.
 
 The external *assembly* ...
-* cannot create a new `Categories` object, because the constructor is `internal` (hence no one outside of the HomeCalendar assembly can access it)
+* cannot create a new `Categories` object, because the constructor is `internal` (hence no one outside of the HomeBudget assembly can access it)
 * but, it can access the `Categories` methods
 
 How does that work?
-Well, the HomeCalendar class creates the `Categories` object, which then can be accessed via the HomeCalendar object.
+Well, the HomeBudget class creates the `Categories` object, which then can be accessed via the HomeBudget object.
 
 ```csharp
 var hb = new HomeBudget(...);
@@ -175,7 +175,7 @@ hb.Categories.Add(...);  // allowed, because 'Add' is public
 // var cat = new Categories(...); 
 ```
 
-![image](./Images/access_modifiers_2_Calendar.png)
+![image](./Images/access_modifiers_2.png)
 
 ## How to test `Internal` Classes
 
