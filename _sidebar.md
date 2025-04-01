@@ -42,6 +42,9 @@
 - [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
 - [16a When to use SQLite](16a_When_to_use_SQLite.md)
 
+**Access Modifiers**
+- [19 Access Modifiers](19_Access_Modifiers.md)
+
 **Architecture, Design Patterns, MVP**
 - [21 Architecture Patterns](21_Architecture_Patterns.md)
 - [21.1 MVP Wordle Example](21.1_MVP_Wordle_Example.md)
