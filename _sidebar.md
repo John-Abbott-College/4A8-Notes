@@ -9,6 +9,7 @@
   - [13_Milestones_3_and_4_guide](12_Milestones_3_and_4_help.md)
   - [14_Milestones_3_and_4_troubleshooting tips](12c_Milestones_3_and_4_Troubleshooting_tips.md)
   - [Milestone 5 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/EQzX7hEIJ-9EsfOQHH6JjF8BoGkehgIRgZ62AjujYZobzQ?e=uFAaPG)
+    
 **Test Info**
 - [17_Test 1 Info](17_Test_1_Info.md)
 - [Test 1 review game with answers](https://johnabbott-my.sharepoint.com/:p:/g/personal/helen_katalifos_johnabbott_qc_ca/ET24k3XHHBdFsxDSdKPCTI8Bw01ukeHvArowh82osNWSwQ?e=uhVfEG)
