@@ -42,7 +42,8 @@
 - [16 Application Testing, Code Coverage](16_ApplicationTesting_CodeCoverage.md)
 - [16a When to use SQLite](16a_When_to_use_SQLite.md)
 
-**Access Modifiers**
+**DLL, Access Control**
+- [18 DLL: Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
 - [19 Access Modifiers](19_Access_Modifiers.md)
 
 **Architecture, Design Patterns, MVP**
