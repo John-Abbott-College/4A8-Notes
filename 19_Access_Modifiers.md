@@ -181,7 +181,7 @@ hb.Categories.Add(...);  // allowed, because 'Add' is public
 
 If the class is `internal`, then by definition, another assembler (such as unit tests), cannot access that class.
 
-The fix: (I think this works for both `debug` mode and `release` mode, but have not tested in `release` mode)
+The fix:
 
 Add this to your HomeBudget code.
 
