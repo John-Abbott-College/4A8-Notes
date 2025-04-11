@@ -58,3 +58,6 @@
  **WPF**
 - [23_Intro_to_WPF_Windows_Application](23_Intro_to_WPF_Windows_Application.md)
 - [24_WPF_ComboBox](24_WPF_Combobox_Control.md)
+
+**CI/CD**
+- [25_CI_CD.md](27_CI_CD.md)
