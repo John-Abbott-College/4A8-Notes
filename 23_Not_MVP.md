@@ -55,7 +55,7 @@ So, **your View needs to have access to HomeBudget via the `using Budget;` code*
 
 ### What Could be Done to Remove the Flaw?
 
-There is probably many ways to do this, but I (Sandy) would propose the following:
+There is probably many ways to do this, but we could propose the following:
 
 1) Use a different namespace for HomeBudget data-types, isolating it from the HomeBudget `using Budget` code.
 
