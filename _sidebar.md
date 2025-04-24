@@ -12,7 +12,7 @@
   - [25_Milestone_6_User_Story_Starter](25_Milestone_6_Budget_stories.md)
   - [Milestone 6 instructions](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESLqfrUyK99BkXSPCZmn5Z8BFiTcWCnR3LSXVy__F-eKqA?e=ja9oeh)
     
-**Test Info**
+**Test Info, Review**
 - [17_Test 1 Info](17_Test_1_Info.md)
 - [Test 1 review game with answers](https://johnabbott-my.sharepoint.com/:p:/g/personal/helen_katalifos_johnabbott_qc_ca/ET24k3XHHBdFsxDSdKPCTI8Bw01ukeHvArowh82osNWSwQ?e=uhVfEG)
 
