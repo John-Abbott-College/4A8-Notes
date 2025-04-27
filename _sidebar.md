@@ -63,4 +63,5 @@
 - [26_DataGrid](28_DataGrid.md)
 
 **CI/CD, GitHub Actions**
-- [25_CI_CD.md](27_CI_CD.md)
+- [25_CI_CD](27_CI_CD.md)
+- [27_CI_CD_Lab_Compile_And_Test_From_Command_Line](30_CICD_Lab_Compile_And_Test_From_Command_Line.md)
