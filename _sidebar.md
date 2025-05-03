@@ -16,7 +16,7 @@
 **Test Info, Review**
 - [17_Test 1 Info](17_Test_1_Info.md)
 - [Test 1 review game with answers](https://johnabbott-my.sharepoint.com/:p:/g/personal/helen_katalifos_johnabbott_qc_ca/ET24k3XHHBdFsxDSdKPCTI8Bw01ukeHvArowh82osNWSwQ?e=uhVfEG)
-- [29_Test_2_Info](29_Test_2_Info.md)
+- [29_Test 2 Info](29_Test_2_Info.md)
 
 **Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
