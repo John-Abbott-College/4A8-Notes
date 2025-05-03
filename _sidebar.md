@@ -16,6 +16,7 @@
 **Test Info, Review**
 - [17_Test 1 Info](17_Test_1_Info.md)
 - [Test 1 review game with answers](https://johnabbott-my.sharepoint.com/:p:/g/personal/helen_katalifos_johnabbott_qc_ca/ET24k3XHHBdFsxDSdKPCTI8Bw01ukeHvArowh82osNWSwQ?e=uhVfEG)
+- [29_Test_2_Info](29_Test_2_Info.md)
 
 **Documentation and setup of projects**
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code.md)
@@ -55,13 +56,13 @@
 - [21.1 MVP Wordle Example](21.1_MVP_Wordle_Example.md)
 - [21.2 MVP and HomeBudget](23_Not_MVP.md)
 - [22 Design Patterns](22_Design_Patterns.md)
-  
 
  **WPF**
 - [23_Intro_to_WPF_Windows_Application](23_Intro_to_WPF_Windows_Application.md)
 - [24_WPF_ComboBox](24_WPF_Combobox_Control.md)
-- [26_DataGrid](28_DataGrid.md)
+- [26_DataGrid](26_DataGrid.md)
 
 **CI/CD, GitHub Actions**
-- [25_CI_CD](27_CI_CD.md)
-- [27_CI_CD_Lab_Compile_And_Test_From_Command_Line](30_CICD_Lab_Compile_And_Test_From_Command_Line.md)
+- [25_CI_CD](25a_CI_CD.md)
+- [27_CI_CD_Lab_Compile_And_Test_From_Command_Line](27_CICD_Lab_Compile_And_Test_From_Command_Line.md)
+- [28_CI_CD Workflow Setup GitHub Actions](28_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
