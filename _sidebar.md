@@ -8,7 +8,7 @@
   - [12_Milestone_3_User_Stories_and_DB](UserStories.md)
   - [13_Milestones_3_and_4_guide](12_Milestones_3_and_4_help.md)
   - [14_Milestones_3_and_4_troubleshooting tips](12c_Milestones_3_and_4_Troubleshooting_tips.md)
-  - [Milestone 5 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/EQzX7hEIJ-9EsfOQHH6JjF8BoGkehgIRgZ62AjujYZobzQ?e=uFAaPG)
+  - [Milestone 5 (code is on Lea)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/EQzX7hEIJ-9EsfOQHH6JjF8BoGkehgIRgZ62AjujYZobzQ?e=lesAW7)
   - [25_Milestone_6_User_Story_Starter](25_Milestone_6_Budget_stories.md)
   - [Milestone 6 instructions](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESLqfrUyK99BkXSPCZmn5Z8BFiTcWCnR3LSXVy__F-eKqA?e=ja9oeh)
   - [Milestone 7_instructions (includes demo video)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/Ea_ZbKizuplDjc91nYp8z2AB2APArGzZE0dTbQIeNAhBcw?e=mRpyuO)
