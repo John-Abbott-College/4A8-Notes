@@ -66,3 +66,8 @@
 - [25_CI_CD](25a_CI_CD.md)
 - [27_CI_CD_Lab_Compile_And_Test_From_Command_Line](27_CICD_Lab_Compile_And_Test_From_Command_Line.md)
 - [28_CI_CD Workflow Setup GitHub Actions](28_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
+
+**Installer - creation and to setup in CI/CD**
+- [30 Installer WAP](30_Installer_WAP.md)
+- [31 Icons](31_Icons.md)
+- [32 Create Installer Automatically in GitHub](32_CICD_Installer_Workflow_Setup_Installer.md)
