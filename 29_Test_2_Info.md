@@ -68,6 +68,11 @@
   - GitHub Actions
     - Script is run on GitHub servers, independently of what is on my computer's copy of the repo
     - GitHub installs a fresh OS version and clones a fresh copy of my repo from GitHub, before running my script.
+    - We used the suggested template script for our type of repo (WPF C# solution). In that template, there already were steps to checkout our repo and add MSBuild to the PATH on wherever GitHub is running our script.
+    - We set appropriate values for the environment variables used in the script steps
+    - The CICD run was set to be triggered by any commit to master, or an pull request to master.
+    - The script was set up to build both the debug and release configurations of our solution. This is why we see two script runs per commit/pull request to master. 
+      
 
 #### Refactoring code
 
