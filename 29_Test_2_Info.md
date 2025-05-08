@@ -8,7 +8,6 @@
   - Scope of each
 - Why do you want to always limit to the most restrictive scope possible?
 - What access modifiers make sense in classes of the HomeBudget dll
-- Testing an internal class
 
 #### Dynamic Link Library - dll
 
