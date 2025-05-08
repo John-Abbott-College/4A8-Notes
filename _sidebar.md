@@ -12,6 +12,7 @@
   - [25_Milestone_6_User_Story_Starter](25_Milestone_6_Budget_stories.md)
   - [Milestone 6 instructions](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESLqfrUyK99BkXSPCZmn5Z8BFiTcWCnR3LSXVy__F-eKqA?e=ja9oeh)
   - [Milestone 7_instructions (includes demo video)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/Ea_ZbKizuplDjc91nYp8z2AB2APArGzZE0dTbQIeNAhBcw?e=mRpyuO)
+  - [Milestone 8 Instructions](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/Efo1HV1PvsNIuc6zzm2qasMBDdbTrFEhfyERAMYCHfi11g?e=9CGYea)
     
 **Test Info, Review**
 - [17_Test 1 Info](17_Test_1_Info.md)
