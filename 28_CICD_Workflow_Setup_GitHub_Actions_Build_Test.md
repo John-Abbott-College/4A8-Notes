@@ -210,13 +210,17 @@ Note the next step is setting up MSBuild to be used.
 
 #### Run the tests  
 
-Note the next step that runs `dotnet test` to run the unit tests as we did using the command-line tool.
+Note the next step that runs `dotnet test` to run the unit tests as we did using the command-line tool. You want to only run the unit tests for the WPF app (the Presenter tests). We are using the API as a dll. Therefore, change the step to specify the XUnit test project to run:
+
+    # Execute all unit tests in the solution
+    - name: Execute unit tests
+      run: dotnet test **$env:Test_Project_Path**
 
 
 
 #### Restore the packages
 
-The next step restores the packages as we also did using the command-line tool. 
+The next step restores the packages as we also did using the command-line tool. Leave it as is.
 
 
 
