@@ -1,5 +1,9 @@
 # Creating an Installer
 
+An installer is an application that takes care or installing all the pieces needed for your application to run for your users. It also allows the user to configure some details of the installation.
+
+
+
 ## Information you need for later
 
 ### Determining which architecture your application is built for (x32, x64)
@@ -18,13 +22,11 @@ The default architecture in visual studio is `Any CPU`.
 
 
 
-# Creating an Installer
-
 ## Can’t we just copy over the exe?
 
+Do we really need an installer? Can't we just give our users the .exe file?
 
-
-TRY IT!
+**TRY IT!**
 
 In the bin folder, find the .exe file for your WPF application. 
 
@@ -88,9 +90,9 @@ In 2018, Microsoft introduced the `msix` app packaging format which
 
 ## Preparation
 
-### Do you need to add the UWP option in Visual Studio?
+### Do you need to add the WAP or UWP option in Visual Studio?
 
-Check if you can add a Windows Application Packaging project in your solution. If you can't, you need to add the Universal Windows Platform development option in VS:
+Check if you can add a Windows Application Packaging project in your solution (next section). If you can't, you need to add the Universal Windows Platform development option in VS:
 
 `Tools`->`Get Tools and Features...`
 
@@ -102,7 +104,7 @@ Check the Windows Application development option or the Universal Windows Platfo
 
 ### Create a `WAPP` project
 
-With the extension installed, create a new **Windows Application Packaging Project** in the ***same solution*** as your application.
+With the extension installed, create a new C# **Windows Application Packaging Project** in the ***same solution*** as your application.
 
 <img src="./Images/WAPP_Project.JPG" />
 
@@ -120,7 +122,9 @@ You may ignore any warning about requiring the Developer Mode for Windows.
 
 ## Link the Application to install
 
-On the Installer project, set the application that this will install. On the WAP project, select `Dependencies`. Right-click to select `Add Project Reference...`
+On the Installer project, set the application that it will install when it is run. On the WAP project, select `Dependencies`. Right-click to select `Add Project Reference...`
+
+
 
 ![image-20230417040917029](./Images/Add_WAPP_Project.JPG)
 
@@ -182,7 +186,7 @@ Choose a password that you will **not lose**! Enter it in the Confirm your passw
 
 Click Ok to create the certificate.
 
-Note that when you View the certificate, `View Full Certificate`, it is clearly  indicated that the certificate is not trusted. 
+Note that when you View the certificate (select `View Full Certificate`), it is clearly  indicated that the certificate is not trusted. 
 
 ![image-20230424020921468](./Images/WAPP_dev_certificate.JPG)
 
@@ -190,7 +194,7 @@ Note that when you View the certificate, `View Full Certificate`, it is clearly 
 
 The certificate expires in a year. When we use the installer that our build will generate, we will have to indicate that we "trust it". Click `Ok`.
 
-Click `Ok` to choose this certificate. You could select `Ok` on the warning.
+Click `Ok`  again in the `Choose a Certificate` dialog to choose this new certificate. You could select `Ok` on the warning.
 
 The certificate is now chosen for the installer.
 
@@ -208,13 +212,13 @@ We have specified the installer details.  Now we must build it.
 
 Rebuild your solution.
 
-Note that MSIX allows you to publish your desktop app to the Microsoft Store. We will not be doing this. Instead, we will be using the option to create a local installer instead. To distribute your application you could give any 'customer'  the installer.
+MSIX allows you to publish your desktop app to the Microsoft Store. We will not be doing this. Instead, we will be using the option to create a local installer instead. To distribute your application you could give any 'customer'  the installer.
 
 To build the installer, right-click on your installer project and choose `Publish -> Create App packages...`
 
 ![image-20230504003655502](./Images/WAPP_publish_menu.PNG)
 
-As we will not be publishing our apps on the Microsoft Store, we will keep the `Sideloading` option checked.
+As we will not be publishing our app on the Microsoft Store, we will keep the `Sideloading` option checked. When we incorporate the building of the installer in our GitHub Actions script we will also have to specify that it our installer is side loading.
 
 ![image-20230424022421100](./Images/WAPP_Sideloading.JPG)
 
@@ -234,9 +238,7 @@ Click `Next`.
 
 Next, we see the architectures we are choosing to support in our installer. Leave this as is for now.  
 
-In 'Output location' set the location where the installer will be placed once built. This could be a URL (if you were providing this installer on a webserver), or a folder. 
-
-Once a user installs your application, future updates will be looked for in that folder.
+In 'Output location' set the location where the installer will be placed once built. 
 
 Choose `Create`.
 
@@ -252,13 +254,13 @@ Set up the following configurations:
 
 ​	Choose Release as the Active solution configuration.
 
-​	Change the Active solution platform to x64. Change all the projects to be built for x64:
+​	Change the Active solution platform to x64. Change all the projects to be built for x64. To set the platform to x64 for any project that does not have it selected:
 
 ​		Choose `Platform -> <New...>`.  In the `New Project platform dialog`, unselect the `Create new solution platforms` checkbox and  then select `x64` in the `New Platform` dropdown 
 
 ![image-20230427020038796](./Images/NewPlatformConfiguration_Installer.png)
 
-​	Make the same changes for x86. Change the Active solution platform to x86. For each project, set x86 as the platform as you did for x64..
+​	Make the same changes for x86. Change the Active solution platform to x86. For each project, set x86 as the platform as you did for x64.
 
 ![image-20230424025439541](./Images/WAPP_configuration_projects.JPG)
 
@@ -266,13 +268,15 @@ Set up the following configurations:
 
 Regenerate the Installer:
 
-​	Right-click on your installer project and choose `Publish -> Create App packages...`
+​	Right-click on your installer project and choose `Publish -> Create App packages...`like we did before. Click next until you get to the  `Select and configure packages` page.
 
 In the `Select and configure packages` page, select the x86 and x64 architectures, instead of the generic Neutral:
 
 ![image-20230424025234415](./Images/WAPP_select_architectures.JPG)
 
 
+
+Note that we will only bother with the Release configuration. Our GitHub Actions script will have to reflect this.
 
 Click `Create` to create the Installer. This takes some time.
 
@@ -291,11 +295,18 @@ In the installer directory, the installer bundle and the public security certifi
 
 
 
-Click `Copy and Close` to have the installer copied to the Installer location. 
+> Note that every time you create an installer selecting `Publish -> Create App packages...` the version is incremented. You can disable auto-increment or set the version number in the  `Select and configure packages` page.
+>
 
-You could launch the installer from the bundle file.
 
-Note that you are blocked from installing the application. This is because the certificate is not trusted! Since you know that you created the certificate you could indicate that you trust the certificate below.
+
+### Testing your installer
+
+You can launch the installer from the bundle file. Try it.
+
+Note that you are blocked from installing the application. This is because the certificate is not trusted! Since you know that you created the certificate you could indicate that you trust the certificate below. In order to do this, however, **you will need admin privileges on the machine you wish to install the app on**.
+
+Note, you do not have admin privileges on the lab computers. If you or one of your teammates has a personal computer on which they have admin privileges, test on there. Otherwise message your teacher to see if they can test for you and give you feedback.
 
 
 
@@ -310,6 +321,8 @@ Right-click on the .cer file to choose `Install certificate`.
 Choose `Local Machine`
 
 For the Certificate store, choose `Trusted Root Certification Authorities`
+
+Note again, that you need administrator privileges on the test computer to do these steps.
 
 
 
