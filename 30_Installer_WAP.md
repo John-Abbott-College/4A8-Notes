@@ -22,6 +22,20 @@ The default architecture in visual studio is `Any CPU`.
 
 ## Can’t we just copy over the exe?
 
+
+
+TRY IT!
+
+In the bin folder, find the .exe file for your WPF application. 
+
+- Double click on it to run it. Does your application run?
+
+Copy the .exe file. Go to a new folder (on your Desktop, or any other folder outside of your solution). Paste the copy of the .exe file there. Double click on it to run it. Does your application run?
+
+- Double click on it to run it. Does your application run? Can you explain why?
+
+  
+
 Beyond the application executable, an application often involves more components
 
 * generic `dll`s, such as `HomeBudget.dll`, `sqlite.dll`
