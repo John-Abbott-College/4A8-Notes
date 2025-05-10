@@ -18,7 +18,7 @@ The default architecture in visual studio is `Any CPU`.
 
 
 
-# Creating an Installer (`setup.exe`)
+# Creating an Installer
 
 ## Can’t we just copy over the exe?
 
