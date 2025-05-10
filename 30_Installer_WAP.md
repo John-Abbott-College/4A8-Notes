@@ -116,7 +116,7 @@ With the extension installed, create a new C# **Windows Application Packaging Pr
 
 
 
-You may ignore any warning about requiring the Developer Mode for Windows.
+You may ignore any warning about requiring the Developer Mode for Windows. This is required if you want to publish your application in the Windows Store, which we will not be doing here.
 
 
 
@@ -182,7 +182,7 @@ In the Packaging page, select `Choose Certificate...` and `Create...`
 
 You could enter your Team name as the Publisher Common Name. 
 
-Choose a password that you will **not lose**! Enter it in the Confirm your password field too.
+Choose a password that you will **not lose**! Enter it in the `Confirm your password` field too.
 
 Click Ok to create the certificate.
 
@@ -218,7 +218,7 @@ To build the installer, right-click on your installer project and choose `Publis
 
 ![image-20230504003655502](./Images/WAPP_publish_menu.PNG)
 
-As we will not be publishing our app on the Microsoft Store, we will keep the `Sideloading` option checked. When we incorporate the building of the installer in our GitHub Actions script we will also have to specify that it our installer is side loading.
+As we will not be publishing our app on the Microsoft Store, we will keep the `Sideloading` option checked. When we incorporate the building of the installer in our GitHub Actions script we will also have to specify that our installer is side loading.
 
 ![image-20230424022421100](./Images/WAPP_Sideloading.JPG)
 
@@ -238,7 +238,7 @@ Click `Next`.
 
 Next, we see the architectures we are choosing to support in our installer. Leave this as is for now.  
 
-In 'Output location' set the location where the installer will be placed once built. 
+In `Output location` set the location where the installer will be placed once built. 
 
 Choose `Create`.
 
@@ -352,7 +352,7 @@ You could go to Windows Manage user certificates to delete the certificates when
 * Note that every build of the installer object increments the version number.
 * You should see:
   * Your company name as a folder in the Start menu with your application in it. 
-  * The application is launched by default.
-    * It works (all DLLs and the application exe are present). 
-  * Rerunning the installer attempts an update
+  * Run your application as administrator.
+    * Check that it works (all DLLs and the application exe are present). 
+  * Rerunning the installer gives you options to reinstall. Note that if you try to install a newer version you will be asked if you want to update.
 
