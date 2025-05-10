@@ -252,15 +252,15 @@ With the main CICD_Practice project selected, choose `Build -> Configuration Man
 
 Set up the following configurations:
 
-​	Choose Release as the Active solution configuration.
+​	Choose **Release** as the Active solution configuration.
 
-​	Change the Active solution platform to x64. Change all the projects to be built for x64. To set the platform to x64 for any project that does not have it selected:
+​	Change the Active solution platform to **x64**. Change all the projects to be built for x64. To set the platform to x64 for any project that does not have it selected:
 
 ​		Choose `Platform -> <New...>`.  In the `New Project platform dialog`, unselect the `Create new solution platforms` checkbox and  then select `x64` in the `New Platform` dropdown 
 
 ![image-20230427020038796](./Images/NewPlatformConfiguration_Installer.png)
 
-​	Make the same changes for x86. Change the Active solution platform to x86. For each project, set x86 as the platform as you did for x64.
+​	Make the same changes for x86. Change the Active solution platform to **x86** (still with Release as the Active Solution Configuration). For each project, set x86 as the platform as you did for x64.
 
 ![image-20230424025439541](./Images/WAPP_configuration_projects.JPG)
 
