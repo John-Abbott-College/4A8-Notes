@@ -214,7 +214,7 @@ Note the next step that runs `dotnet test` to run the unit tests as we did using
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test **$env:Test_Project_Path**
+      run: dotnet test $env:Test_Project_Path
 
 
 
