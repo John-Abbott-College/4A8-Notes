@@ -71,3 +71,4 @@
 - [30 Installer WAP](30_Installer_WAP.md)
 - [31 Icons](31_Icons.md)
 - [32 Create Installer Automatically in GitHub](32_CICD_Installer_Workflow_Setup_Installer.md)
+- [33 Charts and custom UserControls](33_Charts.md)
