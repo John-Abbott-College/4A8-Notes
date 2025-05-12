@@ -146,7 +146,7 @@ Double-click the `Package.appxmanifest` file in the project. The manifest allows
 
 ### Display name
 
-Customize the installed application's display name. Describe your app in the description field.
+Customize your application's display name. Describe your app in the description field.
 
 
 
@@ -160,7 +160,7 @@ In Visual Assets, you will be able to se the Icons for your application. More on
 
 Leave the Package name (a unique Id) as is.
 
-Set the package display name. The default first version of 1.0.0 makes sense.
+Set the package display name to be the name of your application again. The default first version of 1.0.0 makes sense.
 
 
 
