@@ -20,6 +20,8 @@
 - A single copy can be used by different programs at the same time
 - Be able to use a dll in a project
 
+  NOTE: you will not be expected to create a dll
+
 #### WPF controls, layout
 
 - Be able to add controls, set properties and event listeners
