@@ -130,7 +130,7 @@ On the Installer project, set the application that it will install when it is ru
 
 
 
-Select your `CICD_Practice` application. Note that any assemblies the application depends on will be automatically be brought in by the installer.
+Select your WPF application (that will be installed by your installer). Note that any assemblies the application depends on will be automatically be brought in by the installer.
 
 Should you also choose the xunit unit testing project? Why or why not?
 
