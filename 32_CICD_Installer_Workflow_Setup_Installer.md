@@ -212,7 +212,7 @@ You can click on the artifact to download it. Run the installer to verify that y
 
 If you see an error indicating that you need to add RuntimeIdentifiers to your WPF project's .csproj file, add the following in the `<PropertyGroup>` property, below the `<TargetFramework>`:
 
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+`<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>`
 
 
 
