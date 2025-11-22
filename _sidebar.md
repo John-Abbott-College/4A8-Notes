@@ -1,3 +1,8 @@
+**TECH DAY**
+  - [TechDayInstructions](/TechDayInstructions.md)
+  - [Tech Day Code)](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESWwSknSuoJHlaZkFMgPdpYBMy2z8O74jgbIWazMNy4ueg?e=ndjwFd)
+
+
 **Intro**
 - [0.0_Introduction](/00.1_Introduction.md)
 - [0.1_Expectations](/00_Expectations.md)
