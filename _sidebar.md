@@ -1,5 +1,5 @@
 **TECH DAY**
-  - [Tech Day Code](https://johnabbott-my.sharepoint.com/:w:/g/personal/helen_katalifos_johnabbott_qc_ca/ESWwSknSuoJHlaZkFMgPdpYBMy2z8O74jgbIWazMNy4ueg?e=ndjwFd)
+  - [Tech Day Code](GroceryWorkshopProjects.zip)
   - [Tech Day Instructions](/TechDayInstructions.md)
 
 
