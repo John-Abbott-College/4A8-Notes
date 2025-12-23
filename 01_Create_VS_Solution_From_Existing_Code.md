@@ -53,7 +53,7 @@ You should NOT edit the .sln file directly.
 
 * Copy all of the code files to this directory on your machine 
 
-  * for HomeBudget there are 7 files
+  * for HomeCalendar there are 7 files
 
   >NOTE: This is a VERY important step.  If you add code to your solution that are not in your solutions folders, then the solution file will not be able to find your files if you change its location (i.e. submitting to LEA or Git)
 
@@ -67,7 +67,7 @@ You should NOT edit the .sln file directly.
 
   ![VS_add_item](./Images/VS_add_item.png)`
 
-* Select all of the budget files and click `Add` 
+* Select all of the calendar files and click `Add` 
 
 
   * You should now see them in the Solutions Explorer Window							
@@ -77,7 +77,7 @@ You should NOT edit the .sln file directly.
 Namespaces are a way of organizing code such that the variables, classes, methods, etc, are only available in code that shares the same namespace
 
 * Open one of the new files, and note the namespace that it uses
-  * namespace Budget (for HomeBudget code)
+  * namespace Calendar (for HomeCalendar code)
   
 * In`Program.cs`, 
   
@@ -93,11 +93,11 @@ Namespaces are a way of organizing code such that the variables, classes, method
 
 ## Addendum
 
-In our course, we will eventually be building a WPF (GUI) app using the Budget Code files, however…
+In our course, we will eventually be building a WPF (GUI) app using the Calendar Code files, however…
 
 * We need to update the existing files, and they need to be tested
 * To be able to test these files, we need a console app
-* Since there is *no* entry point (Main method) in the budget files, we need to keep `Program.cs` just for the sole purpose of creating an executable that can be tested.
+* Since there is *no* entry point (Main method) in the calendar files, we need to keep `Program.cs` just for the sole purpose of creating an executable that can be tested.
 
 
 
@@ -143,11 +143,11 @@ To get the list of all the keys in the dictionary:
 
 1. What does myDictionary.TryGetValue(myKey, out myValue) do?  How does it differ from myDictionary[myKey]?
 
-2. What is the type of the keys in the Dictionary in GetBudgetDictionaryByCategoryAndMonth?  What is the type of the values?
+2. What is the type of the keys in the Dictionary in GetCalendarDictionaryByCategoryAndMonth?  What is the type of the values?
 
    
 
-In teams, go through and decipher what GetBudgetDictionaryByCategoryAndMonth does using code inspection only.
+In teams, go through and decipher what GetCalendarDictionaryByCategoryAndMonth does using code inspection only.
 
 Questions to answer:
 
