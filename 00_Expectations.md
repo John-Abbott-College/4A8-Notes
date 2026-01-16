@@ -5,18 +5,27 @@ This course is trying to mimic the *real world* as much as possible.  As such, t
 Therefore...
 
 ## Attendance
-* Attendance is mandatory, even on lab days.
-* Marks will be lost on your milestones/assignments if you do not attend class (missing 20% of class time for an assessment will result in a 0, per the attendance policy), unless you have sufficient reason.
+* Attendance is **MANDATORY**, even (and especially) on lab days.
+* Marks will be lost on your milestones/assignments if you do not attend class (missing 20% of class time for an assessment will result in a 0, per the attendance policy), unless you have sufficient reason. Marks will also lost if you do not actively participate in your group.
+* Participation will be part of your mark for group milestones. Participation must be active and present. What does this mean?
+  * What is not participating effectively look like?
+    * Your team is discussing design decisions, approaches and you are not there, or you are physically there but you are on your phone, working on something for another course.
+    * You are not responding to your team messages. 
+    * Your team is meeting to touch base at the beginning of group lab work and you are not present or are otherwise distracted.
+    * You are letting others do most of the work or take all the decisions.
+    * You are not listening in class, you do not take individual work seriously so you are not as effectively prepared to contribute to your team.
+
 
 ## Teams
-* You will be grouped together in teams, and you will *not* have a choice as to whom you will work with, just as you usually do not choose your work colleagues.
+* You will be grouped together in teams, and you will not have a choice as to whom you will work with, just as, often, you do not choose your work colleagues.
   * It is possible that you may not like your teammates.  However, we expect the students to remain professional at *all* times. 
 * Effort and knowledge equality
-  * It is possible that you have a teammate who is not as capable as you.  That is ok, there is always a way to figure out a way to work where each person can contribute.
+  * We all have our strengths and things we could improve on.
+  * It is possible that you have a teammate who has not mastered some content as well as you.  That is ok, there is always a way to figure out a way to work where each person can contribute.
   * *As a team, it is necessary that all members contribute*
-    * This means that if you are good at everything, that does not permit you to *do* everything.  Each team member must be given the opportunity to learn and grow.  Tutor your teammates as required.  
-    * If you are not as good as your teammates, you must make all efforts to learn what you need to learn so that you can contribute effectively.
-  * Every team member needs to understand the logic
+    * This means that if your strengths touch on a lot of the parts of a project, that does not permit you to *do* everything.  Each team member must be given the opportunity to learn and grow.  Help your teammates as required.  The strength of a team and project is bolstered by the collective strength of all its members.
+    * If there is content or skills you feel you have not mastered to the extent needed to effectively contribute to your team, you must make all efforts to learn and ramp up as needed so that you can contribute effectively.
+  * Every team member needs to understand the content
     * All changes made must be code reviewed by all team members. You need to understand what was done.
     * Tests will assess everyone's knowledge.
 * Problems
