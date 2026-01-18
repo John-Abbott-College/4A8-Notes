@@ -13,12 +13,21 @@
 * Open Visual Studio
 
 * Choose `File`->`New`->`Project`
+
 * Look for and choose `Console Application C#` (or equivalent). This will create a .NET Core console application.
+
+  > A **Console Application in C#** is a type of program that runs in a **text-based window (the console/terminal)** rather than using graphical elements like buttons or windows.
+
 * Choose a Name for your project, and a directory where your project will be stored on disk. You absolutely MUST know where your files are!!! 
+
 * `Create new solution` should be chosen from the drop-down menu
+
 * Do **NOT** choose `Place solution and project in the same directory`
+
 * Click `Next`
-* For the framework, select  **.NET 6.0**. Also check the checkbox to not use top-level statements.
+
+* For the framework, select  **.NET 8.0**. Also check the checkbox to not use top-level statements.
+
 * Click `Create`
 
 ![image](./Images/VS_create_solution_VS22.png)
@@ -31,21 +40,32 @@ Info from https://docs.microsoft.com/en-us/visualstudio/ide/
 
 ### Project
 
-A project contains all files that are compiled into an executable, library, or website. Those files can include source code, icons, images, data files, and so on. A project also contains compiler settings and other configuration files that might be needed by various services or components that your program communicates with. 
+A project contains:
 
-Visual Studio uses [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2019) to build each project in a solution, and each project contains an MSBuild project file. The file extension reflects the type of project, for example, a C# project (.csproj), a Visual Basic project (.vbproj), or a database project (.dbproj). 
+* **files** that are compiled into an executable, library, or website. Those files can include source code, icons, images, data files, and other resources. 
+* **compiler settings** and other **configuration files** that might be needed by various services or components that your program communicates with. 
 
-The project file is an XML document that contains all the information and instructions that MSBuild needs in order to build your project, including the content, platform requirements, versioning information, web server or database server settings, and the tasks to perform.
+Visual Studio uses [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2019) to build each project in a solution, and each project contains an MSBuild project file. The file extension reflects the type of project, for example, a C# project (`.csproj`), a Visual Basic project (`.vbproj`), or a database project (`.dbproj`). 
 
-You may have to edit the .csproj file to change some details about the project.
+The project file is an **XML** **document** that contains all the information and instructions that MSBuild needs in order to build your project, including the content, platform requirements, versioning information, web server or database server settings, and the tasks to perform.
+
+You may have to edit the `.csproj` file to change some details about the project.
 
 ### Solution
 
-A solution is a container for one or more related projects, along with build information, Visual Studio window settings, and any miscellaneous files that aren't associated with a particular project. A solution is described by a text file (extension *.sln*) with its own unique format.
+A solution is a **container** that stores:
 
-You should NOT edit the .sln file directly.
+* **one or more related projects**
+* **Solution-level configurations** (Debug / Release, platform targets)
+* **build information** on how to build the projects (dependencies, order, configurations).
+* Visual Studio settings like window layouts, opened files, breakpoints, etc, 
+* miscellaneous files that aren't associated with a particular project (like documentation, notes, or scripts).
 
+A solution is described by a **text file** (extension `.sln`) with its own unique format. 
 
+You should NOT edit the `.sln` file directly.
+
+This file **describes the structure of the solution** and lists all the projects inside it.
 
 ## Adding Files
 
@@ -119,7 +139,7 @@ To add a key-value pair to a dictionary:
 
 `myDictionary.Add(myKey, myValue);`
 
-
+d
 
 To access the value for a specific key: 
 
@@ -141,15 +161,15 @@ To get the list of all the keys in the dictionary:
 
 ## Code inspection lab
 
-1. What does myDictionary.TryGetValue(myKey, out myValue) do?  How does it differ from myDictionary[myKey]?
+1. What does `myDictionary.TryGetValue(myKey, out myValue)` do?  How does it differ from `myDictionary[myKey]`?
 
-2. What is the type of the keys in the Dictionary in GetCalendarDictionaryByCategoryAndMonth?  What is the type of the values?
+2. What is the type of the keys in the Dictionary in `GetCalendarDictionaryByCategoryAndMonth`?  What is the type of the values?
 
    
 
-In teams, go through and decipher what GetCalendarDictionaryByCategoryAndMonth does using code inspection only.
+In teams, go through and decipher what `GetCalendarDictionaryByCategoryAndMonth` does using code inspection only.
 
 Questions to answer:
 
-1. What does the CategoryGroup.Key represent? Where does it come from?
-2. What is the difference between the two things in the last dictionary: ["details:" + CategoryGroup.Key]  vs [CategoryGroup.Key]
+1. What does the `CategoryGroup.Key` represent? Where does it come from?
+2. What is the difference between the two things in the last dictionary? `["details:" + CategoryGroup.Key]`  vs `[CategoryGroup.Key]`
