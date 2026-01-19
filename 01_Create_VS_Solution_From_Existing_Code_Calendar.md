@@ -77,7 +77,7 @@ This file **describes the structure of the solution** and lists all the projects
 
   >NOTE: This is a VERY important step.  If you add code to your solution that are not in your solutions folders, then the solution file will not be able to find your files if you change its location (i.e. submitting to LEA or Git)
 
-  ![copy_source_files](./Images/copy_source_files.png)
+  ![copy_source_files](./Images/copy_source_files_Calendar.png)
 
 * In your solution explorer in Visual Studio, `right click your project` (*not the solution, but the project*) 
 
@@ -103,7 +103,7 @@ Namespaces are a way of organizing code such that the variables, classes, method
   
   * change the namespace to be the same as above
   
-    ![change_namespace](./Images/change_namespace.PNG)
+    ![change_namespace](./Images/change_namespace_Calendar.PNG)
   
   
   
@@ -139,7 +139,6 @@ To add a key-value pair to a dictionary:
 
 `myDictionary.Add(myKey, myValue);`
 
-d
 
 To access the value for a specific key: 
 
