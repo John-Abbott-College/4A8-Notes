@@ -2,11 +2,11 @@
 
 **Console (.NET)**
 
-> Note… instructions are for Microsoft Visual Studio Enterprise 2022 Version 17.4.4. It may be slightly different for different versions of Visual Studio.
+> Note… instructions are for Microsoft Visual Studio Enterprise 2022 Version 17.4.24. It may be slightly different for different versions of Visual Studio.
 >
 > Please use Microsoft Visual Studio Enterprise 2022 in the labs (not 2019). If you are setting yourself up at home, please install Visual Studio Enterprise 2022. You could download it from your [Azure education account](https://azureforeducation.microsoft.com/devtools) (free to you as a CS student). 
 >
-> The Enterprise version is required for some functionality we will be using. 
+> The Enterprise version is **required** for some functionality we will be using. 
 
 ## Create Solution
 
@@ -70,6 +70,10 @@ This file **describes the structure of the solution** and lists all the projects
 ## Adding Files
 
 * Search through your solution directories to find the `Program.cs` file (which was created for you automatically) Ex: `Solutions/`*`ProjectName/ProjectName/`*
+
+* An easy way to get to the folder where your project is located is to right click on the projects and select `Open Folder in File Explorer`
+
+  ![VS_open_folder_in_file_explorer](./Images/VS_open_folder_in_file_explorer.png)
 
 * Copy all of the code files to this directory on your machine 
 

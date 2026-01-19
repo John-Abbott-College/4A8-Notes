@@ -49,7 +49,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
   * Find the project you want to test, and select it, 
 
-  * ![VS_choosing_project_reference](./Images/VS_choosing_project_reference.png)
+  * ![VS_choosing_project_reference](./Images/VS_choosing_project_reference_Calendar.png)
 
     
 
@@ -57,7 +57,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
   * Verify!
 
-    ![VS_showing_reference](./Images/VS_showing_reference.PNG)
+    ![VS_showing_reference](./Images/VS_showing_reference_Calendar.PNG)
 
 * Give your test code access to the code you want to test
 
@@ -71,7 +71,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
 ## Writing a Test
 
-In your test file, you must include the `[FACT]` keyword to indicate which classes/methods are part of testing, as opposed to helper functions.
+In your test file, you must include the `[Fact]` keyword to indicate which classes/methods are part of testing, as opposed to helper functions.
 
 ```csharp
 [Fact]
@@ -114,15 +114,13 @@ public void CategoriesMethod_Delete()
 
 ## Student Activity
 
-* a Console .NET project (call it 'Calendar' to keep it simple).
-* Add all the necessary files (get them from LEA)
 * Create a new `Xunit` project (within the same solution)
   * Don't forget to add the reference to the calendar project
-* Add all the test files to the test project.
+* Add all the test files to the test project. (remember you can right click on the project in VS to open your project folder in a file explorer)
 
 > NOTE: For HomeCalendar tests, there are additional test files which must also be included into the project. In other words, include all files.
 
-* Delete `unitTest1.cs`
+* Delete `UnitTest1.cs`
 
 ## Viewing Your Test Files
 
@@ -153,3 +151,4 @@ In our course, we will eventually be building a WPF (gui) app using the calendar
 
 * In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
 * what other tests are still failing?
+
