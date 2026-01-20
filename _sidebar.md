@@ -13,6 +13,7 @@
 **Documentation and setup of projects**
 
 - [1_Create_VS_Solution_From_Existing_Code](/01_Create_VS_Solution_From_Existing_Code_Calendar.md)
+- [2_Documenting_Public_APIs](02_Documenting_Public_APIs.md)
 
   
 
