@@ -79,91 +79,140 @@ The API reference **must** provide a description for each of the following:
 * Every method, with a description for each parameter, the return value, and any exceptions thrown.
 
 ## Classes, interfaces, structs
-In the first sentence of a class description, briefly state the intended purpose or function of the class or interface with information that can't be deduced from the class name and signature. In additional documentation, elaborate on how to use the API, including how to invoke or instantiate it, what some of the key features are, and any best practices or pitfalls.
+1. In the first sentence of a class description using `<summary>` tags, briefly state the intended **purpose** **or function** of the class or interface with information that can't be deduced from the class name and signature. 
+
+2. In additional documentation (in `<remarks>`), elaborate on **what some of the key features are** and any **best practices or pitfalls**.
+
+3. Provide example code using `<example>` tags.
 
 Many doc tools automatically extract the first sentence of each class description for use in a list of all classes, so make the first sentence unique and descriptive, yet short. Additionally:
-* Do not repeat the class name in the first sentence.
-* Do not say "this class will/does ...."
-* Do not use a period before the actual end of the sentence, because some doc generators naively terminate the "short description" at the first period. 
+* **Do not repeat the class name in the first sentence**.
+* **Do not say "this class will/does ...."**
+* **Do not use a period before the actual end of the sentence**, because some doc generators naively terminate the "short description" at the first period. 
 	* For example, some generators terminate the sentence if they see "*e.g.*", so use "*for example*" instead.
+
+## Constants, fields, enums, properties
+Using `<summary>` tags to document:
+
+#### 1. Constants
+
+* Briefly describe **what the constant represents** and **why it exists**.
+
+* Include units if applicable (seconds, minutes, bytes, etc.).
+
+* Mention **any restrictions or expected ranges**.
+
+#### 2. Fields
+* Describe the purpose of the field and how it is used.
+
+#### 3. enums
+* Provide a short description of the enum’s purpose.
+* For each member, give a concise explanation of what it represents.
+
+#### 4. Properties
+
+* In `<value>` tags describe the value that a property represents.
+
+#### 5. Specify any related classes
+
+Specify other classes that are important to a class for the reader to understand the full usage context. Use  `<seealso>` and `<see>` tags.
+
 
 ## Methods
 
-In the first sentence for a method description, briefly state **what** action the method performs. In subsequent sentences, explain **why and how to use** the method, state any prerequisites that must be met before calling it, give details about **exceptions** that may occur, and **specify any related APIs**.
+#### 1. Description
 
-Use **present tense** for all descriptions—for example:
+In the first sentence for a method description using `<summary>` tags, briefly state **what** action the method performs. 
 
-* *Adds a new bird to the ornithology list.*
-* *Returns a bird.*
+Use **present tense** for all descriptions - for example:
 
-### Description
-* If a method performs an operation and returns some data, start the description with a verb describing the operation—for example:
+   * *Adds a new bird to the ornithology list.*
+   * *Returns a bird.*
+
+##### *Examples*
+
+* If a method **performs an operation and returns some data**, start the description with a verb describing the operation - for example:
   * *Adds a new bird to the ornithology list and returns the ID of the new entry.*
-* If it's a "getter" method and it returns a boolean, start with 
+* If it's a **"getter"** method and it **returns a boolean**, start with 
   * *Checks whether ....*
-* If it's a "getter" method and it returns something other than a boolean, start with 
+* If it's a **"getter" method** and it **returns something other than a boolean**, start with 
   * *Gets the ....*
-* If it has no return value, start with a verb like one of the following:
-  * Turning on an ability or setting: 
+* If it has **no return value,** start with a verb like one of the following:
+  * **Turning on an ability or setting**: 
     * *Sets the ....*
-  * Updating a property: 
+  * **Updating a property**: 
     * *Updates the ....*
-  * Deleting something: 
+  * **Deleting something**: 
     * *Deletes the ....*
-* If it's a convenience method that constructs the class object, start with 
+* If it's a **convenience method that constructs the class object**, start with 
   * *Creates a ....*
 
-### Parameters
+In subsequent sentences using `<remarks>`, explain **why and how to use** the method, state any prerequisites that must be met before calling it.
 
-For parameter descriptions, follow these guidelines:
+#### 2. Parameters
 
-* Capitalize the first word, and end the sentence or phrase with a period.
+For parameter descriptions, use `<param>` tags and follow these guidelines:
 
-#### Non Boolean
+* **Capitalize the first word**, and **end the sentence or phrase with a period**.
 
-* Begin descriptions of non-boolean parameters with "*The*" or "*A*" if possible:
+##### Non Boolean
+
+* Begin descriptions of non-boolean parameters with **"*The*" or "*A*"** if possible:
   * *The ID of the bird you want to get.*
   * *A description of the bird.*
 
-#### Boolean
+##### Boolean
 
-* For boolean parameters for requesting an action, start sentences with 
+* For boolean parameters for **requesting an action**, start sentences with 
   * *If true ...* and *If false ....*
     * Example:  *If true, turn traffic lines on. If false, turn them off.*
-* For boolean parameters for setting the state of something (not making a request), use the format 
+* For boolean parameters for s**etting the state of something** (not making a request), use the format 
   * *True if ...; false otherwise.*
     * Example: *True if the zoom is set; false otherwise.*
 * In this context, don't put the words "true" and "false" in code font or quotation marks.
 
-### Return Values
+#### 3. Return Values
 
-Be as brief as possible in the return value's description; put any detailed information in the class description.
+Use `<returns>` tags to specify method return values.
 
-#### Non Boolean
+Be as **brief** as possible in the return value's description; **put any detailed information in the class description**.
 
-If the return value is anything other than a boolean, start with 
+##### Non Boolean
+
+If the return value is anything **other than a boolean**, start with 
 
 * *The ....*
   * Example: *The bird specified by the given ID.*
 
-#### Boolean
+##### Boolean
 
-If the return value is a boolean, use the format 
+If the return value is a **boolean**, use the format 
 
 * *True if ...; false otherwise.*
   * Example: *True if the bird is in the sanctuary; false otherwise.*
 
-### Exceptions
+#### 4. Exceptions
 
-In languages where the reference generator automatically inserts the word `Throws`, begin your description with 
+Use `<exception>` tags to specify if a method throws *any* exceptions.
+
+In languages where the reference generator **automatically inserts the word `Throws`**, begin your description with 
 
 * *If ...*
   * Example: *If no key is assigned.*
 
-Otherwise, begin with 
+**Otherwise**, begin with 
 
 * *Thrown when ...*
   * Example: *Thrown when no key is assigned.*
+
+#### 5. Specify any related classes
+
+Specify other classes that are important to a class or method for the reader to understand the full usage context. Use  `<seealso>` and `<see>` tags.
+
+
+#### 6. Provide example code
+All the methods should have extensive examples with inputs and outputs shown using `<example>` tags.  Make sure to include examples with all the different combinations of parameters for methods.
+
 
 ## Style Choice - Table of Contents
 
