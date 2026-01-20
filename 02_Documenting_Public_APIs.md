@@ -206,7 +206,6 @@ In languages where the reference generator **automatically inserts the word `Thr
   
   * Example: *Thrown when no key is assigned.*
   
-    
 
 > ⚠️IMPORTANT!  
 >
