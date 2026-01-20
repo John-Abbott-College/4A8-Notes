@@ -163,7 +163,24 @@ In languages where the reference generator automatically inserts the word `Throw
 Otherwise, begin with 
 
 * *Thrown when ...*
+  
   * Example: *Thrown when no key is assigned.*
+  
+    
+
+> ⚠️IMPORTANT!  
+>
+> You must also document exceptions that are thrown by methods called within your method. These exceptions can there be thrown by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
+>
+> You do not need to document these exceptions if:
+>
+> - your method would catch and handle the exception if it was thrown 
+>
+> - your method includes checks that would make the scenario where an exception would be thrown impossible.
+>
+>   If, for example, you check that a value is null before sending it into a method that would throw if it was null
+>
+> 
 
 ## Style Choice - Table of Contents
 
