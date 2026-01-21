@@ -65,73 +65,6 @@ It can run on Linux, macOS, and Windows.
 * Where do you find the generated web pages?
 * What happens if you add XML documentation comments to a public function in an internal class?
 
-#### Troubleshooting
-
-Working from home and running into an error that looks like this when building with docfx.console installed?
-
-```
-1>Build succeeded with warning.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](C:/Users/helen.katalifos/OneDrive - John Abbott College/Documents/GitHubRepos/HomeCalendar1/HomeCalendar1/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar1\HomeCalendar1.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar1.csproj' does not contain any documents.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar1.
-```
-
-There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can, instead use the command line tool (https://dotnet.github.io/docfx/:):
-
-Open the Terminal in VS: View -> Terminal
-
-Run the following command to make sure the CLI docfx is installed:
-
-```
-dotnet tool update -g docfx
-```
-
-IMPORTANT: You must restart VS. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
-
-In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run dir). 
-
-Create a docfx,json (used to configure docfx) by running:
-
-```
- docfx init 
-```
-
-When prompted for the .NET projects location, enter `.` You may select enter to use the defaults on all the other prompts, including the final `Is this OK?` one
-
-Open up the docfx.json file that is generated.
-
-Change the src line here:
-
-```
-  "metadata": [
-    {
-      "src": [
-        {
-          "src": "../.",
-```
-
-to 
-
-```
-          "src": ".",
-```
-
-To create the content for the project: 
-
-```
-docfx metadada
-```
-
-build the html page: 
-
-```
-docfx build
-```
-
-Your html pages will be in the `_site/api` folder
-
-
-
 
 # Style Guide
 
@@ -151,6 +84,21 @@ The API reference **must** provide a description for each of the following:
 2. In additional documentation (in `<remarks>`), elaborate on **what some of the key features are** and any **best practices or pitfalls**.
 
 3. Provide example code using `<example>` tags.
+
+   To avoid any issues with angle brackets in code examples, you should use a CDATA tag for code in your xml comments.
+
+   ```c#
+   <example>
+   <![CDATA[
+   if (a < b && b > 0)
+   {
+       Console.WriteLine("Hello");
+   }
+   ]]>
+   </example>
+   ```
+
+   
 
 Many doc tools automatically extract the first sentence of each class description for use in a list of all classes, so make the first sentence unique and descriptive, yet short. Additionally:
 * **Do not repeat the class name in the first sentence**.
@@ -276,7 +224,7 @@ In languages where the reference generator **automatically inserts the word `Thr
 
 > ⚠️IMPORTANT!  
 >
-> You must also document exceptions that are thrown by methods called within your method. These exceptions can there be thrown by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
+> You must also document exceptions that are thrown by methods called within your method. These exceptions can be thrown by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
 >
 > You do not need to document these exceptions if:
 >
@@ -316,4 +264,69 @@ to:
       "statictoc"
     ]
 ```
+
+#### Troubleshooting docfx
+
+Working from home and running into an error that looks like this when building with docfx.console installed?
+
+```
+1>Build succeeded with warning.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](C:/Users/helen.katalifos/OneDrive - John Abbott College/Documents/GitHubRepos/HomeCalendar1/HomeCalendar1/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar1\HomeCalendar1.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar1.csproj' does not contain any documents.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar1.
+```
+
+There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can, instead use the command line tool
+
+Open the Terminal in VS: View -> Terminal
+
+Run the following command to make sure the CLI docfx is installed:
+
+```
+dotnet tool update -g docfx
+```
+
+IMPORTANT: You must restart VS. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
+
+In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run dir). 
+
+Create a docfx,json (used to configure docfx) by running:
+
+```
+ docfx init 
+```
+
+When prompted for the .NET projects location, enter `.` You may select enter to use the defaults on all the other prompts, including the final `Is this OK?` one
+
+Open up the docfx.json file that is generated.
+
+Change the src line here:
+
+```
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../.",
+```
+
+to 
+
+```
+          "src": ".",
+```
+
+To create the content for the project: 
+
+```
+docfx metadada
+```
+
+build the html page: 
+
+```
+docfx build
+```
+
+Your html pages will be in the `_site/api` folder
 
