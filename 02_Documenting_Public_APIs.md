@@ -275,34 +275,56 @@ Working on your laptop or at home? After installing docfx.console on your projec
 >[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar.
 ```
 
-There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can still generate the documentation html by using the command line tool:
-
-(After having installed docfx.console and rebuilding, there will be a docfx.json file in the folder with your cs files. Leave it there. The command-line tool will use it)
-
-Open the Terminal in VS: View -> Terminal
-
-Run the following command to make sure the CLI docfx is installed:
-
-```
-dotnet tool update -g docfx
-```
-
-IMPORTANT: You must restart VS. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
-
-In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run `dir`). 
+There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can still generate the documentation html by using the command line tool.
 
 
-To create the documentation content for the project: 
+
+##### Using the command-line docfx
+
+(After having installed docfx.console and rebuilding, you have a docfx.json file in the folder with your cs files. Leave it there. The command-line tool will use it.
+
+1- Open the Terminal in VS: View -> Terminal
+
+2- Run the following command to make sure the command-line docfx is installed:
 
 ```
-docfx metadada
+> dotnet tool update -g docfx
 ```
 
-To build the html page: 
+> ⚠️IMPORTANT: You must restart Visual Studio. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
+
+
+
+3- In the terminal, navigate to the folder where your .csproj is. You should see your .csproj file when you run `dir`.   
+
+
+
+4- From the project folder, run this to create the documentation content for the project: 
 
 ```
-docfx build
+> docfx metadada
 ```
 
-Your html pages will be in the `_site/api` folder
+
+
+5- Next, run this to build the html page: 
+
+```
+> docfx build
+```
+
+Your html pages will be in the `_site/api` folder. Open `index.html` in a browser to look at our documentation. 
+
+
+
+Note that you will have to run the two last commands above,  
+
+
+
+```
+> docfx metadada
+> docfx build
+```
+
+each time you want to see your updated documentation html pages after changing the XML.
 
