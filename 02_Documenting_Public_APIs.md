@@ -58,7 +58,10 @@ It can run on Linux, macOS, and Windows.
 #### Student Activity
 
 * Install package in Visual Studio using Nuget: `docfx.console`
+
 * Build the solution to generate the web pages.
+
+  (see the Troubleshooting docfx section below if you do not see your documentation after rebuilding when not working on a computer in the lab)
 
 #### More questions
 
@@ -88,16 +91,18 @@ The API reference **must** provide a description for each of the following:
    To avoid any issues with angle brackets in code examples, you should use a CDATA tag for code in your xml comments.
 
    ```c#
-   <example>
-   <![CDATA[
-   if (a < b && b > 0)
-   {
-       Console.WriteLine("Hello");
-   }
-   ]]>
-   </example>
+   /// <example>
+   /// <code>
+   /// <![CDATA[
+   /// if (a < b && b > 0)
+   /// {
+   ///     Console.WriteLine("Hello");
+   /// }
+   /// ]]>
+   /// </code>
+   /// </example>
    ```
-
+   
    
 
 Many doc tools automatically extract the first sentence of each class description for use in a list of all classes, so make the first sentence unique and descriptive, yet short. Additionally:
@@ -181,7 +186,7 @@ For parameter descriptions, use `<param>` tags and follow these guidelines:
 * For boolean parameters for **requesting an action**, start sentences with 
   * *If true ...* and *If false ....*
     * Example:  *If true, turn traffic lines on. If false, turn them off.*
-* For boolean parameters for s**etting the state of something** (not making a request), use the format 
+* For boolean parameters for **setting the state of something** (not making a request), use the format 
   * *True if ...; false otherwise.*
     * Example: *True if the zoom is set; false otherwise.*
 * In this context, don't put the words "true" and "false" in code font or quotation marks.
@@ -224,7 +229,9 @@ In languages where the reference generator **automatically inserts the word `Thr
 
 > ⚠️IMPORTANT!  
 >
-> You must also document exceptions that are thrown by methods called within your method. These exceptions can be thrown by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
+> You must also document exceptions that are thrown by methods called within your method. 
+>
+> If not handled in your method, these exceptions can be bubbled up (thrown) by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
 >
 > You do not need to document these exceptions if:
 >
@@ -265,73 +272,73 @@ to:
     ]
 ```
 
-#### Troubleshooting docfx
 
-Working from home and running into an error that looks like this when building with docfx.console installed?
 
-```
-1>Build succeeded with warning.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](C:/Users/helen.katalifos/OneDrive - John Abbott College/Documents/GitHubRepos/HomeCalendar1/HomeCalendar1/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar1\HomeCalendar1.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar1.csproj' does not contain any documents.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar1.
-```
+## Troubleshooting docfx
 
-There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can, instead use the command line tool
-
-Open the Terminal in VS: View -> Terminal
-
-Run the following command to make sure the CLI docfx is installed:
+Working on your laptop or at home? After installing docfx.console on your project using the NuGet package manager and rebuilding your project you likely see an error simialr to this one in the output: 
 
 ```
-dotnet tool update -g docfx
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](.../HomeCalendar/HomeCalendar/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar\HomeCalendar.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar.csproj' does not contain any documents.
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar.
 ```
 
-IMPORTANT: You must restart VS. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
+There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can still generate the documentation html by using the command line tool.
 
-In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run dir). 
 
-Create a docfx,json (used to configure docfx) by running:
 
-```
- docfx init 
-```
+### Using the command-line docfx
 
-When prompted for the .NET projects location, enter `.` You may select enter to use the defaults on all the other prompts, including the final `Is this OK?` one
+(After having installed docfx.console and rebuilding, you have a docfx.json file in the folder with your cs files. Leave it there. The command-line tool will use it.
 
-Open up the docfx.json file that is generated.
+1- Open the Terminal in VS: View -> Terminal
 
-Change the src line here:
+2- Run the following command to make sure the command-line docfx is installed:
 
 ```
-  "metadata": [
-    {
-      "src": [
-        {
-          "src": "../.",
+> dotnet tool update -g docfx
 ```
 
-to 
+> ⚠️IMPORTANT: You must restart Visual Studio. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
+
+
+
+3- In the terminal, navigate to the folder where your .csproj is. You should see your .csproj file when you run `dir`.   
+
+
+
+4- From the project folder, run this to create the documentation content for the project: 
 
 ```
-          "src": ".",
+> docfx metadada
 ```
 
-To create the content for the project: 
+
+
+5- Next, run this to build the html page: 
 
 ```
-docfx metadada
+> docfx build
 ```
 
-build the html page: 
+Your html pages will be in the `_site/api` folder. Open `index.html` in a browser to look at our documentation. 
+
+
+
+6- To see updated HTML pages after your changes to the documentation XML comments run the two last commands
 
 ```
-docfx build
+> docfx metadada
+> docfx build
 ```
 
-Your html pages will be in the `_site/api` folder
+
 
 # 🧩 Lab
 
-1. Create a new **C# Console Application** with the solution name **`Hackathon`**.
-2. Add the files **`HackathonManager.cs`** and **`HackathonProject.cs`** to the project folder.
-3. Write **XML documentation comments** for all public classes, fields, constructors, and methods in the project.
+1. Write **XML documentation comments** for all public classes, fields, constructors, and methods in the project.
+1. Download the Hackathon code files. 
+2. Create a new **C# Console App** with the solution name **Hackathon**.
+3. Add the **HackathonManager.cs** and the **HackathonProject.cs** files to the project.
+4. Write XML documentation comments for the **HackathonManager** class as well as all its public methods (including the constructor) and fields.
