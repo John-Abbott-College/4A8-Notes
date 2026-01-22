@@ -58,7 +58,10 @@ It can run on Linux, macOS, and Windows.
 #### Student Activity
 
 * Install package in Visual Studio using Nuget: `docfx.console`
+
 * Build the solution to generate the web pages.
+
+  (see the Troubleshooting docfx section below if you do not see your documentation after rebuilding when not working on a computer in the lab)
 
 #### More questions
 
@@ -265,7 +268,9 @@ to:
     ]
 ```
 
-#### Troubleshooting docfx
+
+
+## Troubleshooting docfx
 
 Working on your laptop or at home? After installing docfx.console on your project using the NuGet package manager and rebuilding your project you likely see an error simialr to this one in the output: 
 
@@ -279,7 +284,7 @@ There seems to be an issue with newer versions on VS, in particular since docfx.
 
 
 
-##### Using the command-line docfx
+### Using the command-line docfx
 
 (After having installed docfx.console and rebuilding, you have a docfx.json file in the folder with your cs files. Leave it there. The command-line tool will use it.
 
@@ -317,14 +322,18 @@ Your html pages will be in the `_site/api` folder. Open `index.html` in a browse
 
 
 
-Note that you will have to run the two last commands above,  
-
-
+6- To see updated HTML pages after your changes to the documentation XML comments run the two last commands
 
 ```
 > docfx metadada
 > docfx build
 ```
 
-each time you want to see your updated documentation html pages after changing the XML.
 
+
+# 🧩 Lab
+
+1. Download the Hackathon code files. 
+2. Create a new **C# Console App** with the solution name **Hackathon**.
+3. Add the **HackathonManager.cs** and the **HackathonProject.cs** files to the project.
+4. Write XML documentation comments for the **HackathonManager** class as well as all its public methods (including the constructor) and fields
