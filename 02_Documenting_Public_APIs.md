@@ -91,16 +91,18 @@ The API reference **must** provide a description for each of the following:
    To avoid any issues with angle brackets in code examples, you should use a CDATA tag for code in your xml comments.
 
    ```c#
-   <example>
-   <![CDATA[
-   if (a < b && b > 0)
-   {
-       Console.WriteLine("Hello");
-   }
-   ]]>
-   </example>
+   /// <example>
+   /// <code>
+   /// <![CDATA[
+   /// if (a < b && b > 0)
+   /// {
+   ///     Console.WriteLine("Hello");
+   /// }
+   /// ]]>
+   /// </code>
+   /// </example>
    ```
-
+   
    
 
 Many doc tools automatically extract the first sentence of each class description for use in a list of all classes, so make the first sentence unique and descriptive, yet short. Additionally:
@@ -184,7 +186,7 @@ For parameter descriptions, use `<param>` tags and follow these guidelines:
 * For boolean parameters for **requesting an action**, start sentences with 
   * *If true ...* and *If false ....*
     * Example:  *If true, turn traffic lines on. If false, turn them off.*
-* For boolean parameters for s**etting the state of something** (not making a request), use the format 
+* For boolean parameters for **setting the state of something** (not making a request), use the format 
   * *True if ...; false otherwise.*
     * Example: *True if the zoom is set; false otherwise.*
 * In this context, don't put the words "true" and "false" in code font or quotation marks.
@@ -227,7 +229,9 @@ In languages where the reference generator **automatically inserts the word `Thr
 
 > ⚠️IMPORTANT!  
 >
-> You must also document exceptions that are thrown by methods called within your method. These exceptions can be thrown by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
+> You must also document exceptions that are thrown by methods called within your method. 
+>
+> If not handled in your method, these exceptions can be bubbled up (thrown) by your method -  callers of your API method need to know this so they can choose how to handle these exceptions, if they occur.
 >
 > You do not need to document these exceptions if:
 >
@@ -336,4 +340,4 @@ Your html pages will be in the `_site/api` folder. Open `index.html` in a browse
 1. Download the Hackathon code files. 
 2. Create a new **C# Console App** with the solution name **Hackathon**.
 3. Add the **HackathonManager.cs** and the **HackathonProject.cs** files to the project.
-4. Write XML documentation comments for the **HackathonManager** class as well as all its public methods (including the constructor) and fields
+4. Write XML documentation comments for the **HackathonManager** class as well as all its public methods (including the constructor) and fields.
