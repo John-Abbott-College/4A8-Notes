@@ -330,3 +330,8 @@ docfx build
 
 Your html pages will be in the `_site/api` folder
 
+# 🧩 Lab
+
+1. Create a new **C# Console Application** with the solution name **`Hackathon`**.
+2. Add the files **`HackathonManager.cs`** and **`HackathonProject.cs`** to the project folder.
+3. Write **XML documentation comments** for all public classes, fields, constructors, and methods in the project.
