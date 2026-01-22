@@ -267,16 +267,18 @@ to:
 
 #### Troubleshooting docfx
 
-Working from home and running into an error that looks like this when building with docfx.console installed?
+Working on your laptop or at home? You installed docfx.console on your project using the NuGet package manager. You rebuilt your project. If you see an error in the output that looks like the following, follow read on.
 
 ```
 1>Build succeeded with warning.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](C:/Users/helen.katalifos/OneDrive - John Abbott College/Documents/GitHubRepos/HomeCalendar1/HomeCalendar1/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar1\HomeCalendar1.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar1.csproj' does not contain any documents.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar1.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](.../HomeCalendar/HomeCalendar/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar\HomeCalendar.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar.csproj' does not contain any documents.
+1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar.
 ```
 
-There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can, instead use the command line tool
+There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can still generate the documentation html by using the command line tool:
+
+(After having installed docfx.console and rebuilding, you will have a docfx.json file. The command-line tool will use it)
 
 Open the Terminal in VS: View -> Terminal
 
@@ -288,41 +290,16 @@ dotnet tool update -g docfx
 
 IMPORTANT: You must restart VS. docfx is added to your PATH but the instance of VS only reloads the environment variables at start up.
 
-In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run dir). 
+In the terminal, make sure you are in your **project** folder (not in the solution. You should see your .csproj file when you run `dir`). 
 
-Create a docfx,json (used to configure docfx) by running:
 
-```
- docfx init 
-```
-
-When prompted for the .NET projects location, enter `.` You may select enter to use the defaults on all the other prompts, including the final `Is this OK?` one
-
-Open up the docfx.json file that is generated.
-
-Change the src line here:
-
-```
-  "metadata": [
-    {
-      "src": [
-        {
-          "src": "../.",
-```
-
-to 
-
-```
-          "src": ".",
-```
-
-To create the content for the project: 
+To create the documentation content for the project: 
 
 ```
 docfx metadada
 ```
 
-build the html page: 
+To build the html page: 
 
 ```
 docfx build
