@@ -267,18 +267,17 @@ to:
 
 #### Troubleshooting docfx
 
-Working on your laptop or at home? You installed docfx.console on your project using the NuGet package manager. You rebuilt your project. If you see an error in the output that looks like the following, follow read on.
+Working on your laptop or at home? After installing docfx.console on your project using the NuGet package manager and rebuilding your project you likely see an error simialr to this one in the output: 
 
 ```
-1>Build succeeded with warning.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](.../HomeCalendar/HomeCalendar/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar\HomeCalendar.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar.csproj' does not contain any documents.
-1>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar.
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata](.../HomeCalendar/HomeCalendar/HomeCalendar1.csproj)Workspace failed with: [Failure] Msbuild failed when processing the file '...\HomeCalendar\HomeCalendar.csproj' with message: Method not found: 'System.ReadOnlySpan`1<Char> Microsoft.IO.Path.GetFileName(System.ReadOnlySpan`1<Char>)'.
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]Project '...\HomeCalendar1\HomeCalendar.csproj' does not contain any documents.
+>[26-01-21 12:59:20.886]Warning:[MetadataCommand.ExtractMetadata]No metadata is generated for HomeCalendar.
 ```
 
 There seems to be an issue with newer versions on VS, in particular since docfx.console is deprecated. You can still generate the documentation html by using the command line tool:
 
-(After having installed docfx.console and rebuilding, you will have a docfx.json file. The command-line tool will use it)
+(After having installed docfx.console and rebuilding, there will be a docfx.json file in the folder with your cs files. Leave it there. The command-line tool will use it)
 
 Open the Terminal in VS: View -> Terminal
 
