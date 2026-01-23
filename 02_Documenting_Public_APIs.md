@@ -112,7 +112,7 @@ Many doc tools automatically extract the first sentence of each class descriptio
 	* For example, some generators terminate the sentence if they see "*e.g.*", so use "*for example*" instead.
 
 ## Constants, fields, enums, properties
-Using `<summary>` tags to document:
+Using `<summary>` tags document:
 
 #### 1. Constants
 
@@ -337,7 +337,6 @@ Your html pages will be in the `_site/api` folder. Open `index.html` in a browse
 
 # 🧩 Lab
 
-1. Write **XML documentation comments** for all public classes, fields, constructors, and methods in the project.
 1. Download the Hackathon code files. 
 2. Create a new **C# Console App** with the solution name **Hackathon**.
 3. Add the **HackathonManager.cs** and the **HackathonProject.cs** files to the project.
