@@ -1,16 +1,8 @@
-# Create Test Files for a Project
+# Using Existing Test Files for a Project
 
 **Console (.NET)**
 
 > Note… instructions are for Microsoft Visual Studio **Enterprise** 2022 Version 17.4.24. It may be slightly different for different versions of Visual Studio.
-
-## Tutorial
-
-Useful [tutorial](https://docs.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2019) on testing (but we are using a different test project, XUnit). A little outdated, but very informative.  
-
-A good read on testing basics: [Unit testing fundamentals](https://learn.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2019)
-
-
 
 ## Create Test Project
 
@@ -69,7 +61,7 @@ A good read on testing basics: [Unit testing fundamentals](https://learn.microso
 
   * Example: `using Calendar;`
 
-## Writing a Test
+## Test Method Structure
 
 In your test file, you must include the `[Fact]` keyword to indicate which classes/methods are part of testing, as opposed to helper functions.
 
@@ -141,14 +133,4 @@ public void CategoriesMethod_Delete()
 * Debugging
   * You can set breakpoints in tests, and in your project code, as per usual
   * To debug, select test(s) that you wish to debug, right click, and select `debug`
-
-## Student Activity
-
-In our course, we will eventually be building a WPF (gui) app using the calendar code files, however…
-
-* Out of 60-some tests, there are some failing tests! 
-  * you will expected to debug, and fix them before proceeding to make any modifications
-
-* In class exercise... debug the failing test: `TestCategories.Categories_TypeAllDayEventReadCorrectlyFromFile`
-* what other tests are still failing?
 

@@ -16,7 +16,7 @@
 
 - [2_Documenting_Public_APIs](02_Documenting_Public_APIs.md)
 
-- [3_Creating_Tests_for_a_Project_Calendar](03_Creating_Tests_for_a_Project_Calendar.md)
+- [03_Using_Existing_Tests_for_a_Project_Calendar](03_Using_Existing_Tests_for_a_Project_Calendar.md)
 
   
 
