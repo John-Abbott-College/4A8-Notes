@@ -3,7 +3,7 @@
 ## Definition
 *Summarized from [Wikipedia article](https://en.wikipedia.org/wiki/Systems_development_life_cycle)*.
 
-A systems development life cycle is composed of a number of clearly defined and distinct work phases which are used by systems engineers and systems developers to plan for, design, build, test, and deliver information systems. 
+A systems development life cycle is composed of a number of clearly defined and distinct work phases which are used by systems engineers and systems developers to **plan** for, **design**, **build**, **test**, and **deliver** information systems. 
 
 Computer systems are complex. To manage this level of complexity, a number of SDLC models or methodologies have been created, such as 
 
@@ -49,7 +49,7 @@ Programmers / Designers want:
 With the waterfall method, each SLDC phase is completed *before* the next phase begins.
 
 * Customer, management and developers meet and discuss requirements.
-* Developers go off on their own to discuss...
+* Developers go off on their own to discuss.
 * Determine the cost and delivery date for each of:
   * Design
   * Code
@@ -129,9 +129,9 @@ Customers like RUP because
 * If the costs are running too high, features can be cut.
 
 #### Cons
-There can still be too much focus on documentation and process, which can hamper the flexibility of the developers.
+* There can still be too much focus on documentation and process, which can hamper the flexibility of the developers.
 
-Some say that a three month iteration is still too long to be adaptable to changing requirements.
+* Some say that a three month iteration is still too long to be adaptable to changing requirements.
 
 
 
