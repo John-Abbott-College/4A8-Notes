@@ -59,17 +59,14 @@ The product is designed, coded and tested during a **sprint**.
 
 #### Scrum Master
 
-* Acts as a coach, guiding the team to increase their
-  cohesiveness, self-organisation and performance.
-
+* Acts as a coach, guiding the team to increase their cohesiveness, self-organization and performance.
+  
 * Is responsible for enacting Scrum values and practices.
 
-* Ensures that the team is fully functional and productive by removing 
-  any impediments that may arise.
-
+* Ensures that the team is fully functional and productive by removing any impediments that may arise.
+  
 * Shields the team from external interferences.
-* Not a team boss.
-  A peer position set apart by knowledge and responsibilities (not rank!)
+* Not a team boss. A peer position set apart by knowledge and responsibilities (not rank!)
 
 #### Team
 
@@ -77,13 +74,13 @@ The product is designed, coded and tested during a **sprint**.
 
 * Cross-functional: Programmers, testers, designers, etc.
 
-* Members should be full-time
-  (although there may be exceptions, e.g. Database Administrator).
+* Members should be full-time (although there may be exceptions, e.g. Database Administrator).
+  
+* Teams are self-organizing (preferably with no titles/hierarchy).
 
-* Teams are self-organizing (preferably with no titles/hierarchy).*
+* Membership should change only between sprints. You have been given the names of the members in your Scrum Team.
 
-* Membership should change only between sprints.
-  You have been given the names of the members in your Scrum Team.
+📹 Extra [resource](https://www.youtube.com/watch?v=EUALxzRTfkw)
 
 ### Ceremonies
 
@@ -92,8 +89,10 @@ The product is designed, coded and tested during a **sprint**.
 * Team selects items from the product backlog that they commit to completing in the upcoming sprint. 
   This is the **sprint backlog**.
 * Tasks are identified and each is estimated.
-  This is done in a collaborative manner (e.g. using **planning poker**) or putting tasks onto a **swim lanes wall**.
+  This is done in a collaborative manner (e.g. using **[planning poker](https://www.mountaingoatsoftware.com/agile/planning-poker)**) or putting tasks onto a **swim lanes wall**.
   <img src="./Images/Scrum_swim_lanes.png" alt="img" style="zoom:50%;" />   <img src="./Images/Scrum_poker.png" alt="img" style="zoom:50%;" />
+
+📹 Extra [resource](https://www.youtube.com/watch?v=bT30zGIfaW8)
 
 #### Sprint Review
 
@@ -127,7 +126,7 @@ The product is designed, coded and tested during a **sprint**.
 
 #### Daily Scrum Meeting
 
-* Takes place daily (stand-up, 15mins max)
+* Takes place daily (stand-up, 15 mins max)
 
 * Not for problem solving.
 
@@ -151,25 +150,24 @@ Typically, each team member answers the following three questions at the daily s
   * The highest priority items are broken down into **user stories**.
 
 * Is **prioritized by Product Owner** as required
-  * and reprioritized as the start of each sprint.
+  * and reprioritized at the start of each sprint.
 
-* Each item should have priority, description, estimate of effort and type (requirement / 
-  maintenance / improvement, etc.)
+* Each item should have priority, description, estimate of effort and type (requirement / maintenance / improvement, etc.)
 
-> |Backlog item|Estimate
-> |---|---|
-> |Allow a guest to make a reservation|3
-> |As a guest, I want to cancel a reservation.|5
-> |As a guest, I want to change the dates of a reservation.|3
-> |As a hotel employee, I want to run RevPAR reports (revenue-per-available-room)|8
-> |Improve exception handling|8
-> |…|…
+ |Backlog item|Estimate
+ |---|---|
+ |Allow a guest to make a reservation|3
+ |As a guest, I want to cancel a reservation.|5
+ |As a guest, I want to change the dates of a reservation.|3
+ |As a hotel employee, I want to run RevPAR reports (revenue-per-available-room)|8
+ |Improve exception handling|8
+ |…|…
 
 #### User Stories
 
 Features in the product backlog from a user’s perspective.
 
-* User stories are written in the following format:
+* [User stories](https://www.mountaingoatsoftware.com/agile/user-stories) are written in the following format:
   As a <role> I want a <feature> so that I can <accomplish something>
 
   > * *As a user I can backup my hard-drive*
@@ -183,7 +181,7 @@ Features in the product backlog from a user’s perspective.
   * By adding “conditions of satisfaction”.
 * User stories are written **throughout** the entire agile project. Everyone in the team participates with the goal of creating the **product backlog** which fully describes the functionality required.
 
-* Incomplete until a discussion about that story has taken place.
+* User stories are incomplete until a discussion about that story has taken place.
 
 * Must be precise in use of language. 
 
