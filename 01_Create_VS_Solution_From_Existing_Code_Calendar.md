@@ -175,5 +175,5 @@ In teams, go through and decipher what `GetCalendarDictionaryByCategoryAndMonth`
 Questions to answer:
 
 1. What does the `CategoryGroup.Key` represent? Where does it come from?
-2. What is the difference between the two things in the last dictionary? `["details:" + CategoryGroup.Key]`  vs `[CategoryGroup.Key]`
+2. What is the difference between the two things in the last dictionary? `["items:" + CategoryGroup.Key]`  vs `[CategoryGroup.Key]`
 3. What does the last dictionary object added to `summary` hold?
