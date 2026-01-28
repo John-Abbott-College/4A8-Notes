@@ -311,7 +311,7 @@ There seems to be an issue with newer versions on VS, in particular since docfx.
 4- From the project folder, run this to create the documentation content for the project: 
 
 ```
-> docfx metadada
+> docfx metadata
 ```
 
 
