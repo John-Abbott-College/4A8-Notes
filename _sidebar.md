@@ -20,6 +20,8 @@
 
 - [04_software_development_life](04_software_development_life.md)
 
+- [Scrum](05_scrum.md)
+
   
 
   
