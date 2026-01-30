@@ -127,7 +127,7 @@ Using `<summary>` tags document:
 
 #### 3. enums
 * Provide a short description of the enum’s purpose.
-* For each member, give a concise explanation of what it represents.
+* For each member, give a concise explanation of what it represents. The `<summary>` tag can be used on each enum value to describe it
 
 #### 4. Properties
 
@@ -311,7 +311,7 @@ There seems to be an issue with newer versions on VS, in particular since docfx.
 4- From the project folder, run this to create the documentation content for the project: 
 
 ```
-> docfx metadada
+> docfx metadata
 ```
 
 
