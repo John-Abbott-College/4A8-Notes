@@ -170,10 +170,12 @@ Features in the product backlog from a user’s perspective.
 * [User stories](https://www.mountaingoatsoftware.com/agile/user-stories) are written in the following format:
   As a <role> I want a <feature> so that I can <accomplish something>
 
-  > * *As a user I can backup my hard-drive*
-  > * *As a power user, I can specify files or folders to backup based on size, date created or date modified*
-  > * *As a user I can indicate folders not to backup so that my backup drive isn’t filled with things I don’t need saved*
-
+  > As a user 
+  >
+  > I can indicate folders not to backup 
+  >
+  > so that my backup drive isn’t filled with things I don’t need saved
+  
 * Some user stories are too large (epic) and need to be split into multiple smaller user stories before it can be worked on.
 
 * We add detail to user stories in two ways:
@@ -185,8 +187,9 @@ Features in the product backlog from a user’s perspective.
 
 * Must be precise in use of language. 
 
-  > * Entrée comes with choice of soup or salad and bread.
-  > * The user can enter a name. It can be 127 characters.
+  > Entrée comes with choice of soup or salad and bread.
+  
+  > The user can enter a name. It can be 127 characters.
 
 ##### INVEST
 
