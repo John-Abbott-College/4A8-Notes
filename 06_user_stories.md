@@ -4,7 +4,7 @@
 
 (as opposed to requirements)
 
-**Requirements are the hardest thing to get a customer to define correctly….**
+**Requirements are the hardest thing to get a customer to define correctly**
 
 👤Typical customer: I need a database to keep track of my recipes
 
@@ -16,12 +16,13 @@
 
 👤Customer: You are a bad company, and I am not paying you.
 
-The point of a user story is to force the customer to tell you what they *need*, not what they think they want.
+The point of a user story is to force the customer to tell you what they ***need***, not what they think they want.
 
 * User stories are written **throughout** the entire agile project.
   * Everyone in the team participates with the goal of creating the **product backlog** which fully describes the functionality required.
-* A Story is incomplete until a discussion about that story has taken place.
+* A story is incomplete until a discussion about that story has taken place.
 * Must be precise in use of language. 
+* Describe features in the product backlog from a *user’s* perspective.
 
 
 
@@ -35,32 +36,28 @@ I want to `__________________________`
 
 So that I can `__________________________`
 
-* Describes features in the product backlog from a *user’s* perspective.
-* User stories are written in the following format:
-   As a <role> I want a <feature> so that I can <accomplish something>
-
 
 
 ## ✅Qualities Each Story Should Have
 
 INVEST is the acronym used for qualities you want in your user stories:
 
-**I – Independent** ⛓️‍💥
+**I – Independent** 
  should not need other stories to implement it (where possible).
 
-**N – Negotiable** 💬
+**N – Negotiable**
  product owner and development team discuss and expand details.
 
-**V – Valuable** 💎
+**V – Valuable** 
  shows product value to the customer (not technical steps required).
 
-**E – Estimable** 📊
+**E – Estimable** 
  refined enough that developers can estimate the effort required.
 
-**S – Small** ✂️
+**S – Small**
  small in executable size (so you can have 6-10 user stores per sprint).
 
-**T – Testable** 🧪
+**T – Testable** 
  needs to be testable so development team knows when it is done.
 
 
@@ -110,11 +107,13 @@ Why is it better?
 
 ## ✍🏻Adding Details to a Story
 
-We add detail to user stories in two ways:
+We add detail to user stories in three ways:
 
 1️⃣ By splitting a user story into multiple smaller user stories.
 
 2️⃣ By adding “conditions of satisfaction”.
+
+3️⃣ By adding "assumptions".
 
 
 
@@ -148,7 +147,7 @@ The above examples shows how a broad feature like “backup” starts as an epic
 
 
 
-***Example 2*** 
+***Example 2 - adding details*** 
 
 Entrée comes with a choice of soup or salad and bread
 
@@ -169,14 +168,35 @@ All user stories must have *acceptance criteria*, which describes the conditions
 > Acceptance Criteria
 >
 > * Customer must first select the recipe in the application, 
+> 
+>* When customer clicks ‘upload’, the recipe will then be uploaded to the web
+
+
+
+*NOTE: where on the web is defined in a different user story.*
+
+### 3️⃣ Documenting assumptions
+
+Assumptions capture expectations or constraints that are believed to be true but may need validation later.
+
+>As a cook 
 >
-> * When customer clicks ‘upload’, the recipe will then be uploaded to the web
-
-
-
-NOTE: where on the web is defined in a different user story.
-
-
+>I want to have access to all of my recipes 
+>
+>so that I can pick one and publish it to the web
+>
+>Assumptions
+>
+>- The cook is authenticated and authorized to publish recipes.
+>- All recipes are already stored digitally in the application.
+>
+>Acceptance Criteria
+>
+>* Customer must first select the recipe in the application, 
+>
+>* When customer clicks ‘upload’, the recipe will then be uploaded to the web
+>
+>
 
 # 💡ATM Stories Examples
 
@@ -212,12 +232,33 @@ Examples from http://groups.umd.umich.edu/cis/course.des/cis375/active/class5/Us
 
 # 🧩🧩Lab 
 
-As a class, read and discuss the user stories in the following document.
+## 🧠 Think–Pair–Share: Writing User Stories
 
-http://groups.umd.umich.edu/cis/course.des/cis375/active/class5/User-Stories-ATM.pdf
+### **Think – ⏱️ 15 mins**
 
-As a class, write user stories for
+1. Read the user stories in the following document:
+    http://groups.umd.umich.edu/cis/course.des/cis375/active/class5/User-Stories-ATM.pdf
+2. Individually write **2 user stories**:
+   - One for a **Bank Manager**
+   - One for a **Security Officer**
 
-‘Bank Manager’ 
+------
 
-‘Security Officer’
+### **Pair – ⏱️ 10 mins**
+
+1. Pair up with the person sitting next to you.
+2. Share your user stories with each other.
+3. Merge your ideas and **select the user stories that best comply with INVEST**
+    (Independent, Negotiable, Valuable, Estimable, Small, Testable).
+4. Choose **one presenter** from your pair.
+
+    
+
+------
+
+### **Share** – ⏱️ 20 mins
+
+1. The presenter of every pair will share **one selected user story** with the class and explain **why it meets INVEST**.
+
+------
+
