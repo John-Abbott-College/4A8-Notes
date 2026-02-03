@@ -22,8 +22,8 @@
 
 - [Scrum](05_scrum.md)
 
-  
+- [User Stories](06_user_stories.md)
 
   
-  
+
   
