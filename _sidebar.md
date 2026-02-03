@@ -24,6 +24,8 @@
 
 - [User Stories](06_user_stories.md)
 
+- [SQLite](07_Connecting_to_a_database.md)
+
   
 
   
