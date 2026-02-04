@@ -12,7 +12,7 @@
 
 **Documentation and setup of projects**
 
-- [Create VS Solution From Existing Code](/01_Create_VS_Solution_From_Existing_Code_Calendar.md)
+- [Create VS Solution From Existing Code](01_Create_VS_Solution_From_Existing_Code_Calendar.md)
 
 - [Documenting Public APIs](02_Documenting_Public_APIs.md)
 
