@@ -4,12 +4,6 @@
 
 Watch the video on Moodle.
 
-### Questions:
-
-* Do you think Scrum methodology affects good code design?
-* Can you anticipate some criticisms of the Scrum methodology?
-* Do you think you would like working in a development team using the Scrum methodology? Why or why not?
-
 ## What is Scrum?
 
 * Scrum is an **agile process** that allows us to focus on delivering the **highest business value** in the **shortest time**. 
