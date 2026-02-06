@@ -169,7 +169,7 @@ Otherwise...
 
 A good read - amusing article on when comments are warranted and can get ugly:
 
-[code comments - the good, the bad, and the ugly](https://www.freecodecamp.org/news/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83/)
+[code comments - the good, the bad, and the ugly](https://medium.com/free-code-camp/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83)
 
 ### Comments Example (Helen)
 
