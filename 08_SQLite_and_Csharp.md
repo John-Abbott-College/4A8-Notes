@@ -1,55 +1,75 @@
 # SQLite and C#
 
-## Goals
+🎯Objectives
 
-Using C# and sqlite, 
+By the end of this activity, using C# and SQLite, you will be able to 
 
-* Connect to a database
-*  Create tables and insert data via C#
-* Verify your work by using sqlite from the command prompt
-* Insert data using parameters
-* Retrieve data using parameters (querying)
-  * Why parameters? To prevent sql injection
-* Know and understand what sql injection is!
+1. Connect to a database
+2. Create tables and insert data via C#
+3. Verify your work by using SQLite from the command prompt
+4. Understand what SQL injection is and how parameterized queries help prevent it.
+5. Insert data securely using parameters
+6. Retrieve data using parameterized queries
 
-## Student Activities - Install Packages in Visual Studio
 
-#### Install C# libraries to allow connections with sqlite
 
-We will be using ADO.NET as our database connection protocol
+## 🧩🧩 Lab
 
-* What is it? (Google it) 
-* How does it differ from ODBC (if at all?)
+### 1. Install Packages in Visual Studio
 
-To install additional libraries, we will be using “NuGet” from within Visual Studio
+In this activity you will install C# libraries to allow connections with SQLite. We will be using ADO.NET.
 
-* Look online for instructions on how to use ‘NuGet’
-* Must install ```System.Data.SQLite``` into your project (so create a console project first)
+**ADO.NET** (ActiveX Data Objects for .NET) is a library of commands and objects that allow your application to talk to a database.
 
-## Student Activities - Practice
+With ADO.NET, you can:
 
-Use the this [tutorial](https://zetcode.com/csharp/sqlite/)
-* Create a *practice*  a database file
-* Add tables to a database file
-* Insert data into database file
-* Query existing data in database file
+- Open a database connection
+- Run `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+- Retrieve data into objects like `DataReader`, `DataTable`, or `DataSet`
+
+***Instructions***
+
+1. Using  “NuGet”, Install ```System.Data.SQLite``` into the Hackathon project
+
+   > ```System.Data.SQLite``` is an implementation of the ADO.NET specification for the SQLite database.
+
+2. Open the `Hackathon.csproj` file, what do you see?
+
+### 2. Storing and Retrieving data from SQLite
+
+Use this [tutorial](https://zetcode.com/csharp/sqlite/) to
+1. Create a database file for the Hackathon project. Use a relative path in the connection string.
+
+2. Add `HackathonProject` table to the database file.
+
+2. Write a function that inserts 3 projects into database file.
+
+3. Write a function to inserts 2 projects into database file using prepared statements.
+
+4. Write a function to display all existing projects. Print column headers as well.
+
+   
 
 *ALWAYS VERIFY YOUR WORK BY USING THE SQLITE ON THE COMMAND LINE.*
 **Do not just read the tutorial and think you understand it. Type it in. Try it!**
 
-# SQL Injections
+---
+
+## SQL Injections 💉
 
 ![Little Bobby Tables (c) XKCD](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
 *(c) XKCD*
 
-## What is SQL Injection?
+When a program builds SQL queries by just pasting strings together, a cleverly crafted input can change the meaning of the SQL. 
 
-I happens when an SQL query is sent to the database server which unintentionally returns more information than was intended.  This information can be used to find passwords, *etc.*
+### What is SQL Injection?
+
+SQL Injection occurs when **user input is improperly handled** in SQL statements, allowing an attacker to **inject malicious SQL code** into a query resulting in deleting entire tables, gaining access to sensitive information, etc..
 
 Surprisingly, even many top-tiered companies do not protect themselves from this attack.
 
-## How is it accomplished?
+### How is it accomplished?
 
 A common web hacking technique.
 
@@ -62,10 +82,10 @@ Imagine the following...
 In the *code behind*, there will need to be a query that looks something like:
 
 ```sql
-select name from users where name='scott' and password='tiger'
+select name from users where name ='scott' and password='tiger'
 ```
 
-### Example 1
+#### Example 1
 
 Because the input comes from a user, this user can type anything they want.
 
@@ -98,7 +118,7 @@ var rdr = cmd.ExecuteReader();
 
 And since `'1'='1'` is always true, **ALL** records from the `users` table will be displayed.
 
-### Example 2
+#### Example 2
 
 Aside from acquiring confidential information such as usernames and passwords, SQL injection can be used to drop tables and data.
 
@@ -114,7 +134,7 @@ What does ```cmd.CommandText``` become at this stage?
 
 Binding variables will ensure that the data passed in the variable is never used as part of the SQL statement (so prevents SQL injection).
 
-## How to Prevent SQL Injection
+### How to Prevent SQL Injection
 
 * Input comes from user, so user can type anything they want.
 
@@ -139,31 +159,29 @@ Binding variables will ensure that the data passed in the variable is never used
 
 **Result**: the data returned will only be the rows where  `name` is equal to the string “` sandy' or '1'='1 `”
 
-## How Does Binding Prevent SQL Injection?
-
 ![img](./Images/sql_binding.png)
 
-### Typical Cycle of Database Communication
+#### Typical Cycle of Database Communication
 
-#### Prepare
+##### 1. Prepare
 
 The database receives the SQL string, with or without parameters.  The SQL string is analyzed, parsed and compiled. 
 
 If there are parameters specified in the SQL command (*i.e*. `UserID = @name`), then the ‘compiled SQL code’ inserts a reference to the data that will be used when the SQL code is executed. (In other words, it creates a pointer to a variable, that is filled in only when the data is bound)
 
-#### Bind
+##### 2. Bind
 
 Any parameter that needs to be sent as part of the query needs to be *bound*.  That means that the database will be sent the data and store this data in the pointer location defined in the prepare statement.
 
 The bound data is **NEVER** interpreted as SQL
 
-#### Execute
+##### 3. Execute
 
 When the command is executed, the precompiled SQL statement is executed, using the bound data as *inputs only*.  In other words... The bound data is **NEVER** interpreted as SQL.
 
 If the command is a query, the result of the query is stored in the database until it is *fetched*.
 
-#### Fetch
+##### 4. Fetch
 
 When the data is fetched, the data from the Database is transferred to your local machine.  For SQLite, where the database sits on the local machine, the data is transferred from the SQLite storage to the C# process.
 
@@ -181,24 +199,13 @@ When `cmd.Parameters.AddWithValue` function is called, the value of the paramete
 
 When `rdr = cmd.ExecuteReader()`or `cmd.ExecuteNonQuery()` is executed, the SQL string, the value of the bound variables will be sent to SQLite.
 
-This step *prepares* the SQL statement (holding a pointer to the compiled SQL) if it has not already done so in a previous call to `Execute*`.  The statement will then be executed.
+This step *prepares* the SQL statement (holding a pointer to the compiled SQL) if it has not already done so in a previous call to `Execute`.  The statement will then be executed.
 
 #### Read
 
 Same as *fetch*
 
-
-
-
-
-## Student Activities - Questions
-
-At the end of this lesson, you should be able to answer the following questions.  If not, do further research.  If you still cannot answer the questions, seek assistance from your teacher.
-
-* Try creating your own sql injection string
-* How do prepared statements (using parameters) prevent sql injection?
-
-LAB:
+## 🧩🧩 Lab
 
 Create a small WPF application with a text box and a button.
 When the button is pressed, run a query on your database:
@@ -211,7 +218,7 @@ Try recreating the *Bobby Tables SQL* injection
 
 Then change your code to use bind parameters instead.
 
-# FINAL WORD
+# ⚠️FINAL WORD⚠️
 
 There is nothing wrong with writing values directly into built up statements; 
 
