@@ -119,8 +119,6 @@ SQLite is:
 - When scalability is a concern.
 - When you do not want to include a database with an application, like with a web application
 
-
-
 ## References
 
 [tutorialspoint](https://www.tutorialspoint.com/sqlite/index.htm)
