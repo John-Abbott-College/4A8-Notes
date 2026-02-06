@@ -31,6 +31,8 @@
 **SQLite, SQLInjection**
 
 - [SQLite](07_Connecting_to_a_database.md)
+  
+- [SQLite from C# and SQL Injection](08_SQLite_and_Csharp.md)
 
   
 

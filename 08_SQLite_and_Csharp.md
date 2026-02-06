@@ -38,15 +38,16 @@ With ADO.NET, you can:
 ### 2. Storing and Retrieving data from SQLite
 
 Use this [tutorial](https://zetcode.com/csharp/sqlite/) to
+
 1. Create a database file for the Hackathon project. Use a relative path in the connection string.
 
 2. Add `HackathonProject` table to the database file.
 
-2. Write a function that inserts 3 projects into database file.
+3. Write a function that inserts 3 projects into database file.
 
-3. Write a function to inserts 2 projects into database file using prepared statements.
+4. Write a function to inserts 2 projects into database file using prepared statements.
 
-4. Write a function to display all existing projects. Print column headers as well.
+5. Write a function to display all existing projects. Print column headers as well.
 
    
 
@@ -77,7 +78,7 @@ A common web hacking technique.
 
 Imagine the following...
 
-![img](./Images/login.png)
+![img](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Desktop\Images\login.png)
 
 In the *code behind*, there will need to be a query that looks something like:
 
@@ -159,7 +160,7 @@ Binding variables will ensure that the data passed in the variable is never used
 
 **Result**: the data returned will only be the rows where  `name` is equal to the string “` sandy' or '1'='1 `”
 
-![img](./Images/sql_binding.png)
+![img](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Desktop\Images\sql_binding.png)
 
 #### Typical Cycle of Database Communication
 
