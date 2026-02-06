@@ -25,6 +25,7 @@ To install additional libraries, we will be using “NuGet” from within Visual
 
 * Look online for instructions on how to use ‘NuGet’
 * Must install ```System.Data.SQLite``` into your project (so create a console project first)
+* Then also install the ```SourceGear.sqlite3``` package
 
 ## Student Activities - Practice
 
