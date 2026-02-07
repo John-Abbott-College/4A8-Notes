@@ -78,7 +78,7 @@ A common web hacking technique.
 
 Imagine the following...
 
-![img](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Desktop\Images\login.png)
+![img](.\Images\login.png)
 
 In the *code behind*, there will need to be a query that looks something like:
 
@@ -160,7 +160,7 @@ Binding variables will ensure that the data passed in the variable is never used
 
 **Result**: the data returned will only be the rows where  `name` is equal to the string “` sandy' or '1'='1 `”
 
-![img](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Desktop\Images\sql_binding.png)
+![img](.\Images\sql_binding.png)
 
 #### Typical Cycle of Database Communication
 
@@ -208,16 +208,15 @@ Same as *fetch*
 
 ## 🧩🧩 Lab
 
-Create a small WPF application with a text box and a button.
-When the button is pressed, run a query on your database:
+1. Create a small WPF application with a text box and a button.
 
-```csharp
-SELECT * FROM myTable WHERE id=’ + retrievedString + ’
-```
+2. Try recreating the *Bobby Tables SQL* injection
 
-Try recreating the *Bobby Tables SQL* injection
+   1. When the button is pressed, run a query on your database:
 
-Then change your code to use bind parameters instead.
+   ```SELECT * FROM myTable WHERE id=’ + retrievedString + ’```
+
+3. Then change your code to use bind parameters instead.
 
 # ⚠️FINAL WORD⚠️
 
