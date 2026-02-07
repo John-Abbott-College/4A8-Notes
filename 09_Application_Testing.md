@@ -135,7 +135,7 @@ Information on which conditions or branches of control statements are executed c
 
 After performing a run of your unit tests, you could trigger a code coverage analysis run (Test > Analyze Code Coverage for All Tests):
 
-![image-CodeCoverageTrigger](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Winter 2026\4A8\App Dev 2026\4A8-Notes\Images\CodeCoverageTrigger.JPG)
+![image-CodeCoverageTrigger](.\Images\CodeCoverageTrigger.JPG)
 
 
 
