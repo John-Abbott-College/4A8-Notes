@@ -1,22 +1,93 @@
-# Application testing and Code Coverage
+# Application Testing and Code Coverage
 
 Testing is crucial to verifying that your code base works as intended and that it is robust. 
 
-### Unit testing
+# Unit testing
 
 * Narrow scope
 * Testing an individual unit of code, ideally the smallest testable piece (method or class)
 * No dependencies on any outside systems. You are testing the internal workings of this unit. You do not care how it interacts with anything else.
 
+### What is a Unit Test?
+
+The testing of a small, isolated unit of code. 
+
+A unit is often a method.
+
+### What a unit test does NOT test
+
+1. Multiple components, the whole system, end to end.
+2. The interaction between parts of your application.
+3. Things that could go wrong if your system is not well set up (environment).
+
+### Use a Unit test Framework
+
+Using a framework to write and run unit tests make sense. You do not want to have to write all that functionality yourself! 
+
+We are using **XUnit** which gives us ways to specify when a function is a test `[Fact]` and an interface for running and tracking tests. 
+
+### Organizing and naming your unit test methods
+
+**Classes** are a useful way to organize unit tests.
+
+Name your class to reflect the class it contains unit tests for. example: *TestMyClass.cs*
+
+The unit tests themselves are methods in the class. As always, use a very descriptive name. A good template for a unit test method name is to specify what is tested and the expected result. Example: *Adding_2_And_4_Should_Return_6*
+
+### Parts of a unit test
+
+You are testing a hypothesis.
+
+1. **Arrange** - setup the necessary variables and values.
+
+2. **Act** - run the method you are testing.
+
+3. **Assert** - check that your hypothesis is correct.
+
+### What should you test?
+
+You want to test:
+
+1. typical use of the code
+2. atypical uses of the code
+3. expected functioning in edge case conditions.
+
+Adding a test when you fix a bug that comes up is a good idea. It is something that was missed, having a test makes it hard to miss in the future. 
+
+Fixes often get inadvertently reverted (merged conflict, bringing in old code).
+
+### Using the Assert class
+
+Assert.ConditionThatMustBeMet
+
+For example: Assert.Equal, Assert.False
+
+These methods throw exceptions if the condition is not met.
+
+### Private, helper methods
+
+It is perfectly ok to add private methods to your test class. You would **not** specify these as `[Fact]` methods.
+
+You could reuse code to Arrange things or even in the Assert part. 
+
+### Make your test independent
+
+The framework you are using should be able to run your tests in any order. Often, they are run in parallel.
+
+### Add them to your build
+
+Have them be run automatically on every commit to master  MORE ON THIS LATER!
 
 
-### Integration testing
 
-- Testing the interaction between components of the system.
+
+## Integration testing
 
 - Normally done once there is assurance that each individual component works properly - i.e. they are each well unit tested.
 
-- You are verifying that your code behaves nicely with other code it is using.
+- Testing the interaction between components of the system.
+
+  - You are verifying that your code behaves nicely with other code it is using.
 
 - Test environment resembles production.	
 
@@ -26,15 +97,15 @@ Testing is crucial to verifying that your code base works as intended and that i
 
   ​                                                                     VS	
 
-  Unit test: you mock the other components to only test the behaviour of the one unit.
+  Unit test: you mock the other components to only test the behavior of the one unit.
 
 
 
-### Regression testing
+## Regression testing
 
-- Verify if any new bugs were introduced in the system after it was changed. 
+- Verify if new bugs were introduced in the system after it was changed. 
 
-- Good practice to add regression tests for bug fixes that feel unsteady (easily reintroduced)
+- Good practice to add regression tests for bug fixes that feel unsteady (easily reintroduced).
 
 - You run your regression tests to make sure all existing functionality is still as expected.
 
@@ -58,13 +129,13 @@ Information on which conditions or branches of control statements are executed c
 
 
 
-#### Code coverage in Visual Studio Enterprise 
+### Code coverage in Visual Studio Enterprise 
 
-*note, code coverage functionality is not provided in base VS*
+> code coverage functionality is not provided in base VS
 
 After performing a run of your unit tests, you could trigger a code coverage analysis run (Test > Analyze Code Coverage for All Tests):
 
-![image-CodeCoverageTrigger](./Images/CodeCoverageTrigger.JPG)
+![image-CodeCoverageTrigger](C:\Users\Meghrig.Terzian\OneDrive - John Abbott College\Winter 2026\4A8\App Dev 2026\4A8-Notes\Images\CodeCoverageTrigger.JPG)
 
 
 
@@ -72,7 +143,7 @@ After performing a run of your unit tests, you could trigger a code coverage ana
 
 The code coverage results will appear in a tab:
 
-![image-CodeCoverageResults](./Images/CodeCoverageResults.JPG)
+![image-CodeCoverageResults](.\Images\CodeCoverageResults.JPG)
 
 
 
@@ -80,11 +151,11 @@ An interesting metric is the % of lines of code that are executed.
 
 You may need to add this column to your Code Coverage Results View.
 
-![image-CodeCoverageAddColumnMenu](./Images/CodeCoverageAddColumnMenu.JPG)
+![image-CodeCoverageAddColumnMenu](.\Images\CodeCoverageAddColumnMenu.JPG)
 
 
 
-![image-CodeCoverage_percent_Column](./Images/CodeCoverage_percent_Column.JPG)
+![image-CodeCoverage_percent_Column](C.\Images\CodeCoverage_percent_Column.JPG)
 
 
 
@@ -138,7 +209,7 @@ And the unit test that tests it:
 
 The current unit tests are inadequate. The code coverage analysis shows 50% coverage:
 
-![image-CodeCoverage_method_50percent](./Images/CodeCoverage_method_50percent.JPG)
+![image-CodeCoverage_method_50percent](.\Images\CodeCoverage_method_50percent.JPG)
 
 
 
@@ -170,7 +241,7 @@ Adding the following test, brings code coverage to 100%!
 
 
 
-![image-CodeCoverage_method_100percent](./Images/CodeCoverage_method_100percent.JPG)
+![image-CodeCoverage_method_100percent](.\Images\CodeCoverage_method_100percent.JPG)
 
 
 
@@ -201,4 +272,10 @@ It is your responsibility to make sure that your code is properly tested in unit
 
 Helpful hint: to remove the code coverage highlighting in the code:
 
-![image-CodeCoverage_removeHighlight](./Images/CodeCoverage_removeHighlight.JPG)
+![image-CodeCoverage_removeHighlight](.\Images\CodeCoverage_removeHighlight.JPG)
+
+
+
+## Reference
+
+https://stackify.com
