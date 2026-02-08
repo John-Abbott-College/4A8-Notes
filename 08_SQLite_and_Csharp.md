@@ -7,13 +7,13 @@ By the end of this activity, using C# and SQLite, you will be able to
 1. Connect to a database
 2. Create tables and insert data via C#
 3. Verify your work by using SQLite from the command prompt
-4. Understand what SQL injection is and how parameterized queries help prevent it.
+4. Understand what SQL injection is and how parameterized queries help prevent it
 5. Insert data securely using parameters
 6. Retrieve data using parameterized queries
 
 
 
-## 🧩🧩 Lab
+## 🧩🧩 Lab 1
 
 ### 1. Install Packages in Visual Studio
 
@@ -29,9 +29,9 @@ With ADO.NET, you can:
 
 ***Instructions***
 
-1. Using  “NuGet”, Install ```System.Data.SQLite``` into the Hackathon project
+1. Using  “NuGet”, Install `System.Data.SQLite.Core` into the Hackathon project
 
-   > ```System.Data.SQLite``` is an implementation of the ADO.NET specification for the SQLite database.
+   > `System.Data.SQLite.Core` is an implementation of the ADO.NET specification for the SQLite database.
 
 2. Open the `Hackathon.csproj` file, what do you see?
 
@@ -40,16 +40,11 @@ With ADO.NET, you can:
 Use this [tutorial](https://zetcode.com/csharp/sqlite/) to
 
 1. Create a database file for the Hackathon project. Use a relative path in the connection string.
-
 2. Add `HackathonProject` table to the database file.
-
-3. Write a function that inserts 3 projects into database file.
-
-4. Write a function to inserts 2 projects into database file using prepared statements.
-
+3. Write a function to insert 3 projects into the `HackathonProject` table.
+4. Write a function to insert 2 projects into database file using prepared statements.
 5. Write a function to display all existing projects. Print column headers as well.
-
-   
+6. Submit your work on Moodle.
 
 *ALWAYS VERIFY YOUR WORK BY USING THE SQLITE ON THE COMMAND LINE.*
 **Do not just read the tutorial and think you understand it. Type it in. Try it!**
@@ -155,7 +150,6 @@ Binding variables will ensure that the data passed in the variable is never used
   cmd.commandText="Select * from Users where name = @name";
   cmd.parameter( @name, id); // bind user input to parameter
   var rdr = cmd.ExecuteReader();
-  
   ```
 
 **Result**: the data returned will only be the rows where  `name` is equal to the string “` sandy' or '1'='1 `”
@@ -166,19 +160,19 @@ Binding variables will ensure that the data passed in the variable is never used
 
 ##### 1. Prepare
 
-The database receives the SQL string, with or without parameters.  The SQL string is analyzed, parsed and compiled. 
+The database receives the SQL string, with or without parameters. The SQL string is analyzed, parsed and compiled. 
 
 If there are parameters specified in the SQL command (*i.e*. `UserID = @name`), then the ‘compiled SQL code’ inserts a reference to the data that will be used when the SQL code is executed. (In other words, it creates a pointer to a variable, that is filled in only when the data is bound)
 
 ##### 2. Bind
 
-Any parameter that needs to be sent as part of the query needs to be *bound*.  That means that the database will be sent the data and store this data in the pointer location defined in the prepare statement.
+Any parameter that needs to be sent as part of the query needs to be *bound*. That means that the database will be sent the data and store this data in the pointer location defined in the prepare statement.
 
-The bound data is **NEVER** interpreted as SQL
+The bound data is **NEVER** interpreted as SQL.
 
 ##### 3. Execute
 
-When the command is executed, the precompiled SQL statement is executed, using the bound data as *inputs only*.  In other words... The bound data is **NEVER** interpreted as SQL.
+When the command is executed, the precompiled SQL statement is executed, using the bound data as *inputs only*.  In other words, the bound data is **NEVER** interpreted as SQL.
 
 If the command is a query, the result of the query is stored in the database until it is *fetched*.
 
@@ -206,7 +200,7 @@ This step *prepares* the SQL statement (holding a pointer to the compiled SQL) i
 
 Same as *fetch*
 
-## 🧩🧩 Lab
+## 🧩🧩 Lab 2 
 
 1. Create a small WPF application with a text box and a button.
 
@@ -217,6 +211,8 @@ Same as *fetch*
    ```SELECT * FROM myTable WHERE id=’ + retrievedString + ’```
 
 3. Then change your code to use bind parameters instead.
+
+4. Submit your work on Moodle.
 
 # ⚠️FINAL WORD⚠️
 

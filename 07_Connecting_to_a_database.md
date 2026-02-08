@@ -19,7 +19,7 @@ Be able to understand and use SQLite from the command line
 2. Answer the below questions
    1. What is SQLite?
    2. How is SQLite like the SQLServer database you have experience with?
-   3. How does it differ from SQLServer database you have experience with
+   3. How does it differ from SQLServer database you have experience with?
    4. Where is it installed? On a server? Locally?
    5. What type of database is it? relational or non-relational?
 
@@ -27,13 +27,15 @@ Be able to understand and use SQLite from the command line
 
 Follow the instructions on this page to install SQLite: [Installation Instructions](https://www.sqlitetutorial.net/download-install-sqlite/)
 
+**You do not need to install an SQLite GUI tool.**
+
 >**Keep a list of all the steps you have taken.**
 >
 >If you get stuck, you need to have the list of all the steps you have taken to help the trouble-shooting
 >
 >*Before* asking for help, verify that the list of steps you took are consistent with the instructions.
 
-Verify that you can run SQLite from the command line!!!! You do not need to install an SQLite GUI tool.
+Verify that you can run SQLite from the command line!!!! 
 
 
 
@@ -41,11 +43,11 @@ Verify that you can run SQLite from the command line!!!! You do not need to inst
 
 1. Download a sample database [SQLite Sample Database And Its Diagram (in PDF format)](https://www.sqlitetutorial.net/sqlite-sample-database/)
 
-2. Learn how to use SQLite by following this [Practical SQLite Commands That You Don't Want To Miss](https://www.sqlitetutorial.net/sqlite-commands/)
+2. Learn how to use SQLite command-line tool by following this [Practical SQLite Commands That You Don't Want To Miss](https://www.sqlitetutorial.net/sqlite-commands/)
 
-3. It is assumed that the student remembers SQL from their database class, but if not, ([SQLite Tutorial - An Easy Way to Master SQLite Fast](https://www.sqlitetutorial.net/)).
+3. Datatypes in SQLite is different than other standard relational databases.  Please read the following on [SQLite Data Types And Its Important Concepts Explained](https://www.sqlitetutorial.net/sqlite-data-types/)
 
-4. Datatypes in SQLite is different than other standard relational databases.  Please read the following on [SQLite Data Types And Its Important Concepts Explained](https://www.sqlitetutorial.net/sqlite-data-types/)
+4. It is assumed that the student remembers SQL from their database class, but if not, ([SQLite Tutorial - An Easy Way to Master SQLite Fast](https://www.sqlitetutorial.net/)).
 
 5. Answer the following questions:
 
@@ -61,7 +63,7 @@ Verify that you can run SQLite from the command line!!!! You do not need to inst
 
 
 ## 🛢When to use SQLite vs SQLServer/MySQL? 
-We will change the code to be backed by a database instead of XML files. We chose to use SQLite as the database. Why?
+We will change the `CalendarApp` code to be backed by a database instead of XML files. We chose to use SQLite as the database. Why?
 
 SQLite is:
 
@@ -69,18 +71,18 @@ SQLite is:
 * server-less - it does not require a server or any configuration
 * lightweight
 
-### How does it differ from databases that require a server such as MySQL?
+### How does it differ from databases that require a server such as MSSQLServer or MySQL?
 
 1. #### Setup
 
-   - **SQlite** is self-contained, small, and file-based. It can be installed with your application, on the client-side directly. It does not require a server to interact with, the application can interact with it directly (like we are via the C# SQLite library).
+   - **SQLite** is self-contained, small, and file-based. It can be installed with your application, on the client-side directly. It does not require a server to interact with, the application can interact with it directly (like we will via the C# SQLite library).
    - **MySQL** requires the client to interact with a database server. The application needs to connect to the server in order to access the database. Configuration is involved and the server is much bigger than SQLite.
 
    
 
 2. #### Scalability
 
-   - **SQlite** does not do well with big databases, it requires too much memory and becomes inefficient
+   - **SQLite** does not do well with big databases, it requires too much memory and becomes inefficient
 
    - **MySQL** can handle a lot of data and can be used at scale.
 
@@ -88,7 +90,7 @@ SQLite is:
 
 3. #### Access
 
-   - **SQlite** does not have user management. It cannot handle being accessed simultaneously by multiple processes.
+   - **SQLite** does not have user management. It cannot handle being accessed simultaneously by multiple processes.
 
    - **MySQL** handles multiple users with permission levels 
 
@@ -96,7 +98,7 @@ SQLite is:
 
 4. #### Security
 
-   - **SQlite** does not have an authentication system. File itself can be read and updated. 
+   - **SQLite** does not have an authentication system. File itself can be read and updated. 
 
    - **MySQL** has a built-in authentication and security features.
 
@@ -111,7 +113,6 @@ SQLite is:
 
 - When developing and testing with a simple database.
 
-  
 
 ### When should you **NOT** use SQLite?
 
