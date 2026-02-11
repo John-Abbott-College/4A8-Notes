@@ -36,7 +36,7 @@ Every group Milestone could have deductions of up to 50% of the mark for the tea
 
 ## Deductions
 
-- Miss more than 20% of the in class time given to work on a milestone, without an important reason that is excused by your teacher: **0 on that milestone**.
+- Missed more than 20% of the in class time given to work on a milestone, without an important reason that is excused by your teacher: **0 on that milestone**.
 - Missed a team stand up meeting: - **6% for the milestone**
 - Various deductions for not being actively present: 
   - being distracted during team work time: on phone, doing work or studying for other courses, browsing other things
