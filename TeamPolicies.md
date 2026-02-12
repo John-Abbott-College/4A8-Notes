@@ -6,9 +6,9 @@ Your team will have a number of responsibilities as it works on the different mi
 
   You will be rotating these roles for every milestone. Role tasks are the following:
 
-  - The coordinator checks with other team members before the meeting to remind them of when and where they will meet and what they are supposed to do. Coordinator keeps everyone on task and makes sure everyone is involved.
-  - The recorder prepares the final solution to be turned in.
-  - The checker double-checks it before it is handed in. Moreover, the checker makes sure everyone understands both the solution and the strategy used to get it. The Checker turns in the assignment, with the names on it of every team member who participated actively in completing it.
+  - The **coordinator** checks with other team members before the meeting to remind them of when and where they will meet and what they are supposed to do.
+  - The **recorder** takes notes during retrospectives and submits them. Turning in an assignment is everybody's responsibility though GitHub releases.
+  - The **checker** double-checks that on GitHub a release tag for the milestone has been created and JIRA sprint is closed by the deadline. It is everyone's responsibility to makes sure you understand both the solution and the strategy.
 
 - **Agree on a common meeting time** and what each member should have done before the meeting.
 
@@ -28,7 +28,7 @@ Your team will have a number of responsibilities as it works on the different mi
 
 - **Dealing with non-cooperative team members:**
 
-  If a team member refuses to cooperate on an assignment, his/her name should not be included on the completed work. If the problem persists, the team should meet with the instructor so that the problem can be resolved, if possible. If the problem still continues, the cooperating team members may notify the uncooperative member in writing that he/she is in danger of being fired, sending a copy of the memo to the instructor. If there is no subsequent improvement, they should notify the individual in writing (copy to the instructor) that he/she is no longer with the team. The fired student should meet with his/her instructor to discuss options. Similarly, students who are consistently doing all the work for their team may issue a warning memo that they will quit unless they start getting cooperation, and a second memo quitting the team if the cooperation is not forthcoming. Students who get fired or quit must either find another team willing to add them as a member or get zeroes for the remaining assignments.
+  If a team member refuses to cooperate on an assignment, their name should not be included on the completed work. If the problem persists, the team should meet with the instructor so that the problem can be resolved, if possible. If the problem still continues, the cooperating team members may notify the uncooperative member in writing that they are in danger of being fired, sending a copy of the memo to the instructor. Similarly, students who are consistently doing all the work for their team may issue a warning memo that they will quit unless they start getting cooperation, and a second memo quitting the team if the cooperation is not forthcoming. Students in danger of being fired or quitting should meet with the instructor.
 
 - **Policy on absences**
 
