@@ -42,7 +42,7 @@ Create an account using an email address. You could use your JAC email address o
 
 9. On How do you track Work page, leave the default option => Choose Finish.
 
-10. Choose the ... next to your site name => Add People to add the email addresses of your **teammates** and **BOTH** teachers:
+10. Choose the ... next to your site name => Add People to add the email addresses of your **teammates** and **your teacher** as administrators.
 
     meghrig.terzian@johnabbott.qc.ca
 
@@ -51,33 +51,37 @@ Create an account using an email address. You could use your JAC email address o
     ![](./Images/JIRA_addPeople.PNG)
 
 
-10. In the backlog view, choose view and turn on epic panel.
+10. Change the space access to private.
+
+11. In the backlog view, choose view and turn on epic panel.
 
     ![](.\Images\JIRA_epic.png)
 
-11.  you can create epics
+12. you can create epics
 
     ![](.\Images\JIRA_createepic.png)
 
-12. and stories
+13. and stories
 
-    ![](.\Images\JIRA_createStory.png)
+    ![+](.\Images\JIRA_createStory.png)
 
-13. add details to stories
+14. add details to stories
 
     ![](.\Images\JIRA_story_example.png)
 
-14. add stories to epics
+15. add stories to epics
 
     ![](.\Images\JIRA_add_story_to_epic.png)
 
-15. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
+16. Click on a story to edit it: associate it to an epic, set the story points, a description with acceptance criteria, assign stories to each other.
 
     ![](./Images/JIRA_story.PNG)
 
-16. Fill in your backlog!
+17. Fill in your backlog!
 
-17. After a sprint planning meeting, create a sprint.
+18. After a sprint planning meeting, create a sprint and then start it.
 
-18. closing?
+19. Whenever a story is completed close it. 
+
+    
 
