@@ -1,11 +1,5 @@
 # JIRA - Scrum project management software
 
-## Scrum overview
-
-![image](./Images/Scrum_cycle.png)
-
-
-
 ## What is JIRA?
 
 JIRA is a widely-used industry tool for software project management
@@ -31,7 +25,7 @@ Create an account using an email address. You could use your JAC email address o
    ##### **jacappdev1-2026-yourteamname**
 
    ![](./Images/teamName.PNG)
-   
+
 5. Choose Software Development for the kind of work you do:
 
    ![](./Images/softwareDev.PNG)
@@ -39,51 +33,51 @@ Create an account using an email address. You could use your JAC email address o
 6. You could choose the options that make sense for your team plans to use JIRA.
 
     ![](./Images/Jira_Tasks.PNG)
-   
-7. You could indicate that you not familiar with Jira in order to see the tip prompts.
-   
-8. On the left hand panel, choose Project settings
 
-    ![](./Images/JIRA_ProjectSettings.PNG)
-    
-9.  Choose Access => Add People to add the email addresses of your **teammates** and **BOTH** teachers:
+7. Set project name to CalendarApp > Get started
+
+8. Select types of work you need like Story, bugs, Task
+
+    ![](./Images/JIRA_WorkTypes.PNG)
+
+9. On How do you track Work page, leave the default option => Choose Finish.
+
+10. Choose the ... next to your site name => Add People to add the email addresses of your **teammates** and **BOTH** teachers:
 
     meghrig.terzian@johnabbott.qc.ca
 
     helen.katalifos@johnabbott.qc.ca
 
-   ![](./Images/JIRA_addPeople.PNG)
+    ![](./Images/JIRA_addPeople.PNG)
 
 
-10. Back in the project, in the backlog view, you could create issues (stories) to be added in the backlog. You could show the Epic view, add epics to your project and associate stories to epics (categories of stories)10
+10. In the backlog view, choose view and turn on epic panel.
 
-    ![](./Images/backlogView.PNG)
+    ![](.\Images\JIRA_epic.png)
 
-11. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
+11.  you can create epics
 
-    ![](./Images/storyEdit.PNG)
+    ![](.\Images\JIRA_createepic.png)
 
-12. Fill in your backlog!
+12. and stories
 
-13. After a sprint planning meeting, create a sprint.
+    ![](.\Images\JIRA_createStory.png)
 
-14. For every new sprint you create, create a ***Filter*** to show the associated stories (helps to see stories in completed sprints). Select View all issues:
+13. add details to stories
 
-    ![](./Images/filter.PNG)
-    
-15. Check the sprint filter.
+    ![](.\Images\JIRA_story_example.png)
 
-    ![](./Images/sprintFilter.PNG)
+14. add stories to epics
 
-16. Select the sprint in the left panel and save the filter:
+    ![](.\Images\JIRA_add_story_to_epic.png)
 
-    ![](./Images/sprintFilterSave.PNG)
+15. Click on a story to edit it: associate it to an epic, set the story points, add a description with acceptance criteria.
 
-17. Name the filter for the sprint:
+    ![](./Images/JIRA_story.PNG)
 
-    ![](./Images/saveFilter.PNG)
+16. Fill in your backlog!
 
-18. Name the filter for the sprint:
+17. After a sprint planning meeting, create a sprint.
 
-    ![](./Images/saveFilter.PNG)
+18. closing?
 
