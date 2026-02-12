@@ -39,10 +39,11 @@ With ADO.NET, you can:
 
 Use this [tutorial](https://zetcode.com/csharp/sqlite/) to
 
+skip the **C# SQLite prepared statements** section
+
 1. Create a database file for the Hackathon project. Use a relative path in the connection string.
 2. Add `HackathonProject` table to the database file.
 3. Write a function to insert 3 projects into the `HackathonProject` table.
-4. Write a function to insert 2 projects into database file using prepared statements.
 5. Write a function to display all existing projects. Print column headers as well.
 6. Submit your work on Moodle.
 
