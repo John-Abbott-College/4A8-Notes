@@ -217,12 +217,11 @@ Same as *fetch*
 
 # ⚠️FINAL WORD⚠️
 
-There is nothing wrong with writing values directly into built up statements; 
+It is very important to use paramater binding when incorporating user input into your SQL statment.  
+It is actually best practice to ALWAYS use binding in your SQL statements, even for data that you provide yourself. You may inadvertently incorporate something that could be run as SQL. It is safer to just parameterize all values.
 
-Or even using variables…AS LONG AS YOU ARE ABSOLUTELY CERTAIN WHAT THE TEXT IS i.e. the user isn’t supplying the text
-
-Whenever the data comes from a user (or any other outside source) USE BINDING! (i.e. parameters)
+USE BINDING (i.e. parameters) in all your SQL statments!
 
 ***!!! Security !!!***
 
-NOTE: A ZERO GRADE WILL BE GIVEN TO ANY ASSIGNMENT THAT DOES NOT INCLUDE PROPER BINDING OF USER INPUT!
+NOTE: A ZERO GRADE WILL BE GIVEN TO ANY ASSIGNMENT THAT DOES NOT INCLUDE PROPER BINDING OF USER INPUT! Marks wil be lost for not binding other parametesrs, as well.
