@@ -4,15 +4,23 @@ Testing is crucial to verifying that your code base works as intended and that i
 
 # Unit testing
 
-* Narrow scope
-* Testing an individual unit of code, ideally the smallest testable piece (method or class)
-* No dependencies on any outside systems. You are testing the internal workings of this unit. You do not care how it interacts with anything else.
-
 ### What is a Unit Test?
 
 The testing of a small, isolated unit of code. 
 
-A unit is often a method.
+* Narrow scope
+* Testing an individual unit of code, ideally the smallest testable piece (method or class). Often, the unit is a method.
+* No dependencies on any outside systems. You are testing the internal workings of this unit. You do not care how it interacts with anything else.
+
+### Purpose
+
+Make the contract of code explicit. This allows you to verify that your code does what you want it to do.
+
+Also helps:
+
+- Find bugs before they get out into production.
+- Make you consciously consider edge cases and various scenarios.
+- Ensure that future changes do not inadvertently break the contract of the code.
 
 ### What a unit test does NOT test
 
@@ -24,15 +32,37 @@ A unit is often a method.
 
 Using a framework to write and run unit tests make sense. You do not want to have to write all that functionality yourself! 
 
+What functionality does the unit test framework usually provide?
+
+- a way to run unit tests
+- the ability to see which unit tests passed and failed
+- the stack trace and failed test info for failed tests.
+
 We are using **XUnit** which gives us ways to specify when a function is a test `[Fact]` and an interface for running and tracking tests. 
 
+
+
 ### Organizing and naming your unit test methods
+
+#### Unit test class name
 
 **Classes** are a useful way to organize unit tests.
 
 Name your class to reflect the class it contains unit tests for. example: *TestMyClass.cs*
 
-The unit tests themselves are methods in the class. As always, use a very descriptive name. A good template for a unit test method name is to specify what is tested and the expected result. Example: *Adding_2_And_4_Should_Return_6*
+
+
+#### Unit test method name
+
+The unit tests themselves are methods in the class. 
+
+As always, use a very descriptive name. Good test names helps make it clear what is tested.  They come in very handy when a report of failed tests is seen - the possible problem can be clearer faster.
+
+A good template for a unit test method name is to specify what is tested and the expected result. Example: `Add_2And4_ShouldReturn6`
+
+`Add_TwoNegativeNumbers_ShouldReturnANegativeNumber`
+
+
 
 ### Parts of a unit test
 
@@ -43,6 +73,8 @@ You are testing a hypothesis.
 2. **Act** - run the method you are testing.
 
 3. **Assert** - check that your hypothesis is correct.
+
+   
 
 ### What should you test?
 
@@ -56,13 +88,34 @@ Adding a test when you fix a bug that comes up is a good idea. It is something t
 
 Fixes often get inadvertently reverted (merged conflict, bringing in old code).
 
+
+
 ### Using the Assert class
 
-Assert.ConditionThatMustBeMet
-
-For example: Assert.Equal, Assert.False
+`Assert.ConditionThatMustBeMet( parametersList )`
 
 These methods throw exceptions if the condition is not met.
+
+
+
+For example: 
+
+- `Assert.Equal` fails (throws an exception that causes the unit test to fail) if the given parameters are not equal. 
+
+- `Assert.False` fails (throws an exception that causes the unit test to fail) if the given parameter does not evaluate to False (if it is True). 
+
+- Will this assert throw an exception?
+
+  
+
+  ```C#
+          List<string> listActual = new List<string> { "one", "two", "three" };
+          listActual.RemoveAt(2);
+  
+          Assert.DoesNotContain<string>("three", listActual);
+  ```
+
+
 
 ### Private, helper methods
 
@@ -70,9 +123,13 @@ It is perfectly ok to add private methods to your test class. You would **not** 
 
 You could reuse code to Arrange things or even in the Assert part. 
 
+
+
 ### Make your test independent
 
 The framework you are using should be able to run your tests in any order. Often, they are run in parallel.
+
+
 
 ### Add them to your build
 
@@ -105,7 +162,7 @@ Have them be run automatically on every commit to master  MORE ON THIS LATER!
 
 - Verify if new bugs were introduced in the system after it was changed. 
 
-- Good practice to add regression tests for bug fixes that feel unsteady (easily reintroduced).
+- It is good practice to add regression tests for bug fixes that feel unsteady (easily reintroduced).
 
 - You run your regression tests to make sure all existing functionality is still as expected.
 
@@ -173,39 +230,43 @@ Remember, just because a line of code is considered covered with respect to code
 
 Consider the following method: 
 
-    public float getFuelPerKilometerCorrectedForTemperature( float litersOfFuel, 
-                                                             float kilometersTravelled, 
-                                                             float temperatureInCelsius )
+```C#
+public float getFuelPerKilometerCorrectedForTemperature( float litersOfFuel, 
+                                                         float kilometersTravelled, 
+                                                         float temperatureInCelsius )
+{
+    if ( litersOfFuel > 400 || temperatureInCelsius < -40 )
     {
-        if ( litersOfFuel > 400 || temperatureInCelsius < -40 )
-        {
-            throw new Exception( "this makes no sense!" );
-        }
-    
-        return ( litersOfFuel / kilometersTravelled ) * ( temperatureInCelsius / 32 );
+        throw new Exception( "this makes no sense!" );
     }
+
+    return ( litersOfFuel / kilometersTravelled ) * ( temperatureInCelsius / 32 );
+}
+```
 
 And the unit test that tests it:
 
-    [Fact]
-    public void Test_getFuelPerKilometerCorrectedForTemperature()
-    {
-    	//Arrange
-    	FuelCalculator fuelCalculator = new FuelCalculator();
-    
-        float litersOfFuel = 20;
-        float kilometersTravelled = 4;
-        float temperatureInCelsius = 30;
-    
-        //Act
-        float fuelPerKilometer =         	
-        	fuelCalculator.getFuelPerKilometerCorrectedForTemperature( litersOfFuel,
-        															   kilometersTravelled,
-                                                                       temperatureInCelsius);
-    
-        //Assert
-        Assert.AreEqual(4.6875, fuelPerKilometer);
-    }
+```C#
+[Fact]
+public void Test_getFuelPerKilometerCorrectedForTemperature()
+{
+	//Arrange
+	FuelCalculator fuelCalculator = new FuelCalculator();
+
+    float litersOfFuel = 20;
+    float kilometersTravelled = 4;
+    float temperatureInCelsius = 30;
+
+    //Act
+    float fuelPerKilometer =         	
+    	fuelCalculator.getFuelPerKilometerCorrectedForTemperature( litersOfFuel,
+    															   kilometersTravelled,
+                                                                   temperatureInCelsius);
+
+    //Assert
+    Assert.AreEqual(4.6875, fuelPerKilometer);
+}
+```
 
 The current unit tests are inadequate. The code coverage analysis shows 50% coverage:
 
@@ -215,29 +276,31 @@ The current unit tests are inadequate. The code coverage analysis shows 50% cove
 
 Adding the following test, brings code coverage to 100%!
 
-    [Fact]
-    public void Test_getFuelPerKilometerCorrectedForTemperature_litersTooBig_exceptionExpected()
+```C#
+[Fact]
+public void Test_getFuelPerKilometerCorrectedForTemperature_litersTooBig_exceptionExpected()
+{
+    //Arrange
+    FuelCalculator fuelCalculator = new FuelCalculator();
+
+    float litersOfFuel = 500;
+    float kilometersTravelled = 4;
+    float temperatureInCelsius = 30;
+
+    //Act
+    try
     {
-        //Arrange
-        FuelCalculator fuelCalculator = new FuelCalculator();
-    
-        float litersOfFuel = 500;
-        float kilometersTravelled = 4;
-        float temperatureInCelsius = 30;
-    
-        //Act
-        try
-        {
-           float fuelPerKilometer = 	
-               fuelCalculator.getFuelPerKilometerCorrectedForTemperature(litersOfFuel,
-                                                                         kilometersTravelled,
-                                                                         temperatureInCelsius);
-        }
-        catch
-        {
-        	Assert.IsTrue( true, "Liters beyond maximum threw exception");
-        }
+       float fuelPerKilometer = 	
+           fuelCalculator.getFuelPerKilometerCorrectedForTemperature(litersOfFuel,
+                                                                     kilometersTravelled,
+                                                                     temperatureInCelsius);
     }
+    catch
+    {
+    	Assert.IsTrue( true, "Liters beyond maximum threw exception");
+    }
+}
+```
 
 
 
@@ -269,8 +332,9 @@ It is your responsibility to make sure that your code is properly tested in unit
 
 
 
+#### Removing code coverage highlighting
 
-Helpful hint: to remove the code coverage highlighting in the code:
+ To remove the code coverage highlighting in the code, select the **X** in the Code Coverage Results tab toolbar:
 
 ![image-CodeCoverage_removeHighlight](.\Images\CodeCoverage_removeHighlight.JPG)
 
@@ -279,3 +343,114 @@ Helpful hint: to remove the code coverage highlighting in the code:
 ## Reference
 
 https://stackify.com
+
+
+
+# 🧩🧩Lab 1 - Writing good unit tests
+
+
+
+Activity using the `TestMathWhiz` unit test class:
+
+1. Set up your solution:
+
+   1. Create a C# ConsoleApp project and add `MathWhiz.cs`to it.  
+
+   2. Create an xUnit project in the same solution. Add `TestMathWhiz.cs` to it. 
+
+   3. Make the xUnit project aware of the ConsoleApp project. Make any namespace or using statement changes, as required.
+
+      
+
+2. Fix up the unit test class!
+
+   Make sure:
+
+   - All methods are tested, including constructors (explicit ones if there are any, the default one otherwise)
+
+   - Unit test guidelines are followed:
+
+     - each test should test a **single** scenario
+
+     - the unit test should be well named: `FunctionTested_scenarioTested_expectedResult`
+     - test out that **exceptions** are thrown when expected
+
+     - when your method's contract explicitly does not throw an exception for a special scenario, test that no exception is thrown.
+
+     - **code coverage** should be as complete as possible.
+
+     - unit test code is still code!
+
+       - all variables within the unit test code should be well named
+
+       - move any duplicated code into private methods to avoid code duplication
+
+         
+
+3. After your unit tests are finalized, for each one, identify the 3 sections, 
+
+   ```C#
+   //Arrange
+   
+   //Act
+   
+   //Assert
+   ```
+
+​	
+
+​	
+
+# 🧩🧩Lab 2 - Test Driven Development (TDD)
+
+
+
+## What is it? 
+
+The 'contract' of your method is of the utmost importance.
+
+In TDD, you write out the unit tests first, so that you consider all the details of your functionality without being influenced by your chosen implementation.
+
+The tests should consider all the important scenarios:
+
+- What is the typical case? 
+- What other flavours of a usual run are there? 
+- What are all the edge cases - what should happen in those cases? 
+- Are there any exceptions thrown?
+
+
+
+## How does TDD work?  
+
+- **Do not code** out ANY of the method itself!
+- Specify the **contract** of your function using unit tests as a first step. 
+- Once all the unit tests are done, start coding your function to make your unit tests run. 
+- Continue developing your function until your unit tests all pass.
+- Make sure you have full (or as full as possible) code coverage.  Add tests as needed.  Make sure they fail first.
+
+
+
+## Try it out!
+
+
+
+Add a function `PositiveExponify` to the `MathWhiz` class.  It should accept an integer exponent and an integer base.
+
+Here are some contract details to consider:
+
+- if a negative exponent is passed in, an exception should be thrown
+- if an exponent of 0 is passed in, the usual mathematical exponent rules should be respected (look this up if you don't remember!)
+- Think of a broad range of scenario categories.
+
+As usual be mindful of the unit test guidelines (see Lab 1).
+
+Remember! Full code coverage does not guarantee complete logic testing, make sure you consider all the relevant scenarios!
+
+
+
+
+
+
+
+
+
