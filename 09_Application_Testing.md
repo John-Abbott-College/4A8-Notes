@@ -58,7 +58,11 @@ The unit tests themselves are methods in the class.
 
 As always, use a very descriptive name. Good test names helps make it clear what is tested.  They come in very handy when a report of failed tests is seen - the possible problem can be clearer faster.
 
-A good template for a unit test method name is to specify what is tested and the expected result. Example: `Add_2And4_ShouldReturn6`
+A good template for a unit test method name is to specify what is tested and the expected result. 
+
+Examples:
+
+`Add_2And4_ShouldReturn6`
 
 `Add_TwoNegativeNumbers_ShouldReturnANegativeNumber`
 
@@ -96,8 +100,6 @@ Fixes often get inadvertently reverted (merged conflict, bringing in old code).
 
 These methods throw exceptions if the condition is not met.
 
-
-
 For example: 
 
 - `Assert.Equal` fails (throws an exception that causes the unit test to fail) if the given parameters are not equal. 
@@ -109,10 +111,10 @@ For example:
   
 
   ```C#
-          List<string> listActual = new List<string> { "one", "two", "three" };
-          listActual.RemoveAt(2);
+  List<string> listActual = new List<string> { "one", "two", "three" };
+  listActual.RemoveAt(2);
   
-          Assert.DoesNotContain<string>("three", listActual);
+  Assert.DoesNotContain<string>("three", listActual);
   ```
 
 
@@ -212,7 +214,7 @@ You may need to add this column to your Code Coverage Results View.
 
 
 
-![image-CodeCoverage_percent_Column](C.\Images\CodeCoverage_percent_Column.JPG)
+![image-CodeCoverage_percent_Column](.\Images\CodeCoverage_percent_Column.JPG)
 
 
 
@@ -340,9 +342,7 @@ It is your responsibility to make sure that your code is properly tested in unit
 
 
 
-## Reference
 
-https://stackify.com
 
 
 
@@ -354,7 +354,7 @@ Activity using the `TestMathWhiz` unit test class:
 
 1. Set up your solution:
 
-   1. Create a C# ConsoleApp project and add `MathWhiz.cs`to it.  
+   1. Create a C# ConsoleApp project and add `MathWhiz.cs` to it.  
 
    2. Create an xUnit project in the same solution. Add `TestMathWhiz.cs` to it. 
 
@@ -432,8 +432,6 @@ The tests should consider all the important scenarios:
 
 ## Try it out!
 
-
-
 Add a function `PositiveExponify` to the `MathWhiz` class.  It should accept an integer exponent and an integer base.
 
 Here are some contract details to consider:
@@ -450,7 +448,9 @@ Remember! Full code coverage does not guarantee complete logic testing, make sur
 
 
 
+## Reference
 
+https://stackify.com
 
 
 
