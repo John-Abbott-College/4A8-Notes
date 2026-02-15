@@ -2,7 +2,13 @@
 - [0.0_Introduction](/00.1_Introduction.md)
 - [0.1_Expectations](/00_Expectations.md)
 
+**Teamwork**
+
+[Team Policies](TeamPolicies.md)
+
 **Milestone Info**
+
+[User Stories - Milestone 3 &4 ](12b_Milestone_3_4_UserStories.md)
 
 
 
@@ -27,6 +33,7 @@
 
 - [User Stories](06_user_stories.md)
   
+- [JIRA](11_JIRA.md)
 
 **SQLite, SQLInjection**
 
@@ -34,8 +41,7 @@
   
 - [SQLite from C# and SQL Injection](08_SQLite_and_Csharp.md)
 
-
-Testing
+**Testing**
 
 * [Application_Testing](09_Application_Testing.md)
 
