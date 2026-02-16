@@ -364,7 +364,7 @@ Activity using the `TestMathWhiz` unit test class:
 
 2. Fix up the unit test class!
 
-   Look over the unit tests for the Multiply method and correct any issues you identify by verifying that:
+   Look over the unit tests for the  `MathWhiz` class and correct any issues you identify by verifying that:
 
    - All methods are tested, including constructors (explicit ones if there are any, the default one otherwise)
 
@@ -373,31 +373,20 @@ Activity using the `TestMathWhiz` unit test class:
      - each test should test a **single** scenario
 
      - the unit test should be well named: `FunctionTested_scenarioTested_expectedResult`
+     
      - test out that **exceptions** are thrown when expected
-
-     - when your method's contract explicitly does not throw an exception for a special scenario, test that no exception is thrown.
-
-     - **code coverage** should be as complete as possible.
-
-     - unit test code is still code!
-
-       - all variables within the unit test code should be well named
-
-       - move any duplicated code into private methods to avoid code duplication
-
-         
-
-3. After your unit tests are finalized, for each one, identify the 3 sections, 
-
-   ```C#
-   //Arrange
-   
-   //Act
-   
-   //Assert
-   ```
-
-​	
+     
+     - **code coverage** should be as complete as possible
+     
+       
+     
+     > Remember, unit test code is still code!
+     >
+     > - all variables within the unit test code should be well named
+     >
+     > - move any duplicated code into private methods to avoid code duplication
+     >
+     >   
 
 ​	
 
@@ -432,7 +421,7 @@ The tests should consider all the important scenarios:
 
 ## Try it out!
 
-#### Write the tests
+#### Write the unit tests
 
 Write all the unit tests for a new method for the  `MathWhiz` class that will be called `DividePositiveNumbers`.  DO NOT code the method.
 
@@ -444,9 +433,23 @@ In your tests, you should enforce the following contract details of the future `
 - if either of the passed in values are negative, 0 should be returned.
 - If there are no problematic inputs, the quotient should be returned.
 
+
+
 As usual be mindful of the unit test guidelines (see Lab 1). Think of a broad range of scenario categories.
 
-Remember! Full code coverage does not guarantee complete logic testing, make sure you consider all the relevant scenarios!
+In each tests, identify the 3 sections: 
+
+```C#
+//Arrange
+
+//Act
+
+//Assert
+```
+
+
+
+> Remember! Full code coverage does not guarantee complete logic testing, make sure you consider all the relevant scenarios!
 
 
 
@@ -462,7 +465,7 @@ Start by making the method with an empty body (does nothing). Run a unit test to
 
 Did you miss any test scenarios?  Add them.
 
-Check the code coverage of your method.  Are there untested lines?  Add tests as needed.
+Check the code coverage of your method.  Are there untested lines?  Add more tests as needed.
 
 
 
