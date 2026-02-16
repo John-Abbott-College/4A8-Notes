@@ -149,7 +149,7 @@ Binding variables will ensure that the data passed in the variable is never used
   
   // USING BINDING TO PREVENT SQL INJECTION
   cmd.commandText="Select * from Users where name = @name";
-  cmd.parameter( @name, id); // bind user input to parameter
+  cmd.parameter( @name, name); // bind user input to parameter
   var rdr = cmd.ExecuteReader();
   ```
 
