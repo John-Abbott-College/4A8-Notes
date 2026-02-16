@@ -75,7 +75,7 @@ Create an account using an email address. You could use your JAC email address o
 
 16. Click on a story to edit it: associate it to an epic, set the story points, a description with acceptance criteria, assign stories to each other.
 
-    ![](./Images/JIRA_story.PNG)
+    ![](.\Images\JIRA_story.png)
 
 17. Fill in your backlog!
 
