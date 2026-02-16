@@ -58,11 +58,7 @@ The unit tests themselves are methods in the class.
 
 As always, use a very descriptive name. Good test names helps make it clear what is tested.  They come in very handy when a report of failed tests is seen - the possible problem can be clearer faster.
 
-A good template for a unit test method name is to specify what is tested and the expected result. 
-
-Examples:
-
-`Add_2And4_ShouldReturn6`
+A good template for a unit test method name is to specify what is tested and the expected result. Example: `Add_2And4_ShouldReturn6`
 
 `Add_TwoNegativeNumbers_ShouldReturnANegativeNumber`
 
@@ -100,6 +96,8 @@ Fixes often get inadvertently reverted (merged conflict, bringing in old code).
 
 These methods throw exceptions if the condition is not met.
 
+
+
 For example: 
 
 - `Assert.Equal` fails (throws an exception that causes the unit test to fail) if the given parameters are not equal. 
@@ -111,10 +109,10 @@ For example:
   
 
   ```C#
-  List<string> listActual = new List<string> { "one", "two", "three" };
-  listActual.RemoveAt(2);
+          List<string> listActual = new List<string> { "one", "two", "three" };
+          listActual.RemoveAt(2);
   
-  Assert.DoesNotContain<string>("three", listActual);
+          Assert.DoesNotContain<string>("three", listActual);
   ```
 
 
@@ -342,7 +340,9 @@ It is your responsibility to make sure that your code is properly tested in unit
 
 
 
+## Reference
 
+https://stackify.com
 
 
 
@@ -354,7 +354,7 @@ Activity using the `TestMathWhiz` unit test class:
 
 1. Set up your solution:
 
-   1. Create a C# ConsoleApp project and add `MathWhiz.cs` to it.  
+   1. Create a C# ConsoleApp project and add `MathWhiz.cs`to it.  
 
    2. Create an xUnit project in the same solution. Add `TestMathWhiz.cs` to it. 
 
@@ -364,7 +364,7 @@ Activity using the `TestMathWhiz` unit test class:
 
 2. Fix up the unit test class!
 
-   Make sure:
+   Look over the unit tests for the Multiply method and correct any issues you identify by verifying that:
 
    - All methods are tested, including constructors (explicit ones if there are any, the default one otherwise)
 
@@ -432,25 +432,43 @@ The tests should consider all the important scenarios:
 
 ## Try it out!
 
-Add a function `PositiveExponify` to the `MathWhiz` class.  It should accept an integer exponent and an integer base.
+#### Write the tests
 
-Here are some contract details to consider:
+Write all the unit tests for a new method for the  `MathWhiz` class that will be called `DividePositiveNumbers`.  DO NOT code the method.
 
-- if a negative exponent is passed in, an exception should be thrown
-- if an exponent of 0 is passed in, the usual mathematical exponent rules should be respected (look this up if you don't remember!)
-- Think of a broad range of scenario categories.
+In your tests, you should enforce the following contract details of the future `DividePositiveNumbers` method:
 
-As usual be mindful of the unit test guidelines (see Lab 1).
+- it will accept two integers, the number to be divided and the divisor.
+- if a divisor of 0 is passed in, an ArgumentException should be thrown indicating that Division by zero is not permitted.
+- the exception prefix should be added to the beginning of the thrown exception message with a space in between.
+- if either of the passed in values are negative, 0 should be returned.
+- If there are no problematic inputs, the quotient should be returned.
+
+As usual be mindful of the unit test guidelines (see Lab 1). Think of a broad range of scenario categories.
 
 Remember! Full code coverage does not guarantee complete logic testing, make sure you consider all the relevant scenarios!
 
 
 
+#### Write the method
+
+Once all the unit tests are coded, start writing the  `DividePositiveNumbers` method to the `MathWhiz` class.  
+
+Start by making the method with an empty body (does nothing). Run a unit test to see it fail, then implement the contract detail in the method to get the test to pass. Keep going until all your tests pass.
 
 
-## Reference
 
-https://stackify.com
+#### Verify
+
+Did you miss any test scenarios?  Add them.
+
+Check the code coverage of your method.  Are there untested lines?  Add tests as needed.
+
+
+
+
+
+
 
 
 
