@@ -45,3 +45,6 @@
 
 * [Application_Testing](09_Application_Testing.md)
 
+**Coding Standards**
+
+* [Coding Standards](12_coding_standards.md)
