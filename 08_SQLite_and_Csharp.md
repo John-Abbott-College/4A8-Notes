@@ -149,7 +149,7 @@ Binding variables will ensure that the data passed in the variable is never used
   
   // USING BINDING TO PREVENT SQL INJECTION
   cmd.commandText="Select * from Users where name = @name";
-  cmd.parameter( @name, id); // bind user input to parameter
+  cmd.parameter( @name, name); // bind user input to parameter
   var rdr = cmd.ExecuteReader();
   ```
 
@@ -214,6 +214,47 @@ Same as *fetch*
 3. Then change your code to use bind parameters instead.
 
 4. Submit your work on Moodle.
+
+
+
+### SQL standards
+
+#### Parameter binding
+
+Use parameter binding for all values inserted into an SQL statement. This ensures that values are never interpreted as SQL making your code safe and robust.
+
+```
+var time = "3 hours";
+var recipe = "bread";
+
+var cmd = new SQLiteCommand(DBConn);
+cmd.CommandText = "update recipe set Name = @recipe, Time = @time";
+
+cmd.Parameters.AddWithValue("@recipe", recipe);
+cmd.Parameters.AddWithValue("@time", time);
+
+cmd.ExecuteNonQuery();
+```
+
+#### Be specific about the columns to be retrieved
+
+Never use SELECT * in a query. Specify the individual columns to be retrieved and their order.
+
+BAD: 
+
+```
+SELECT * FROM Categories;
+```
+
+GOOD:
+
+```
+SELECT Id, Name FROM Categories;
+```
+
+Assuming the order of columns makes your code error prone and hard to maintain. If a change is made to the columns of a table, all query code will need to be modified to reflect the changed column order.  Moreover a column that should be accessed could be returned.
+
+It is important to be purposeful in the selection of returned information.
 
 # ⚠️FINAL WORD⚠️
 

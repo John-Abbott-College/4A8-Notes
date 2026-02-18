@@ -109,10 +109,10 @@ For example:
   
 
   ```C#
-          List<string> listActual = new List<string> { "one", "two", "three" };
-          listActual.RemoveAt(2);
+  List<string> listActual = new List<string> { "one", "two", "three" };
+  listActual.RemoveAt(2);
   
-          Assert.DoesNotContain<string>("three", listActual);
+  Assert.DoesNotContain<string>("three", listActual);
   ```
 
 
@@ -354,7 +354,7 @@ Activity using the `TestMathWhiz` unit test class:
 
 1. Set up your solution:
 
-   1. Create a C# ConsoleApp project and add `MathWhiz.cs`to it.  
+   1. Create a C# ConsoleApp project and add `MathWhiz.cs` to it.  
 
    2. Create an xUnit project in the same solution. Add `TestMathWhiz.cs` to it. 
 
