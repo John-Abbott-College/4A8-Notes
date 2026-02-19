@@ -10,6 +10,8 @@
 
 [User Stories - Milestone 3 &4 ](12b_Milestone_3_4_UserStories.md)
 
+[Milestones_3 & 4 care package](12a_Milestones_3_and_4_care_package.md)
+
 
 
 **Test Info, Review**
@@ -48,3 +50,13 @@
 **Coding Standards**
 
 * [Coding Standards](12_coding_standards.md)
+
+**Git & GitHub**
+
+* [Using git solo](11.1_using_git_solo.pdf)
+
+* [gitignore](11.2_git_ignore.pdf)
+* [Pull Requests](11.3_Tale_of_the_git_pull_request.pdf)
+* [Working in teams with git](11.4_working_in_teams_with_git.pdf)
+* [Tags releases & VS](11.5_git.md)
+

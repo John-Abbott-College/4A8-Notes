@@ -38,18 +38,18 @@ Remember that you cannot have spaces in the path to your solution. Pull your tea
 
 * Parameterizing any data in your SQL statements prevents SQLInjection vulnerability. SQLInjection vulnerability is bad.
 * Select * is bad - why? assumes a column order, exposes all columns (review the notes if this doesn't sound familiar).
-* You are switching the API to use a database because the user wants more scalability. They should be able to expect the API methods (except for the `HomeCalendar` constructor) to be the same per their perspective - behavior, parameters, return values, exceptions.//?
+* You are switching the API to use a database because the user wants more scalability. They should be able to expect the API methods (except for the `HomeCalendar` constructor) to be the same per their perspective - behavior, parameters, return values, exceptions.
 * A story is only done when unit tests for it are complete and pass and the documentation of the public parts of the API are up to date.
 * Dead code - comment it out and leave it around?  Remove! You have version control to be able to go see it if you need it later. Commented out code causes clutter - cluttered code is more prone to bugs. Clean code is the way to go.
 * Milestone 3: all the unit tests should pass. Have a unit test where the two files are not the same? Check the XML files yourself. Is the difference the way the dates are expressed?  Look below for info on Dates to see how to fix this.
-* You must add `System.Data.SQLite` to both your HomeCalendar project, *and* to your test project.
+* You must add `System.Data.SQLite.Core` to both your HomeCalendar project, *and* to your test project.
 ## Reminders
 
 * If you do not understand a story properly, check in with the product owner (your teacher)
 
 ## Helper Files
 
-On Lea, you can find
+On Lea/Moodle, you can find
 
 * a zip of test files
   * Note that these test files are not complete, but have tests for Category and Categories (after changes to database).  See suggested workflow.
@@ -148,7 +148,7 @@ Many of you have been closing your database connection to get the tests to work,
 
 ### Database test file
 
-It is possible that we will need to give you a new test database file, so BE prepared for it.//?
+It is possible that we will need to give you a new test database file, so BE prepared for it.
 
 **To create a database from an sql file**
 
@@ -184,8 +184,7 @@ sqlite> .quit
 Example:
 
 ```sql
-select * from events 
-		where Date >= '2020-01-01' and Date <= '2020-01-31;
+select * from events where Date >= '2020-01-01' and Date <= '2020-01-31;
 ```
 
 Query SQL by year/month?
@@ -201,6 +200,7 @@ DateTime date = DateTime.ParseExact(
 			string, "yyyy-MM-dd H:mm:ss", 
 			CultureInfo.InvariantCulture
 );
+// CultureInfo.InvariantCulture Ignores the computer’s regional settings. 
 ```
 To convert a DateTime to a string in the proper format:
 ```csharp
