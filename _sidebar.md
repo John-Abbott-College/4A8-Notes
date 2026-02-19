@@ -35,7 +35,7 @@
 
 - [User Stories](06_user_stories.md)
   
-- [JIRA](11_JIRA.md)
+- [JIRA](10_JIRA.md)
 
 **SQLite, SQLInjection**
 
@@ -59,4 +59,5 @@
 * [Pull Requests](11.3_Tale_of_the_git_pull_request.pdf)
 * [Working in teams with git](11.4_working_in_teams_with_git.pdf)
 * [Tags releases & VS](11.5_git.md)
+* [Merge Conflicts](11.6_Git_Merge_Conflicts.md)
 
