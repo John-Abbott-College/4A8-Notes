@@ -173,11 +173,49 @@ sqlite> .quit
 
 ### Dates
 
-#### SQLiteSQLite
+**Date and Time are always prone to trouble**
+
+Because different people have different settings on their computer...
+
+* The datetime 'string' will be different from user to user!!!
+
+**Dealing with DateTime**
+
+* Always use a C# `DateTime` object
+* Always read/write datetime/strings specifying which format you want to use!
+
+**Why use strings to represent the date?**
+
+SQLite is *light*, and does not support the storage of a datetime object...
+
+* Which means that you need to store the date as a string...
+* Which can be interpreted differently if you have a different locale setup
+  In SQLite, your datetime column must be a *text* type.
+
+**What to do?**
+
+Always ensure you use the formatting properties of `DateTime` in C#
+Example:
+
+```csharp
+using System.Globalization;
+
+DateTime x = DateTime.ParseExact("2011-02-27", "yyyy-MM-dd H:mm:ss, CultureInfor.InvariantCulture);
+// CultureInfo.InvariantCulture Ignores the computer’s regional settings. 
+
+```
+
+***Very Important***
+
+Use `MM` for month as a number, if you use small `mm`, it will not work.
+
+To convert a DateTime to a string in the proper format:
+
+```sql
+String str = myDateTime.ToString("yyyy-MM-dd H:mm:ss")
+```
 
 **IMPORTANT**
-
- SQLite does not support dates inside the database, only Text, so all dates in the database must be expressed as a string.
 
 * Date formats should *always* have the year-month-date (or year/month/date) format, so that you can sort by date, and query within a range of dates
 
@@ -189,23 +227,6 @@ select * from events where Date >= '2020-01-01' and Date <= '2020-01-31;
 
 Query SQL by year/month?
 * See SQL Help section below
-
-#### C# 
-
-**To convert a string (in the correct format) to a DateTime…**
-
-```csharp
-using System.Globalization;
-DateTime date = DateTime.ParseExact(
-			string, "yyyy-MM-dd H:mm:ss", 
-			CultureInfo.InvariantCulture
-);
-// CultureInfo.InvariantCulture Ignores the computer’s regional settings. 
-```
-To convert a DateTime to a string in the proper format:
-```csharp
-String str = myDateTime.ToString("yyyy-MM-dd H:mm:ss")
-```
 
 **IMPORTANT:**
 In HomeCalendar, we are using 
