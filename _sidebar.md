@@ -53,11 +53,11 @@
 
 **Git & GitHub**
 
-* [Using git solo](11.1_using_git_solo.pdf)
+* [Using git solo](https://drive.google.com/file/d/1CKXzVzqlzD4T8eK5vpWtUZnUO65S5Zfs/view?usp=share_link)
 
-* [gitignore](11.2_git_ignore.pdf)
-* [Pull Requests](11.3_Tale_of_the_git_pull_request.pdf)
-* [Working in teams with git](11.4_working_in_teams_with_git.pdf)
+* [gitignore](https://drive.google.com/file/d/1ojSClOnWaxk0DHTPfmgAhz_w2beTw_q0/view?usp=share_link)
+* [Pull Requests](https://drive.google.com/file/d/1mcvrfejqrmnHfo5zaBIUhGphnR4px5It/view?usp=share_link)
+* [Working in teams with git](https://drive.google.com/file/d/1ZMj097yKSdP6b6s9bkbHlXNW2q78Bba1/view?usp=share_link)
 * [Tags releases & VS](11.5_git.md)
 * [Merge Conflicts](11.6_Git_Merge_Conflicts.md)
 
