@@ -207,7 +207,7 @@ DateTime x = DateTime.ParseExact(info.InnerText, "M/d/yyyy h:mm:ss tt", CultureI
 
 ***Very Important***
 
-Use `MM` for month as a number, if you use small `mm`, it will not work.
+Use `M` for month as a number, if you use small `mm`, it will not work.
 
 To convert a DateTime to a string in the proper format:
 
