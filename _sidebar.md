@@ -5,7 +5,7 @@
 **Teamwork**
 
 - [Team Policies](TeamPolicies.md)
-- [Teamwork Dashboard](Team work Dashboard.md)
+- [Teamwork Dashboard](TeamworkDashboard.md)
 
 **Milestone Info**
 
