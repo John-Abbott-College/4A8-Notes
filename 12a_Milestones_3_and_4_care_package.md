@@ -200,7 +200,7 @@ Example:
 ```csharp
 using System.Globalization;
 
-DateTime x = DateTime.ParseExact("2011-02-27", "yyyy-MM-dd H:mm:ss, CultureInfor.InvariantCulture);
+DateTime x = DateTime.ParseExact(info.InnerText, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
 // CultureInfo.InvariantCulture Ignores the computer’s regional settings. 
 
 ```
@@ -212,7 +212,7 @@ Use `MM` for month as a number, if you use small `mm`, it will not work.
 To convert a DateTime to a string in the proper format:
 
 ```sql
-String str = myDateTime.ToString("yyyy-MM-dd H:mm:ss")
+String str = myDateTime.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
 ```
 
 **IMPORTANT**
