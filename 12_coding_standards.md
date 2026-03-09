@@ -1,6 +1,6 @@
 # Coding Standards
 
-Styles can differ (see below). In a professional setting it is best to adapt to the established standards. If you have insights or a perspectove that could be helpful, you can respectfully share it and try to change the standard!
+Styles can differ (see below). In a professional setting it is best to adapt to the established standards. If you have insights or a perspective that could be helpful, you can respectfully share it and try to change the standard!
 
 ## Warning!
 
@@ -81,7 +81,7 @@ List<Categories> _listOfAllCategories;
 
 ## Function / Method Names
 
-The names have to meaningful… what does the function/method do?
+The names have to be meaningful… what does the function/method do?
 **Use verbs**
 
 BAD:	
