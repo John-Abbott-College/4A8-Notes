@@ -57,21 +57,21 @@ On Lea/Moodle, you can find
 
 ## Suggested Workflow
 
-1. Fix all existing bugs
-   1. All current tests should pass
-2. Add Database class and tests to the appropriate projects within your solution
+1. Make proper changes so all tests pass.
+2. Add Database class and test class to the appropriate projects within your solution
    1. All tests should pass 
-3. Make category & categories properties read-only.
+3. Make category properties read-only.
    1. Replace `TestCategory.cs`
    2. All `TestCategory.cs` files should pass
 4. Copy over all new tests to your project
    1. Temporarily change home calendar constructor (see code below). 
    2. Note that this is a TEMPORARY fix
-5. Modify categories to use the database
-   1. Remove all references to the `List<category>` property.
+5. Modify `Categories.cs`  to use the database
+   1. Remove all references to the `List<Category>` property.
    2. All tests in `TestCategories.cs` should pass
-6. Fix the availability category story
+6. Fix the availability category story "[Events for availability should not count towards busy time](https://john-abbott-college.github.io/4A8-Notes/#/12b_Milestone_3_4_UserStories?id=events-for-availability-should-not-count-towards-busy-time)"
    1. All tests should pass
+7. Implement remaining stories in sprint 1 epics.
 
 **SUGGESTED END OF SPRINT 1**
 
