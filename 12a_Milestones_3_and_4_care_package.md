@@ -58,38 +58,57 @@ On Lea/Moodle, you can find
 ## Suggested Workflow
 
 1. Make proper changes so all tests pass.
+
 2. Add Database class and test class to the appropriate projects within your solution
    1. All tests should pass 
+
 3. Make category properties read-only.
    1. Replace `TestCategory.cs`
+
    2. All `TestCategory.cs` files should pass
+
+      > If you have unit tests failing because of read-only properties, determine whether those tests are still necessary. If they are no longer needed, remove them. 
+
 4. Copy over all new tests to your project
    1. Temporarily change home calendar constructor (see code below). 
    2. Note that this is a TEMPORARY fix
+
 5. Modify `Categories.cs`  to use the database
    1. Remove all references to the `List<Category>` property.
    2. All tests in `TestCategories.cs` should pass
+   3. You might need to modify unit tests code.
+
 6. Fix the availability category story "[Events for availability should not count towards busy time](https://john-abbott-college.github.io/4A8-Notes/#/12b_Milestone_3_4_UserStories?id=events-for-availability-should-not-count-towards-busy-time)"
    1. All tests should pass
+   1. You might need to modify unit tests to adapt to this change
+
 7. Implement remaining stories in sprint 1 epics.
+
+   1. You might need to modify unit tests to adapt to changes.
+   2. If you have unit tests failing because of read-only properties, determine whether those tests are still necessary. If they are no longer needed, remove them. 
+
 
 **SUGGESTED END OF SPRINT 1**
 
-7. Modify events to use the database
+---
+
+**SPRINT 2**
+
+1. Modify events to use the database
    1. Adjust tests to the new situation
    2. Your new tests must pass
    
-9. Update `HomeCalendar` constructor to take in one file, and one file only
+2. Update `HomeCalendar` constructor to take in one file, and one file only
    1. Adjust `HomeCalendar` tests
    2. all tests pass
    
-9. If not already done, remove the `HomeCalendar` constructor that takes in zero arguments and uses a default file. 
+3. If not already done, remove the `HomeCalendar` constructor that takes in zero arguments and uses a default file. 
 
-   10. Remove all code associated with default file.
+   1. Remove all code associated with default file.
 
-   11. Update `TestHomeCalendar.cs`
+   2. Update `TestHomeCalendar.cs`
 
-   12. all tests pass
+   3. all tests pass
 
 11. Remove any 'dead' or 'useless' code
     1. all tests pass
