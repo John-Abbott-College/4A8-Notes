@@ -9,7 +9,7 @@
 | Feb 27 | 3        | Aadi, Daniel, Alireza, James, Artem, Luca        |                                |    Feb 25: 30mins, Feb 26:                                          |
 | Mar 17 |  3 (review), 4 |                |                                |                                             |
 | Mar 18 |  4        |  Jainder, Dylan          |                                |                                             |
-| Mar 20       |      4     |   Alireza, Daniel, Dylan             |                                |                                             |
+| Mar 20       |      4     |   Alireza, Daniel, Léa             |                                |                                             |
 
 
 
