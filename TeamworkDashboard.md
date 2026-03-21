@@ -7,9 +7,9 @@
 | Date   | Milestone | Missed StandUp | mins - Missed <br />Class time | mins - Class time <br />given for team work |
 | ------ | --------- | -------------- | ------------------------------ | ------------------------------------------- |
 | Feb 27 | 3        | Aadi, Daniel, Alireza, James, Artem, Luca        |                                |    Feb 25: 30mins, Feb 26:                                          |
-|        |           |                |                                |                                             |
-|        |           |                |                                |                                             |
-|        |           |                |                                |                                             |
+| Mar 17 |  3 (review), 4 |                |                                |                                             |
+| Mar 18 |  4        |  Jainder, Dylan          |                                |                                             |
+| Mar 20       |      4     |   Alireza, Daniel, Léa             |                                |                                             |
 
 
 
