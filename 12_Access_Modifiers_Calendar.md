@@ -1,12 +1,12 @@
 # Access Modifiers
 
-> Though a hundred crooked paths may conduct to a temporary success, the one plain and straight path of public and private virtue can alone lead to a pure and lasting fame and the blessings of posterity. - *Author: Edward Everett*
-
 ## What are access modifiers?
 
-In object orientated programming, the *scope* of a class, property, or method is determined by specific keywords, called **Access Modifiers**. A scope determines **who can see and use** a class, method, or property.
+In object orientated programming, the **scope** of a class, property, or method is determined by specific keywords, called **Access Modifiers**. 
 
-These keywords are prepended to the class, property or method name.
+**Scope** determines **who can see and use** a class, method, or property.
+
+**Access Modifiers** are prepended to the class, property or method name.
 
 ### Allowed Access Modifiers in C#
 
@@ -21,7 +21,11 @@ These keywords are prepended to the class, property or method name.
 | protected internal | Access is limited to the current assembly and types derived from the containing class. All members in current project and all members in derived class can access the variables. |
 | private protected  | Access is limited to the containing class or types derived from the containing class within the current assembly. |
 
-An **assembly** is a compiled unit of code that contains classes, interfaces, and other resources. An assembly is the **output file your project produces after compilation**. The file is usually an executable program (`.exe`) or library (`.dll`).
+An **assembly** is a compiled unit of code that contains classes, interfaces, and other resources. 
+
+An assembly is the **output file your project produces after compilation**. 
+
+The file is usually an executable program (`.exe`) or library (`.dll`).
 
 #### Example
 
@@ -51,7 +55,7 @@ In the following example, the class `HomeCalendar` is **public**, as well as the
 
 **Example**: `System.Data.SQLite` assembly.
 
-Any class within the `System.Data.SQLite` code that has been declared `public` is available to us, 
+Any class within the `System.Data.SQLite` assembly that has been declared `public` is available to us, 
 
 * `SQLiteConnection` is a public class.
 
@@ -108,9 +112,9 @@ Ask the following questions:
 
 ```csharp
 // NOT realistic code
-myHomeCalendar = new HomeCalendar("abc.db");
+myHomeCalendar = new HomeCalendar("abc.db"); //create a HomeCalendar using database abc.db
 var e = homeCalendar.Categories;
-var c = new Categories(Database.Open("def.db"));
+var c = new Categories(Database.Open("def.db")); //create a new Categories object using a different database
 c.Add("whatever");
 ```
 
@@ -120,14 +124,20 @@ c.Add("whatever");
 
 ​    Would we *want* someone to be able to do this?
 
-* I certainly would not.
+* I certainly would not. Users **should not bypass HomeCalendar** and manipulate categories directly.
 
 ### Categories class - which Access Modifier?
 
 What if we make `Categories` an *internal* class?
 
-* Then we could not use the `homeCalendar.Categories.Add` function.
+* Then users of the API will not use the `homeCalendar.Categories.Add` function.
+  * We want **users to be able to add categories** via `homeCalendar.Categories.Add(...)`
+  * Making `Categories` internal **prevents that**, so the API is **not usable externally**
   * fix: Create a method `homeCalendar.AddCategory` method that takes care of it for us, and make sure that `AddCategory` is *public*
+    * Problem? You **cannot expose the `Categories` object** at all (even read-only)
+    * Users **cannot iterate or query categories directly** without HomeCalendar methods
+    * Less flexible API
+  
 
 What if we make `Categories` a *public* class?
 
