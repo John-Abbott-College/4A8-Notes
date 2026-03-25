@@ -132,7 +132,8 @@ What if we make `Categories` an *internal* class?
 
 * Then users of the API will not use the `homeCalendar.Categories.Add` function.
   * We want **users to be able to add categories** via `homeCalendar.Categories.Add(...)`
-  * Making `Categories` internal **prevents that**, so the API is **not usable externally**
+    * Making `Categories` internal **prevents that**, so the API is **not usable externally**
+  
   * fix: Create a method `homeCalendar.AddCategory` method that takes care of it for us, and make sure that `AddCategory` is *public*
     * Problem? You **cannot expose the `Categories` object** at all (even read-only)
     * Users **cannot iterate or query categories directly** without HomeCalendar methods
@@ -143,6 +144,7 @@ What if we make `Categories` a *public* class?
 
 * Then the user could create their own `Categories` object, and really make for some confusing code.
   * fix: Make the constructor for the `Categories` class *internal*, thus `HomeCalendar` class methods can use it because it is part of the same assembly, but an external assembly could not.
+  * More flexible API. Users can read or add categories, but cannot create their own.
 
 ### Database class - which Access Modifier?
 

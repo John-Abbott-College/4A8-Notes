@@ -66,3 +66,8 @@
 
 * [Access_Modifiers](12_Access_Modifiers_Calendar.md)
 * [Dynamic Link Libraries](18_Dynamic_Link_Libraries.md)
+
+**MVP**
+
+* [Architectural Patterns](21_Architecture_Patterns.md)
+* [MVP Wordle Example](21.1_MVP_Wordle_Example.md)
