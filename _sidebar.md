@@ -1,4 +1,5 @@
 **Intro**
+
 - [0.0_Introduction](/00.1_Introduction.md)
 - [0.1_Expectations](/00_Expectations.md)
 
@@ -71,3 +72,7 @@
 
 * [Architectural Patterns](21_Architecture_Patterns.md)
 * [MVP Wordle Example](21.1_MVP_Wordle_Example.md)
+
+**WPF**
+
+[Intro to WPF](23_Intro_to_WPF_Windows_Application.md)
