@@ -75,4 +75,9 @@
 
 **WPF**
 
-[Intro to WPF](23_Intro_to_WPF_Windows_Application.md)
+* [Intro to WPF](23_Intro_to_WPF_Windows_Application.md)
+* [Combobox Control](24_WPF_Combobox_Control.md)
+
+**Design Patterns**
+
+* [Design Patterns](22_Design_Patterns.md)
