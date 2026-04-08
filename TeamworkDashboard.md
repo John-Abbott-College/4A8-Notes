@@ -11,6 +11,8 @@
 | Mar 18 |  4        |  Jainder, Dylan          |                                |                                             |
 | Mar 20       |      4     |   Alireza, Daniel, Léa, Briana             |                                |                                             |
 | Mar 24       |      4     |   Alireza, James, Briana, Léa, William             |                                |                                             |
+| Apr 8       |      6     |               |   missed class lesson on concept important for milestone 6: Aadi, Luca, Jainder, Rebecca, Makan, Taisha, Ryan, Briana, Mariya?                             |                                             |
+
 
 
 
