@@ -14,7 +14,7 @@
 
 [Milestones_3 & 4 care package](12a_Milestones_3_and_4_care_package.md)
 
-[Milestones 7 User Stories](25a_Milestone_6_Calendar_stories.md)
+[Milestones 6 User Stories](25a_Milestone_6_Calendar_stories.md)
 
 **Test Info, Review**
 
