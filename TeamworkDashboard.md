@@ -13,6 +13,9 @@
 | Mar 24       |      4     |   Alireza, James, Briana, Léa, William             |                                |                                             |
 | Apr 8       |      6     |               |   missed class lesson on concept important for milestone 6: Aadi, Luca, Jainder, Rebecca, Makan, Taisha, Ryan, Briana, Mariya?                             |                                             |
 | Apr 14 | 6 | | 20 and sprint planning =- Luca, Briana, Aadi, Jainder| 20|
+| Apr 15 | 6 | | | 150|
+| Apr 17 | 6 | | | 70|
+| Apr 21 | 6 | Daniel, Briana| missed 30 mins Daniel, all class Briana| ?|
 
 
 
