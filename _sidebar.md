@@ -85,4 +85,5 @@
 **CI CD**
 
 * [CI CD](25_CI_CD.md)
+* [Compile and Test](27_CICD_Lab_Compile_And_Test_From_Command_Line.md)
 
