@@ -15,7 +15,8 @@
 | Apr 14 | 6 | | 20 and sprint planning =- Luca, Briana, Aadi, Jainder| 20|
 | Apr 15 | 6 | | | 150|
 | Apr 17 | 6 | | | 70|
-| Apr 21 | 6 | Daniel, Briana| missed 30 mins Daniel, all class Briana| ?|
+| Apr 21 | 6 | Daniel, Briana| missed 30 mins Daniel, all class Briana| 110|
+| Apr 22 | 6 | Alireza, Daniel| | |
 
 
 
