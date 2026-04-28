@@ -72,6 +72,7 @@
 
 * [Architectural Patterns](21_Architecture_Patterns.md)
 * [MVP Wordle Example](21.1_MVP_Wordle_Example.md)
+* [MVP Flaw](26_Not_MVP_Calendar.md)
 
 **WPF**
 
