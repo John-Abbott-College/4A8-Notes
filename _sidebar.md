@@ -20,6 +20,8 @@
 
 [Test1Info](17_Test_1_Info.md)
 
+[Test2Info](29_Test_2_Info.md)
+
 **Documentation and setup of projects**
 
 - [Create VS Solution From Existing Code](01_Create_VS_Solution_From_Existing_Code_Calendar.md)
