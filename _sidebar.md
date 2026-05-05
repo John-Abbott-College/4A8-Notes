@@ -91,4 +91,5 @@
 * [CI CD](25_CI_CD.md)
 * [Compile and Test](27_CICD_Lab_Compile_And_Test_From_Command_Line.md)
 * [GitHub Actions](28_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
+* [Installer WAP](30_Installer_WAP.md)
 
