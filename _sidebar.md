@@ -81,6 +81,7 @@
 * [Intro to WPF](23_Intro_to_WPF_Windows_Application.md)
 * [Combobox Control](24_WPF_Combobox_Control.md)
 * [DataGrid](26_DataGrid.md)
+* [Icons](31_Icons.md)
 
 **Design Patterns**
 
