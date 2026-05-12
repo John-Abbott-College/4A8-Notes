@@ -93,4 +93,5 @@
 * [Compile and Test](27_CICD_Lab_Compile_And_Test_From_Command_Line.md)
 * [GitHub Actions](28_CICD_Workflow_Setup_GitHub_Actions_Build_Test.md)
 * [Installer WAP](30_Installer_WAP.md)
+* [GitHub Actions - Installer](32_CICD_Installer_Workflow_Setup_Installer_new.md)
 
