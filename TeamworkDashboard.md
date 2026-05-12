@@ -18,6 +18,7 @@
 | Apr 21 | 6 | Daniel, Briana| missed 30 mins Daniel, all class Briana| there for standup, but missed class time: Rebecca, Taisha, missed 50mins|110|
 | Apr 22 | 6 | Alireza + missed 10 mins of class, Daniel, Jainder (interview?)| | |
 | May 1 | 6 | Daniel, Jainder, Makan, Aadi| | |
+| May 12 | 7-8 | Jainder, Rebecca| 1.5 hours
 
 
 
