@@ -19,7 +19,7 @@
 | Apr 22 | 6 | Alireza + missed 10 mins of class, Daniel, Jainder (interview?)| | |
 | May 1 | 6 | Daniel, Jainder, Makan, Aadi| | |
 | May 12 | 7-8 | Jainder standup only + 10mins, Rebecca| 1.5 hours
-| May 14 | 7-8 | Jainder, Artem, Daniel, James, Aadi, Mariya| 1.3 hours
+| May 14 | 7-8 | Jainder, Artem, Daniel, James, Aadi, (Mariya missed all but last 15 mins)| 1.3 hours
 
 
 
