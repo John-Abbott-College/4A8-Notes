@@ -55,7 +55,7 @@ INVEST is the acronym used for qualities you want in your user stories:
  refined enough that developers can estimate the effort required.
 
 **S – Small**
- small in executable size (so you can have 6-10 user stores per sprint).
+ small in executable size (so you can have 6-10 user stories per sprint).
 
 **T – Testable** 
  needs to be testable so development team knows when it is done.
@@ -70,7 +70,7 @@ The point of a user story is to force the customer to tell you what they *need*,
 
 > As a cook
 >
-> I want to to have a database with my recipes
+> I want to have a database with my recipes
 >
 > So that I can publish them to the web
 
@@ -219,7 +219,7 @@ Examples from http://groups.umd.umich.edu/cis/course.des/cis375/active/class5/Us
 
 > As a Customer
 >
-> I want to to check the balance of my bank account 
+> I want to check the balance of my bank account 
 >
 > So that I can perform transactions. 
 >

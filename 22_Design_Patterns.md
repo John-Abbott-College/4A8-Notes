@@ -12,7 +12,7 @@ A **software design pattern** is a general, *reusable* solution to a commonly oc
 
 It is a description or template for how to solve a problem that can be used in many different situations. 
 
-Are formalized *best practices* that the programmer can use to solve common problems when designing an application or system.
+Design patterns are formalized *best practices* that the programmer can use to solve common problems when designing an application or system.
 
 > ... "Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to each problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice" [AIS+77, page *x*]
 >
@@ -101,7 +101,7 @@ class Calendar {
   // UpdateCalendar(...)
 }
 ```
-This is what we are going to broadcasting 
+This is what we are going to broadcast 
 ```csharp
 public struct SpecialEvent {
   Object _sender;

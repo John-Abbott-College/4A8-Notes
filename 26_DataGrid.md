@@ -88,7 +88,7 @@ To bind the data, using `"{Binding `*`PropertyName`*`}`"
 
  var column = new DataGridTextColumn();     // Create a text column object 
  column.Header = "My Column Header";				
- column.Binding = new Binding("Name");			// Bind to an object propery         
+ column.Binding = new Binding("Name");			// Bind to an object property         
  myDataGrid.Columns.Add(column);             // Add the defined column to the DataGrid
 ```
 
@@ -210,7 +210,7 @@ public MainWindow()
 }
 private void MenuItem_Click(object sender, RoutedEventArgs e)
 {
-    // the selected object will always be a of the type that was originally put in the ItemsSource
+    // the selected object will always be of the type that was originally put in the ItemsSource
     var selected = myDataGrid.SelectedItem as User;
     if (selected != null)
     {

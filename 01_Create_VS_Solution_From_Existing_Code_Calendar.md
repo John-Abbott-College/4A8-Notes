@@ -71,7 +71,7 @@ This file **describes the structure of the solution** and lists all the projects
 
 * Search through your solution directories to find the `Program.cs` file (which was created for you automatically) Ex: `Solutions/`*`ProjectName/ProjectName/`*
 
-* An easy way to get to the folder where your project is located is to right click on the projects and select `Open Folder in File Explorer`
+* An easy way to get to the folder where your project is located is to right click on the project and select `Open Folder in File Explorer`
 
   ![VS_open_folder_in_file_explorer](./Images/VS_open_folder_in_file_explorer.png)
 
@@ -79,7 +79,7 @@ This file **describes the structure of the solution** and lists all the projects
 
   * for HomeCalendar there are 7 files
 
-  >NOTE: This is a VERY important step.  If you add code to your solution that are not in your solutions folders, then the solution file will not be able to find your files if you change its location (i.e. submitting to LEA or Git)
+  >NOTE: This is a VERY important step.  If you add code to your solution that is not in your solutions folders, then the solution file will not be able to find your files if you change its location (i.e. submitting to LEA or Git)
 
   ![copy_source_files](./Images/copy_source_files_Calendar.png)
 
