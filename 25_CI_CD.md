@@ -8,7 +8,7 @@
 
 ![CI/CD](./Images/cicd_1.svg)
 
-*souce: synopsys.com*
+*source: synopsys.com*
 
 
 
@@ -30,14 +30,14 @@ Developers are expected to:
 
 - Add/modify tests for your changes and having the full series of tests run on every change (detects regressions)
 - Integrate your changes very often
-- Identify how your changes that affect the build process. Did you add a dependency (package), modify the version of a package you require? You are expected to update the build scripts.
+- Identify how your changes affect the build process. Did you add a dependency (package), modify the version of a package you require? You are expected to update the build scripts.
 
 
 This requires: code coverage metrics, tests done before the story is completed, frequent integration of code.
 
 CI involves using **tools** to **automate** these processes and incorporate them into the development iterations. This makes it so that the testing, integration and build tasks are not big, separate efforts. Instead these tasks are done incrementally and frequently. This ensures that errors are detected as quickly as possible.
 
-This is inline with the Agile principles. In the past, it wasn't rare that all the integration, writing of tests, and updating of the build scripts happened only after all the development was done, exposing issues very late in the process.
+This is in line with the Agile principles. In the past, it wasn't rare that all the integration, writing of tests, and updating of the build scripts happened only after all the development was done, exposing issues very late in the process.
 
 
 
@@ -59,7 +59,7 @@ Ultimate goal: code put onto master frequently => automatically, tests are run, 
 
 - Traceable record of what needs to be done to release
 
-- Visibility for all (devs, QA, management). The tools used show reports that everyone can acccess.
+- Visibility for all (devs, QA, management). The tools used show reports that everyone can access.
 
 - Notification in case of problems, visual feedback of the process.
 
